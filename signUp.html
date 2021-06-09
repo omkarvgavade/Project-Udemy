@@ -383,37 +383,6 @@
         opacity: 1;
       }
 
-      /* add appropriate colors to fb,google ana apple buttons */
-
-      .google,
-      .apple,
-      .fb {
-        background: #fff;
-        color: #333;
-        border: 1px solid #dedfe0;
-        font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-        /* -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
-        -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);; */
-        box-shadow: 0 2px 2px 0 rgb(41 48 59 / 24%), 0 0 2px 0 rgb(41 48 59 / 12%);
-      }
-      .google{
-        display: flex;
-        height: 50px;
-      }
-      .fb {
-        background-color: #1a538a;
-        color: white;
-        display: flex;
-        padding:10px;
-        padding-left: 5px;
-        border-radius: 4px;
-      }
-      .apple{
-        display: flex;
-        padding:10px;
-        padding-left: 5px;
-      }
-
       /* style the submit button */
       input[type="submit"] {
         background-color: #ec5252;
@@ -422,6 +391,7 @@
         height:45px;
         font-weight: bold;
         border-radius: 2px;
+        margin-bottom: 10px;;
       }
 
       input[type="submit"]:hover {
@@ -454,39 +424,20 @@
         font-size:18px;
         font: inherit;
       }
-      .img-google, .img-f{
-        width: 25px;
-      }
-      .fb-1{
-        font-size: 25px;
-        padding-left: -20px;
-      }
-      .ap-1{
-        font-size: 25px;
-        padding-left: -20px;
-      }
-      .bolt{
-        margin-left: 15px;
-        margin-top:3px
-      }
-      .col{
-        margin-bottom: 15px;
-        margin-right: 0px;
-      }
       .row{
         width:400px;
-        height: 35px;
+        height: 40px;
         margin: 0px auto;
         /* border: 1px solid; */
         border-bottom: 1px solid;
         border-color: #DEDFE0;
+        margin-bottom:25px;
       }
       .row b{
         margin-left: 35px;
-        
       }
-      div.fb.btn{
-        margin-top: 15px;
+      form{
+        position: relative;
       }
       .form-group{
         text-align: center;
@@ -503,7 +454,7 @@
         color: #1b3136;
       }
       .sign{
-        margin-top:25px
+        margin-top:25px; 
       }
       .sign b{
         color: #007791;
@@ -511,29 +462,14 @@
       .sign b:hover{
         color: #1b3136;
       }
-      .log{
-        margin-top: 8px;
-        cursor: pointer;
-      }
-      .log b{
-        color: #007791;
-      }
-      .log b:hover{
-        color: #1b3136;
-      }
       .a-tag{
         text-decoration: none;
       }
-      /* hr{
-        margin-top:50px;
-        height:20px;
-        border:1px solid gray; 
-      } */
       .flexBox{
         display:flex;
         width:100;
         height:80px;
-        margin-top: 40px;
+        margin-top: 50px;
         border:1px solid #dcdacb;
         column-gap: 60px;
       }
@@ -566,12 +502,6 @@
         margin-top: 25px;
       }
 
-
-
-      *{
-            margin: 0px;
-            padding: 0px;
-        }
         #links {
        line-height: 1.6rem;
     display: grid;
@@ -581,19 +511,21 @@
       #links ul {
         flex-grow: 2;
         list-style: none;
+        
       }
       #links a {
         text-decoration: none;
-        color: rgb(46, 45, 45);
         font-size: 15px;
+        color:#007791;
       }
       .languageRight {
-          text-align:end;  
+          text-align:end; 
       }
       .languageRight a{
         padding:12px 20px;
         border:1px solid rgb(123,122,117);
         border-radius: 5px;
+        
       }
       .languageRight a>img{
           width:15px;
@@ -620,6 +552,91 @@
       .fooBox{
         font-size:12px;
         color: gray;
+      }
+      .check{
+        height:20px;
+        margin-left: -90px;
+        margin-top: 5px;
+      }
+      .info{
+        margin-top: 5px;
+        margin-left: -80px;
+        font-size:15px;
+      }
+      .checkCont{
+        border: none;
+      }
+      .indicator{
+        height:5px;
+        width:310px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        margin: 10px 0;
+        column-gap: 1px;
+        display: none;
+      }
+      .indicator span{
+        width:100%;
+        height:100%;
+        background:lightgrey;
+        border-radius: 5px;
+        position: relative;
+      }
+      .showBtn{
+        position: absolute;
+        right: 10px;
+        top: 140px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size:15px;
+        font-weight: 600;
+        display: none;
+      }
+      .indicator span.tobe{
+        margin: 0px 3px;
+      }
+      .indicator span:before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius:5px;
+      }
+      .indicator span.active.weak:before{
+        background-color: #EC5252; 
+      }
+      .indicator span.active.tobe:before{
+        background-color: #FFE48C
+      }
+      .indicator span.active.medium:before{
+        background-color: #46C28E
+      }
+      .indicator span.active.strong:before{
+        background-color: #208058
+      }
+      .text{
+        font-size: 10px;
+        width: 125px;
+        /* border: 1px solid; */
+        margin-left: 15px;
+        display:none;
+      }
+      .boxPolicy{
+        width: 335px;
+        height: 30px;
+        border:none;
+        border-bottom: 1px solid #DEDFE0;
+      }
+      .boxPolicy div{
+        font-size:10px;
+        margin-top: 20px;
+        text-align: center;
+      }
+      .boxPolicy div a{
+        text-decoration: none;
       }
     </style>
   <body>
@@ -655,6 +672,7 @@
                   placeholder="Search for anything"
                 />
               </div>
+              
             </li>
             <li class="navText1">
               <a class="navText" href="#">Udemy for Business</a>
@@ -712,52 +730,18 @@
       </nav>
     </header>
     <div class="lContainer">
-      <div class="row"><b>Log In to Your Udemy Account!</b></div>
+      <div class="row"><b>Sign Up and Start Learning!</b></div>
       <form action="/action_page.php">
-        <div class="col">
-          <!-- <a href="#" class="fb btn">
-            <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-          </a> -->
 
-          <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=313137469260&kid_directed_site=0&app_id=313137469260&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv5.0%2Fdialog%2Foauth%3Fscope%3Demail%252Cpublic_profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.udemy.com%252Fjoin%252Fsocial-complete%252Ffacebook%252F%26return_scopes%3Dtrue%26client_id%3D313137469260%26state%3DwoDUYVCXswRwn3FxmOK0x2jBPxCupMoh%26auth_type%3Drerequest%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D22e3ef49-c30b-4425-bc0f-a9de4d061077%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.udemy.com%2Fjoin%2Fsocial-complete%2Ffacebook%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3DwoDUYVCXswRwn3FxmOK0x2jBPxCupMoh%23_%3D_&display=page&locale=mr_IN&pl_dbl=0" class="a-tag"><div class="fb btn">
-            <!-- <i class="fa fa-google fa-fw"></i> Login with Google -->
-            <div>
-              <i class="fa fa-facebook fa-fw fb-1"></i>
-            </div>
-            <div class="bolt">
-              <b>Continue with Facebook</b>
-            </div>
-          </div></a>
-
-
-          <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?response_type=permission%20id_token%20code&scope=profile%20email&openid.realm&include_granted_scopes=true&redirect_uri=storagerelay%3A%2F%2Fhttps%2Fwww.udemy.com%3Fid%3Dauth578111&client_id=700206021005-bfren0qj1or8pp5spnn521hos9lm9ll9.apps.googleusercontent.com&ss_domain=https%3A%2F%2Fwww.udemy.com&gsiwebsdk=shim&access_type=offline&flowName=GeneralOAuthFlow" class="a-tag"><div class="google btn">
-            <!-- <i class="fa fa-google fa-fw"></i> Login with Google -->
-            <div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" alt="google" class="img-google">
-            </div>
-            <div class="bolt">
-              <b>Continue with Google</b>
-            </div>
-          </div></a>
-
-
-
-
-          <!-- <a href="#" class="apple btn"
-            ><i class="fa fa-apple fa-fw"> </i> Login with Apple
-          </a> -->
-
-          
-          <a href="https://appleid.apple.com/auth/authorize?client_id=com.udemy.web&redirect_uri=https%3A%2F%2Fwww.udemy.com%2Fjoin%2Fsocial-complete%2Fapple%2Flogin%2F&response_type=code%20id_token&state=jwyvowjnwtybblmv&scope=name%20email&response_mode=form_post&frame_id=b13d88f0-3ae7-49a4-b5b4-2229a16b62db&m=11&v=1.5.3" class="a-tag"><div class="apple btn">
-            <div>
-              <i class="fa fa-apple fa-fw ap-1"></i>
-            </div>
-            <div class="bolt">
-              <b>Continue with Apple</b>
-            </div>
-          </div></a>
-
-        </div>
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Full Name"
+              name="fname"
+            />
+          </div>
 
         <div class="input-container">
           <i class="fa fa-envelope icon"></i>
@@ -771,17 +755,42 @@
 
         <div class="input-container">
           <i class="fa fa-lock icon"></i>
-          <input
-            class="input-field"
+          <input onkeyup="trigger()"
+            class="input-field" id="psw"
             type="password"
             placeholder="Password"
             name="psw"
           />
+          <span class="showBtn">Show</span>
         </div>
-        <input type="submit" value="Log In" />
-        <div class="form-group">or <a href="https://www.udemy.com/user/forgot-password/">Forgot Password</a></div>
-        <div class="form-group sign">Don't have an account? <a href="https://www.udemy.com/join/signup-popup/"><b>Sign up</b></a></div>
-        <div class="form-group log"><a><b>Log in with your organization</b></a></div>
+        <div class="indicator">
+          <span class="weak"></span>
+          <!-- EC5252 -->
+          <span class="tobe"></span>
+          <!-- FFE48C -->
+          <span class="medium"></span>
+          <!-- 46C28E -->
+          <span class="strong"></span>
+          <!-- 208058 -->
+          <div>
+          <div class="text">Too weak</div></div>
+        </div>
+        
+        <div class="input-container checkCont">
+          <input
+            class="check"
+            type="checkbox"
+          />
+          <div class="info">I’m in for emails with exciting discounts and personalized recommendations</div>
+          
+        </div>
+        <input type="submit" value="Sign Up" />
+        <div class="boxPolicy">
+          <div>By signing up, you agree to our <a href="https://www.udemy.com/terms/">Terms of Use</a> and <a href="https://www.udemy.com/terms/privacy/">Privacy Policy.</a></div>
+        </div>
+        <!-- <div class="form-group">or <a href="https://www.udemy.com/user/forgot-password/">Forgot Password</a></div> -->
+        <div class="form-group sign">Already have an account? <a href="https://www.udemy.com/join/login-popup/?locale=en_US&next=https%3A%2F%2Fwww.udemy.com%2Fjoin%2Flogin-popup%2F%3Flocale%3Den_US%26response_type%3Dhtml%26next%3Dhttps%253A%252F%252Fwww.udemy.com%252F&response_type=html"><b>Log In</b></a></div>
+        <!-- <div class="form-group log"><a><b>Log in with your organization</b></a></div> -->
       </form>
       <div class="flexBox">
         <div class="box1">
@@ -866,4 +875,81 @@
       }
     }
   };
+  const indicator = document.querySelector('.indicator');
+  const input = document.getElementById('psw');
+  const weak = document.querySelector('.weak');
+  const tobe = document.querySelector('.tobe');
+  const medium = document.querySelector('.medium');
+  const strong = document.querySelector('.strong');
+  const text = document.querySelector('.text');
+  const showBtn = document.querySelector('.showBtn');
+
+  let regExgWeak = /[a-z]/;
+  let regExgTobe = /[0-9]/;
+  // let regExgMedium = /\d+/;
+  let regExgMedium = /[A-Z]/;
+  let regExgStrong = /.[!,@,#,$,%,^,&,*,_,-,~,(,)]/;
+  function trigger(){
+    if(input.value != ""){
+      indicator.style.display ='block';
+      indicator.style.display ='flex';
+      if(input.value.length <= 3 && (input.value.match(regExgWeak) || input.value.match(regExgTobe) || input.value.match(regExgMedium) || input.value.match(regExgStrong)))no=1;
+      // if(input.value.length >= 3 && (input.value.match(regExgWeak) || input.value.match(regExgTobe) || input.value.match(regExgMedium) || input.value.match(regExgStrong)))no=2;
+      if(input.value.length >= 6 && ((input.value.match(regExgWeak) && input.value.match(regExgTobe)) || (input.value.match(regExgWeak) && input.value.match(regExgStrong)) || (input.value.match(regExgTobe) && input.value.match(regExgStrong)) || (input.value.match(regExgWeak) && input.value.match(regExgMedium)) || (input.value.match(regExgMedium) && input.value.match(regExgStrong))|| (input.value.match(regExgTobe) && input.value.match(regExgMedium))))no=2;
+      if(input.value.length >= 6 && ((input.value.match(regExgWeak) && input.value.match(regExgTobe) && input.value.match(regExgMedium)) || (input.value.match(regExgWeak) && input.value.match(regExgStrong) && input.value.match(regExgMedium)) || (input.value.match(regExgStrong) && input.value.match(regExgWeak) && input.value.match(regExgTobe)) || (input.value.match(regExgMedium) && input.value.match(regExgStrong) && input.value.match(regExgTobe))))no=3;
+      if(input.value.length >= 6 && (input.value.match(regExgWeak) && input.value.match(regExgTobe) && input.value.match(regExgMedium) && input.value.match(regExgStrong)))no=4;
+      if(no == 1){
+        console.log(1)
+        weak.classList.add('active');
+        text.style.display = "block";
+        text.textContent = "Too weak";
+        text.classList.add('weak');
+      }
+      if(no == 2){
+        console.log(2)
+        weak.classList.add('active');
+        tobe.classList.add('active');
+        text.textContent = "Could be Stronger";
+        text.classList.add('tobe');
+      }
+      else{
+        tobe.classList.remove('active');
+        text.classList.remove('tobe');
+      }
+      if(no == 3){
+        console.log(3)
+        tobe.classList.add('active');
+        medium.classList.add('active');
+        text.textContent = "Medium password";
+        text.classList.add('medium');
+      }
+      else{
+        medium.classList.remove('active');
+        text.classList.remove('medium');
+      }
+      if(no == 4){
+        console.log(4)
+        medium.classList.add('active');
+        strong.classList.add('active');
+        text.textContent = "Strong password";
+        text.classList.add('strong');
+      }
+      else{
+        strong.classList.remove('active');
+        text.classList.remove('strong');
+      }
+      showBtn.style.display ='block';
+      showBtn.onclick = function(){
+        if(input.type=='password'){
+          input.type="text";
+        }
+        else{
+          input.type="password"
+        }
+      }
+    }else{
+      indicator.style.display ="none";
+      text.style.display = "none"
+    }
+  }
 </script>
