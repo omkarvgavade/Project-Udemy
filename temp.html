@@ -1,3 +1,5 @@
+
+  
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,17 +26,36 @@
         outline: none;
       }
       .navText {
+        font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
         font-weight: 400;
         color: rgb(60, 59, 55);
-        font-size: 12px;
+        font-size: 14px;
+      }
+      .navText1 {
+        font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+        font-weight: 400;
+        color: rgb(60, 59, 55);
+        font-size: 14px;
+        margin-right: 0px;
+        padding: 0px;
+        width: 122px;
+      }
+      .navText2 {
+        font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+        font-weight: 400;
+        color: rgb(60, 59, 55);
+        font-size: 14px;
+        padding: 0px;
+        width: 105px;
       }
       header {
         width: 100%;
-        height: 12vh;
-        -webkit-box-shadow: 0 8px 6px -6px gray;
-        -moz-box-shadow: 0 8px 6px -6px gray;
-        box-shadow: 0 8px 6px -6px gray;
+        height: 70px;
+        -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
+        -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
+        box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
         overflow: hidden;
+        margin-bottom: 0px;
       }
       .dropbtn {
         background-color: #3498db;
@@ -84,14 +105,15 @@
       .firstSection ul,.secondSection ul {
         list-style: none;
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
       }
       .firstSection > ul li {
-        margin: 0 0.8vw;
+        margin: 0 12px;
       }
       .secondSection > ul > li {
-        margin: 0 0.3vw;
+        margin: 0;
+        margin-left: 0.3vw;
       }
       .navbar a {
         text-decoration: none;
@@ -101,7 +123,9 @@
         flex-basis: 4vw;
         justify-content: space-between;
         align-items: center;
-        padding: 1vw;
+        padding-top: .8vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
         margin: auto;
       }
       .navbar > div:nth-child(1) {
@@ -128,14 +152,16 @@
       .searchContainer {
         display: flex;
         /* flex: 1 1 50%; */
-        width: 30vw;
+        width: 44.2vw;
         position: relative;
         border: 0.1vw solid #ccc;
         border-radius: 3vw;
         overflow: hidden;
+        background-color: #FBFBF8;
       }
       .searchContainer > input {
         cursor: text;
+        background-color: #FBFBF8;
       }
       .searchIcon {
         color: gray;
@@ -169,7 +195,7 @@
         height: 1.3rem;
       }
       .btn-medium {
-        height: 2.7rem;
+        height: 2.4rem;
         width: 100px;
         border: 1px solid rgb(40, 150, 169);
         color: rgb(15, 124, 144);
@@ -190,6 +216,7 @@
       .langIconbtn {
         width: 2.7rem;
         outline: none;
+        margin-right: 0px;
       }
 
       .langIconbtn > img {
@@ -318,7 +345,7 @@
         .container {
           width: 100vw;
           height: 25rem;
-          margin: 0;
+          margin-top: -4px;
         }
         .bgimage {
           background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
@@ -331,7 +358,8 @@
         .container {
           width: 100vw;
           height: 25rem;
-          margin: 0;
+          margin-top: -4px;
+          
         }
         .bgimage {
           background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
@@ -759,7 +787,7 @@
         height: 4rem;
       }
       .logo {
-        margin-right: 20px;
+        margin-right: 10px;
       }
       .mercedesLogo {
         width: 135px;
@@ -889,14 +917,14 @@
                   class="searchBox"
                   type="search"
                   name="search"
-                  placeholder="Search..."
+                  placeholder="Search for anything"
                 />
               </div>
             </li>
-            <li>
+            <li class="navText1">
               <a class="navText" href="#">Udemy for Business</a>
             </li>
-            <li>
+            <li class="navText2">
               <a class="navText" href="#">Teach On Udemy</a>
             </li>
           </ul>
@@ -1329,7 +1357,7 @@ toggle between hiding and showing the dropdown content */
   };
   var educationContent = [
     {
-      img_source: "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg?Expires=1623162637&Signature=Jenp~PmBW4B~72k~NNUHyQvJRH2ZUCmi7Qjo5geTOIB-xT6Ihqhc9MVWsL-CrlAmEUAufFV6KXydPI1qzOTFyDBqoBv1~AGHl0bTnfBH0~gO1l0rlbCHYkZJ6CENeaf7EiYNQU2FPBe~ZxBp2ZtdAhpOwuctPVMmmzugx8BPYY-guSLMTEeHtFuTLGqfFssqEGvuLEdH4pvPT-Mgyw~dfFHd188P1BHy~ltn2NRjPMSTyT0nx8JHTmn2wBipTrbb925zzluikQMFJwJ575D-EMWnmDLiicncC13soVC-eeRfhzvxgX33ZQg8Dk2RhRkxC3yoJLWsY5T6rkLm9~tr8A__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      img_source: "https://source.unsplash.com/1600x900/?nature,water",
       course_name: "javascript",
       Author: "Omkar",
       rating: 4,
@@ -1457,3 +1485,4 @@ toggle between hiding and showing the dropdown content */
     }
   }
 </script>
+
