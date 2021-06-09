@@ -25,10 +25,6 @@
         overflow: hidden;
         margin-bottom: 40px;
       }
-      .udemyLogo {
-        width: 8vw;
-        height: 2.8vw;
-      }
       .navbar a {
         text-decoration: none;
       }
@@ -107,7 +103,7 @@
         text-decoration: none;
         display: block;
       }
-      .logo {
+      .logoMain {
         margin-right: 10px;
       }
       .firstSection ul,.secondSection ul {
@@ -212,6 +208,7 @@
         border: 0;
         padding: 0.5rem 0.5rem 0.5rem 0;
         flex: 1;
+        font-size: 15px;
       }
       .searchBox:focus {
         outline: none;
@@ -356,7 +353,7 @@
         width: 100%;
         /* position: relative; */
         border-radius: 3px;
-        padding: 20px 0 30px 0;
+        padding: 20px 0 0px 0;
         /* border: 1px solid; */
       }
       form {
@@ -536,7 +533,7 @@
         display:flex;
         width:100;
         height:80px;
-        margin-top: 30px;
+        margin-top: 40px;
         border:1px solid #dcdacb;
         column-gap: 60px;
       }
@@ -568,6 +565,62 @@
       .box2 div{
         margin-top: 25px;
       }
+
+
+
+      *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #links {
+       line-height: 1.6rem;
+    display: grid;
+    padding: 30px 50px;
+    grid-template-columns: 20% 20% 20% 40%;
+      }
+      #links ul {
+        flex-grow: 2;
+        list-style: none;
+      }
+      #links a {
+        text-decoration: none;
+        color: rgb(46, 45, 45);
+        font-size: 15px;
+      }
+      .languageRight {
+          text-align:end;  
+      }
+      .languageRight a{
+        padding:12px 20px;
+        border:1px solid rgb(123,122,117);
+        border-radius: 5px;
+      }
+      .languageRight a>img{
+          width:15px;
+          margin-right: 3px;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        column-gap: 1200px;
+        align-items: center;
+        margin-bottom:40px;
+      }
+      .logo {
+        margin-top:25px;
+      }
+      .udemyLogo {
+        width: 7vw;
+        height: 2.8vw;
+      }
+      .cursorPointer:hover {
+        cursor: pointer;
+        outline: none;
+      }
+      .fooBox{
+        font-size:12px;
+        color: gray;
+      }
     </style>
   <body>
     <header>
@@ -580,7 +633,7 @@
             <a href="#contact">Contact</a>
           </div>
         </div>
-        <div class="logo">
+        <div class="logoMain">
           <img
             class="udemyLogo cursorPointer"
             src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
@@ -754,6 +807,47 @@
         </div>
       </div>
     </div>
+    <footer>
+      <div>
+          <div id="links">
+              <ul>
+                <li><a href="">Udemy for Business</a></li>
+                <li><a href="">Teach on Udemy</a></li>
+                <li><a href="">Get the app</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+              </ul>
+              <ul>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Help and support</a></li>
+                <li><a href="">Affiliate</a></li>
+              </ul>
+              <ul>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+                <li><a href="">Featured courses</a></li>
+              </ul>
+              <ul class="languageRight"> 
+               <li> <a href=""><img
+                        src="https://image.flaticon.com/icons/png/128/591/591788.png"
+                        alt="language logo" class="language"
+                      /> English</a></li>
+            
+            </div>
+      </div>
+      
+          <div class="logo">
+            <img
+              class="udemyLogo cursorPointer"
+              src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+              alt="Udemy logo"
+            />
+            <div class="fooBox">&copy;2021 Udemy Inc.</div>
+          </div>
+          
+        </footer>
   </body>
 </html>
 <script>
