@@ -27,8 +27,11 @@
         font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
         font-weight: 400;
         color: rgb(60, 59, 55);
+        font-size: 12px;
         font-size: 14px;
-      }
+      
+               }
+      
       .navText1 {
         font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
         font-weight: 400;
@@ -37,7 +40,10 @@
         margin-right: 0px;
         padding: 0px;
         width: 122px;
-      }
+        margin: 0rem;
+    width: 8rem;
+         }
+      
       .navText2 {
         font-family: sf pro text,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
         font-weight: 400;
@@ -45,12 +51,19 @@
         font-size: 14px;
         padding: 0px;
         width: 105px;
+        margin: 0rem;
+    width: 8rem;
+
       }
       header {
         width: 100%;
+        height: 12vh;
+        -webkit-box-shadow: 0 8px 6px -6px gray;
+        -moz-box-shadow: 0 8px 6px -6px gray;
+        box-shadow: 0 8px 6px -6px gray;
         height: 70px;
-        -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
-        -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
+        -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
+        -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
         box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
         overflow: hidden;
         margin-bottom: 0px;
@@ -63,17 +76,14 @@
         border: none;
         cursor: pointer;
       }
-
       .dropbtn:hover,
       .dropbtn:focus {
         background-color: #2980b9;
       }
-
       .dropdown {
         position: relative;
         display: inline-block;
       }
-
       .dropdown-content {
         display: none;
         position: absolute;
@@ -83,33 +93,32 @@
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         z-index: 1;
       }
-
       .dropdown-content a {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
       }
-
       .dropdown a:hover {
         background-color: #ddd;
       }
-
       .show {
         display: block;
       }
-
       /* check above code till header w3 */
       .firstSection ul,.secondSection ul {
         list-style: none;
         display: flex;
+        justify-content: center;
         /* justify-content: center; */
         align-items: center;
       }
       .firstSection > ul li {
+        margin: 0 0.8vw;
         margin: 0 12px;
       }
       .secondSection > ul > li {
+        margin: 0 0.3vw;
         margin: 0;
         margin-left: 0.3vw;
       }
@@ -121,6 +130,7 @@
         flex-basis: 4vw;
         justify-content: space-between;
         align-items: center;
+        padding: 1vw;
         padding-top: .8vw;
         padding-left: 1vw;
         padding-right: 1vw;
@@ -137,6 +147,7 @@
       }
       .navbar > div:nth-child(4) {
         flex-grow: 4;
+        margin-left: -1rem;
       }
       .logo {
         display: flex;
@@ -150,7 +161,8 @@
       .searchContainer {
         display: flex;
         /* flex: 1 1 50%; */
-        width: 44.2vw;
+        width: 30vw;
+        width: 41.2vw;
         position: relative;
         border: 0.1vw solid #ccc;
         border-radius: 3vw;
@@ -166,7 +178,6 @@
         padding: 0.5rem;
         width: 2vw;
       }
-
       .searchBox {
         border: 0;
         padding: 0.5rem 0.5rem 0.5rem 0;
@@ -186,13 +197,13 @@
       .cartBtn {
         margin-right: 1vw;
       }
-
       .cartIcon {
         color: #73726c;
         width: 1.2rem;
         height: 1.3rem;
       }
       .btn-medium {
+        height: 2.7rem;
         height: 2.4rem;
         width: 100px;
         border: 1px solid rgb(40, 150, 169);
@@ -256,7 +267,6 @@
         .secondSection {
           display: none;
         }
-
         .navbar > div:nth-child(1) {
           display: flex;
           flex-grow: 1;
@@ -289,7 +299,6 @@
       input:focus {
         outline: none;
       }
-
       .searchContent {
         display: flex;
         flex-direction: column;
@@ -325,7 +334,6 @@
         align-items: flex-end;
         margin-right: 0;
       }
-
       .searchBox2 > input {
         width: 18.5rem;
         color: rgb(115, 114, 108);
@@ -338,11 +346,11 @@
       .searchBox2 > button:hover {
         cursor: pointer;
       }
-
       @media (min-width: 1366px) {
         .container {
           width: 100vw;
           height: 25rem;
+          margin: 0;
           margin-top: -4px;
         }
         .bgimage {
@@ -356,8 +364,9 @@
         .container {
           width: 100vw;
           height: 25rem;
+          margin: 0;
           margin-top: -4px;
-          
+
         }
         .bgimage {
           background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
@@ -444,18 +453,16 @@
         font-family: "Times New Roman", Times, serif;
       }
       .coursesSlider {
-     height: 34rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 82vw;
-    font-family: sf pro display,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
-}
-
-
+        height: 34rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 82vw;
+        font-family: sf pro display,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+      }
       
       #linkList {
-      display: inline-flex;
-    margin-left: -1.4rem;
+        display: inline-flex;
+        margin-left: -1.4rem;
       }
       #linkList > li {
         list-style: none;
@@ -491,11 +498,12 @@
         margin-top: 2.1rem;
       }
        .slideCourses {
-          border: 1px solid rgb(220, 218, 203);
+     border: 1px solid rgb(220, 218, 203);
     border-radius: 1rem;
     padding: 2rem;
     width: 82vw;
     margin-top: 1rem;
+    height: 550px;
       }
       .upperContentSlider {
         width: 100%;
@@ -507,60 +515,133 @@
         width: 10rem;
       }
       .upperContentSlider button {
-   height: 2.5rem;
-    width: 8rem;
-    color: rgb(15, 124, 144);
-    font-weight: bold;
-    border: 1px solid rgb(40, 150, 169);
-    background-color: transparent;
-    letter-spacing: -0.04rem;
-    outline: none;
-    margin-top: 1rem;
+        height: 2.5rem;
+        width: 8rem;
+        color: rgb(15, 124, 144);
+        font-weight: bold;
+        border: 1px solid rgb(40, 150, 169);
+        background-color: transparent;
+        letter-spacing: -0.04rem;
+        outline: none;
+        margin-top: 1rem;
       }
-
       .upperContentSlider > div:nth-child(2) {
         text-align: end;
         margin-right: 2rem;
       }
-      #main {
-    max-height: 300px;
-    overflow: hidden;
+      #main,.main-slider-students-view,.main-slider-recommended {
+           max-height: 300px;
+    overflow: visible;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: auto;
     padding: 0px 0px;
-    width: 82vw;
-    margin-left: -4rem;
+    width: 86vw;
+    margin-left: -3.8rem;
+    margin-top: 3rem;
       }
+      .main-slider-students-view,.main-slider-recommended{
+        width:90vw;
+      }
+      .main-slider-2-hp{
+       width: 100vw;
+    height: auto;
+    /* text-align: center; */
+    padding: 0rem 9rem;
+    margin-bottom: 6rem;
 
-      #main > div {
-        position: relative;
-        width: 17%;
-        height: 40vh;
       }
-      #main div img {
+      .main-slider-2-hp >span{
+        font-size: 24px;
+    font-weight: bold;
+      }
+       .main-slider-2-hp >.main-slider-students-view,.main-slider-2-hp >.main-slider-recommended{
+         margin-top: 1rem;
+       }
+       .slide-price{
+         display: inline-flex;
+         
+      }
+      .slide-price h3{
+        font-size: 16px;
+      }
+      .slide-price>span{
+         font-size: 16px;
+            margin-left: 0.5rem;
+    color: rgb(115,114,108);
+    text-decoration: line-through;
+      }
+      #main > div ,.main-slider-students-view>div,.main-slider-recommended>div{
+        position: relative;
+    width: 17%;
+    height: 214px;
+      }
+      #main div img,.main-slider-students-view div img,.main-slider-recommended div img {
         max-width: 100%;
-        border: 1px solid black;
-        border-radius: 0.75vw;
+    /* border: 1px solid black; */
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-radius: 4px;
+    border-right: 1px solid rgb(220,218,203);
+    border-bottom: 1px solid rgb(220,218,203);
       }
-     #main button {
+     #main button,.main-slider-students-view button,.main-slider-recommended button {
         position: relative;
-        text-decoration: none;
-        display: inline-block;
-        padding: 1.5vw;
-        z-index: 2;
+    /* text-decoration: none; */
+    /* display: inline-block; */
+    /* padding: 1.5vw; */
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    box-shadow: 1px 1px 1px -1px;
+    bottom: 46px;
+    outline: none;
       }
+     
+     #main .star>span,#main .description>p,.main-slider-students-view .star>span,.main-slider-students-view .description>p,.main-slider-recommended .star>span,.main-slider-recommended .description>p{
+            font-size: 11px;
+    color: rgb(115,114,108);
+    display:inline;
+ 
+      }
+      .star>span:nth-child(1){
+    margin-left: -35%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #BE5A0E;
+    width: auto;
 
-      #main button:hover {
-        background-color: teal;
-        color: yellow;
+      }
+      .description{
+            display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.2rem;
+      }
+      .description >h3{
+        display: -webkit-box!important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    font-size: 1rem;
+      }
+      .description>p{
+overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 98%;
+    font-size: 13px;
+
       }
       .next,
       .previous {
-        top: -10vh;
-        background-color: hotpink;
-        color: black;
+           background-color: white;
+    color: rgb(15,124,144);
+    border: none;
+    font-size: 2rem;
       }
       .previous {
         left: 3vw;
@@ -571,7 +652,7 @@
       .round {
         border-radius: 50%;
       }
-      .fade {
+      .fade,.fade-2 {
         animation-name: fade;
         animation-duration: 1.5s;
       }
@@ -584,14 +665,13 @@
         }
       }
       :root {
-        --star-size: 100%;
+        --star-size: 90%;
         --star-color: #fff;
-        --star-background: gold;
+        --star-background: rgb(235,138,47);
+        --star-border:1px solid rgb(235,138,47);
       }
-
       .Stars {
         --percent: calc(var(--rating) / 5 * 100%);
-
         display: inline-block;
         font-size: var(--star-size);
         font-weight: 600;
@@ -599,7 +679,7 @@
       }
       .Stars:before {
         content: "★★★★★";
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         background: linear-gradient(
           90deg,
           var(--star-background) var(--percent),
@@ -607,14 +687,12 @@
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        margin-left: 0.3rem;
       }
-
-      #star {
-        background: #e9e9e9;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 3vh;
+      .star {
+       display: flex;
+    justify-content: center;
+    align-items: center;
       }
        #main-content,
       #main-content-2,
@@ -676,7 +754,6 @@
         margin-top: -4rem;
         height: 27rem;
       }
-
       #linktocourses {
          width: 81vw;
     max-width: 100vw;
@@ -724,7 +801,6 @@
     padding: 0;
     margin-top: 4rem;
       }
-
       .headings {
         width: 75vw;
         margin: auto;
@@ -785,6 +861,7 @@
         height: 4rem;
       }
       .logo {
+        margin-right: 20px;
         margin-right: 10px;
       }
       .mercedesLogo {
@@ -838,7 +915,6 @@
       }
       .languageRight {
           text-align:end;
-
       }
       .languageRight a{
         padding:12px 40px;
@@ -915,19 +991,21 @@
                   class="searchBox"
                   type="search"
                   name="search"
+                  placeholder="Search..."
                   placeholder="Search for anything"
                 />
               </div>
             </li>
+            <li style="margin: 2px;">
             <li class="navText1">
               <a class="navText" href="#">Udemy for Business</a>
             </li>
+            <li>
             <li class="navText2">
               <a class="navText" href="#">Teach On Udemy</a>
             </li>
           </ul>
         </div>
-
         <div class="secondSection">
           <ul>
             <li>
@@ -959,7 +1037,6 @@
             </li>
           </ul>
         </div>
-
         <div class="smallWindow">
           <button class="searchButton cursorPointer">
             <i class="fa fa-search searchIcon"></i>
@@ -1009,9 +1086,9 @@
         <div class="coursesSlider">
           <div>
             <ul id="linkList">
-              <li><button>Python</button></li>
+              <li><button onclick="showPython()">Python</button></li>
               <li><button>Excel</button></li>
-              <li><button>Web Development</button></li>
+              <li><button onclick="showWebdevelopment()">Web Development</button></li>
               <li><button>JavaScript</button></li>
               <li><button>Data Science</button></li>
               <li><button>AWS Certification</button></li>
@@ -1019,7 +1096,7 @@
             </ul>
           </div>
           <div class="slideCourses">
-            <div class="pythonSlider">
+            <div class="pythonSlider" >
               <div class="upperContentSlider">
                 <div>
                   <h1>Expand your career opportunities with Python</h1>
@@ -1039,8 +1116,7 @@
                   />
                 </div>
               </div>
-
-             <div id="main">
+             <div id="main" >
             <button onclick="plusSlides(-1)" href="#" class="previous round"
               >&#8249;</button
             >
@@ -1055,7 +1131,37 @@
             </div>
           </div>
         </div>
-      
+        <div>
+          <div class="main-slider-2-hp">
+            <span>Students are viewing</span>
+            <div class="main-slider-students-view">
+               <button onclick="plusSlideStud(-1)" href="#" class="previous round"
+              >&#8249;</button
+            >
+            <div class="slides-2 fade-2"></div>
+            <div class="slides-2 fade-2"></div>
+            <div class="slides-2 fade-2"></div>
+            <div class="slides-2 fade-2"></div>
+            <div class="slides-2 fade-2"></div>
+            <button onclick="plusSlideStud(1)" href="#" class="next round">&#8250;</button>
+          </div>
+            </div>
+              <div class="main-slider-2-hp">
+            <span>Because you searched for Python</span>
+            <div class="main-slider-recommended">
+               <button onclick="plusSlideRecomm(-1)" href="#" class="previous round"
+              >&#8249;</button
+            >
+            <div class="slides-3 fade-3"></div>
+            <div class="slides-3 fade-3"></div>
+            <div class="slides-3 fade-3"></div>
+            <div class="slides-3 fade-3"></div>
+            <div class="slides-3 fade-3"></div>
+            <button onclick="plusSlideRecomm(1)" href="#" class="next round">&#8250;</button>
+          </div>
+            </div>
+          </div>
+        </div>
       </div>
        <div id="main-content">
       <h3>Top Categories</h3>
@@ -1118,7 +1224,6 @@
         </div>
       </div>
     </div>
-
     <div id="main-content-2">
       <h1>Featured topics by category</h1>
       <div id="linktocourses">
@@ -1140,7 +1245,6 @@
             <button>Explore More</button>
           </div>
         </div>
-
         <div class="subparts">
           <h3>Business</h3>
           <div>
@@ -1156,7 +1260,6 @@
             <p>1,351,586 students</p>
           </div>
         </div>
-
         <div class="subparts">
           <h3>IT and software</h3>
           <div>
@@ -1172,7 +1275,6 @@
             <p>3,082,734 students</p>
           </div>
         </div>
-
         <div class="subparts">
           <h3>Design</h3>
           <div>
@@ -1190,7 +1292,6 @@
         </div>
       </div>
     </div>
-
     <div class="midSection">
       <div class="headings">
         <div class="image">
@@ -1212,7 +1313,6 @@
         </div>
       </div>
     </div>
-
     <div id="companies">
       <h1>Trusted by companies of all sizes</h1>
       <div id="logos">
@@ -1266,7 +1366,6 @@
         <div></div>
       </div>
     </div>
-
     <div id="youtube">
       <div class="video">
         <iframe
@@ -1291,7 +1390,6 @@
         </p>
       </div>
     </div>
-
     <div id="links">
       <ul>
         <li><a href="">Udemy for Business</a></li>
@@ -1339,7 +1437,6 @@ toggle between hiding and showing the dropdown content */
   function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
-
   // Close the dropdown if the user clicks outside of it
   window.onclick = function (event) {
     if (!event.target.matches(".dropbtn")) {
@@ -1355,104 +1452,123 @@ toggle between hiding and showing the dropdown content */
   };
   var educationContent = [
     {
-      img_source: "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg?Expires=1623162637&Signature=Jenp~PmBW4B~72k~NNUHyQvJRH2ZUCmi7Qjo5geTOIB-xT6Ihqhc9MVWsL-CrlAmEUAufFV6KXydPI1qzOTFyDBqoBv1~AGHl0bTnfBH0~gO1l0rlbCHYkZJ6CENeaf7EiYNQU2FPBe~ZxBp2ZtdAhpOwuctPVMmmzugx8BPYY-guSLMTEeHtFuTLGqfFssqEGvuLEdH4pvPT-Mgyw~dfFHd188P1BHy~ltn2NRjPMSTyT0nx8JHTmn2wBipTrbb925zzluikQMFJwJ575D-EMWnmDLiicncC13soVC-eeRfhzvxgX33ZQg8Dk2RhRkxC3yoJLWsY5T6rkLm9~tr8A__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
-      course_name: "javascript",
-      Author: "Omkar",
-      rating: 4,
-      price: 5000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg?Expires=1623204287&Signature=MisbPLc6WMpTtx5pGkcVzlglm9yyaSNhqhlVRvYvAmCK7GbxdiHPa5uQZNVVw8NW9zEe76pAJCAkPnAPGYauW57bOG4G9kNqvyPcYuFQYNiO-bKd5mO1BPz5yLs9Z4j9hF1~N-jXMzzt2Ml5bSXG~naNiw57wkvjusMXfbhJlh5iEyHvp7ZxCkLJTGh~dHeLTF7qQeFq6Uk5U0jjiEoAc2jtBmVP6HrahTNwW81q2DdHlIAWwKjYaIXB~hUZWXcFIlGZ4B2Qih17BE20VSAXrhHyu2lTls4uvXH1AbTJPqKWRfTBd58wKUdQMF9Mi~OCTkhxC3hmNkpU2rKpTnZRag__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "2021 Complete Python Bootcamp From Zero to Hero in Python",
+      Author: "Jos Portilla",
+      rating: 4.6,
+      people:144000,
+      price: 455,
+      mainPrice:4480
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?technology,code",
-      course_name: "Html",
-      Author: "Mayur",
+      img_source: "https://img-b.udemycdn.com/course/240x135/950390_270f_3.jpg?secure=-BvfNab4X_3v9C_B3CNtow%3D%3D%2C1623204286",
+      course_name: "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+      Author: "Kiril Eremenko,Hadelen De Ponteves kjkdf kjndkfjskdnfkj",
       rating: 4.5,
-      price: 10000,
+      price: 445,
+      people:146559,
+       mainPrice:4480
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?painting,photography",
-      course_name: "css",
-      Author: "Sudhir",
-      rating: 4,
-      price: 4000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg?Expires=1623204291&Signature=Hv8tA769HhSOPvmIiaXfdGbGCiKqrhwaB9TOGOvOs5G8pRB9BRXj3H3WRZC8CN-b-8ug~rE7Yl5QqZgsw4OYvtt6nij6S8hTDWJV8R010KU7QxsL76fYA3Ds4HifUcaDbi~189288sClkurzZiuA~jc3XQwEX2bvHVbLVwzp0ozjAT~mKZ5F2B0xREPxbQJ5fHRzsx61h8OEb88aXB16kWjbf62s8UmDa-oRHQZgtX6vt288jFyD5qnvPNx7XKKu3E5oPJlIb-0~UX6Q8yhdmbtlNtwuMtGCokx7tTpXIowCjRwC5HLRbrfABsjpMfWLg2vAA7C17nYDGJYoIW14Gw__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Data Science and Free Machine Learning Bootcamp",
+      Author: "Jose Portilla",
+      rating: 4.6,
+      price: 455,
+      people:100777,
+       mainPrice:4480
+
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?camera,water",
-      course_name: "Advanced javascript",
-      Author: "Swanand",
+      img_source: "https://img-c.udemycdn.com/course/240x135/629302_8a2d_2.jpg?Expires=1623247476&Signature=Oka46u0QNEXCjKQQ0q1Ei6YNxzu529XVILGu3nbjsqLGZ3YQv7yUQZSd4yDWCb96X3CS0VU0eF8-~WNhdE3zCnkYEyGCg7AEJFu3QhcqzDo0~Iei0kTKgy2v8DyZNe2-~D5cwPuUkmdWM~RFcsQawrck078i7tl9uVVCSEW0miQazPqOxXttd2rkFjPtT5vebDIQLMuGfvy-ji75G7aKQvwsUA30yBDoe1jlIKjwcpcaSkFD1fMZO1A0-AhnNxD~9z-Goa6Nwya7~C2YlPlyadIVG40DWGGC0XhbLeawapQQJpMyl-o12UEnCTKlazMcDSdIlHYpRl6h0uLFprK~vA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Learn Python Programming Masterclass",
+      Author: "Tim Buchalka,Jean-Paul Roberts,Tim Buchalka Learn Programming Academy",
+      rating: 4.5,
+      price: 455,
+      people:76088,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/692188_9da7_21.jpg?Expires=1623250678&Signature=GgisOkvuiIUXmXv3ylF6F4IpY7VUpIJmnCwVYS0lpoD5Mki-zVY5o6YTEzPnFYNVm6o1CYpUOd3OuhX0931BmGn9Xw4B7chsMSA-S63h3wazZvYrqzgwQt-hs4lBVzDQhmHnbnRlXtYRJ1DirmgQX2K9ukLhFNEMHgPNYE01mTzdMH0SS1xsNWU3zzZAGn2-hJRrIz~vy9XPRx-5qZjJ43oQV54kk7F09YKYycplBrhgSTIJLsWCrSGgHiqJXpi67kRCt15J~p6oZvUX~pondCAvJALs4XRq~mTjkFe~MSJx8QBNniUK15PNtO2jCuZyYELECzNBS9tthv8tERFA5A__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "The Python Mega Course: Build 10 Real World Applications",
+      Author: "Ardit Sulce",
+      rating: 4.6,
+      price: 455,
+      people:48960,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/396876_cc92_7.jpg?Expires=1623250678&Signature=INKyryMyXA42AR0TmQT46ZMa55Roo~CX9ryzICBQ3Av9mmohsYrV3eqh3sI4YbpDiok4pnI6yMrVtX04ARcGU43r8A83EcgVnBP0ZZ-nSO64W4czYAJyLlNNW2k-EDjQ3IHaVDXJM2KaM5lG6rDBMnH8ASph5vtEcglxooMF8tkNzbdSuS1nk4gqjb99ZfsMAsZswyu8J-mV3m171w-CBf0lhb-jhJERqpKNWWwoaz4yTG~3eFVsAuxqL1qlKmque2f5VGlYXlZxP9a9rWX7iX09n0L9TpbTMd0esY08xd4yWRL4Dj4J3GWxcwNK0fTJ5Q4enAy9gfdxvTrQ2zihBA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Learning Python for Data Analysis and Visualization",
+      Author: "Jose Portilla",
+      rating: 4.4,
+      price: 455,
+      people:16300,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-b.udemycdn.com/course/240x135/2776760_f176_5.jpg?secure=JdcWiK_8ql_e-xH4yJzSrQ%3D%3D%2C1623250678",
+      course_name: "100 Days of Code - The Complete Python Pro Bootcamp for 2021",
+      Author: "Dr. Angela Yu",
       rating: 4.7,
-      price: 15000,
+      price: 455,
+      people:32611,
+      mainPrice:4480
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?technology,sky",
-      course_name: "Database",
-      Author: "Nrupul",
-      rating: 4.8,
-      price: 50000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg?Expires=1623252068&Signature=kWkAC2QEO1V0m2vyRFx~ssR774y3FGOpJWNmr0EyvkeWd6UTbOcdnpmYQA6~WK1wJDpULcr1aH2TAEdUNMdEof03MspT6N~VzMIBv~fp7VlnvYn~SZ3zS3z0qKQsuQwNjsNLGimehilHmeSyEEN1KXwZulxeSK8DIzRqaUfIxS9x5asGkpjyPCIXCa6tBcVPVARf-a54bB7ABo7~KTJY9Np-nFYUuFsDexPz34GYfzsqLV0Qn40T5gjlJEtqh5kLERSWef0~H29GmWXtQTN7sQhSk5wbpdOw1S46gKlpW4GGFHJ14MCBKDE0vaY0RMPqUdg4YGoy2JjJNrpp1L7ogg__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Automate the Boring Stuff with Python Programming",
+      Author: "Al Sweigart",
+      rating: 4.6,
+      price: 455,
+      people:87866,
+      mainPrice:4480
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?helicopter,fighter",
-      course_name: "Ds and Algo",
-      Author: "Aman",
-      rating: 5,
-      price: 50000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/822444_a6db.jpg?Expires=1623252068&Signature=hCt6ZPpcC0HV17a23HAo-a7RxDJOVpk1e468fHgoof7I3QbI5rlNAf92MY5w5BLomePAFVQCEwlcV2m5YEyqheC51DNJ6fr27kJfs9vh-01Nahv~XkXRc3kzRQQp86DuyYsPekAPGxlHvsJHYdkW36-Cv6oyDEsHRe7RZVTQm9Ws5y7EBd8JLUmj4S5QSDYrYO~abAQJhZ5QI8lVrXpbQH-YAli5v50Rxq1jhIFg2Oacjf~7irqa6XQNWolA7K3mtyXdRxOE96K68ApEc7heIIXfntMrfScHStruB321jvC~-NPCJaTSz1CFyx7VMVuqfoNRVK4VEtX66h~lzl2nRA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python and Django Full Stack Web Developer Bootcamp",
+      Author: "Jose Portilla",
+      rating: 4.6,
+      price: 455,
+      people:38905,
+      mainPrice:4480
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?army,navy",
-      course_name: "Communication",
-      Author: "Yogesh",
-      rating: 3,
-      price: 1000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/1212032_b7e8.jpg?Expires=1623252068&Signature=P~6JabDqANIkd0blDygZR4o0wH254AUhvU4udEytGFLUjT28VxrlsfGWxEp5rUZyDJTFrx2zi2iAozMyGR91UVpziglMbi6Xu2JUitJOJReARb7UCWJD4Lji3JdBkS9vC40SubX0rWH1mW6a-cMLadhDt~7idW8dqVS7fbBwXgFvJ9ZdZbW4mHCMTmQU8nT5~wzB2Q9Bz-ay21QNnMiRwjajkwaO7zQZ38Y1pJvXPFhgtJ754IumO9huBkaM8jPsMyIKJB3qP~H7c51JNaW9y6h0DKr3q3mzPJfj82-zYSYH3lahYU5L73vW2HbDieYm4YxFqwKWYQcvr~GqMd5TYQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Financial Analysis and Algorithmic Trading",
+      Author: "Jose Portilla",
+      rating: 4.5,
+      price: 455,
+      people:15555,
+      mainPrice:4480
+
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?clothes,shirt",
-      course_name: "Node",
-      Author: "MS Dhoni",
-      rating: 3.5,
-      price: 15000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/1035472_23ce_5.jpg?Expires=1623252068&Signature=izWNw73UjGmcNxuMiDjt5PGWSWb~e6Qjp6MltGA8loe6qSV~pMszkw04KDVFU8e~1UZAHwqKEODLxd7dKygyDrWBE5KqlP8g4ql0ayM7nuxc4jMT4TfSJHS89~fdRXEX6j6n95AFRVjJtandSr6zgFceOP0z6G~FZs33GKmoh0Uhs90YYNjzynT2c1DglohTRok5QsRvSUZOkKQn48VmpLt-t~SADT6WtC8DHTTqS6HhD~0Gzur4BoKcVhbsefgBfZBpY16-eCqkYg~JQar1xjVtKQuMb6ooHi4dNEYRC-SclUrS10-J43ut-30BzVdW7f6B3zM3mKK965swueIvGA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Finance: Investment Fundamentals & Data Analytics",
+      Author: "365 careers",
+      rating: 4.5,
+      price: 455,
+      people:21854,
+      mainPrice:4480
+
     },
     {
-      img_source: "https://source.unsplash.com/1600x900/?male,female",
-      course_name: "React js",
-      Author: "Albert",
-      rating: 4.4,
-      price: 20000,
+      img_source: "https://img-c.udemycdn.com/course/240x135/2473048_8255_5.jpg?Expires=1623252068&Signature=YCIf8tPLGeuSN0RpPJdogZgv1y5vYSmgiBXmJ7XBJozfsWS2gGnz7hywXt8PGbeeltC2eQ0q6Ei-8lRa2CS4j2cGKMUwCmx7RcKbwh9doslzRfudwDK8aQw3C-3K8E7QsyZBD5MWZ7IUtT9vBFazXw2S3wrxFwyG1CrzcVD1BAYkuZGnSI1JPIEyBknqiX8tpSKRy9GJe-6eFSXeQYyHWL32tQQ-~qrjKu-OXJSRF0--B-EwXWMF~025A~uYQ1skDXpnMMToebw-8hWAZCyJzjsIbkCuDumHJwiwWUbbqlRf-y9UlXfVxP7JUKY89b7U~WXJ0Y714KfIz8K624sjJQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Complete Python Developer in 2021: Zero to Mastery",
+      Author: "Andrei Neagoi",
+      rating: 4.7,
+      price: 455,
+      people:27911,
+      mainPrice:4480
     },
-    {
-      img_source: "https://source.unsplash.com/1600x900/?male,female",
-      course_name: "React js",
-      Author: "Albert",
-      rating: 4.4,
-      price: 20400,
-    },
-    {
-      img_source: "https://source.unsplash.com/1600x900/?male,female",
-      course_name: "React js",
-      Author: "Albert",
-      rating: 4.9,
-      price: 2099900,
-    },
-    {
-      img_source: "https://source.unsplash.com/1600x900/?male,female",
-      course_name: "React js",
-      Author: "Albert",
-      rating: 4.4,
-      price: 20400,
-    },
-    {
-      img_source: "https://source.unsplash.com/1600x900/?male,female",
-      course_name: "React js",
-      Author: "Albert",
-      rating: 4.9,
-      price: 2099900,
-    },
+  
   ];
   var slides = document.getElementsByClassName("slides");
   var numberOfdivs = slides.length;
   var a1 = document.getElementsByClassName("previous");
-
   var slideIndex = 0;
   showSlides(slideIndex);
-
   function plusSlides(n) {
     slideIndex += numberOfdivs * n - 1;
     if (slideIndex > 1) {
@@ -1462,24 +1578,314 @@ toggle between hiding and showing the dropdown content */
       showSlides(slideIndex);
     }
   }
-
   function showSlides(a) {
     // for (let i = 0; i < numberOfdivs; i++) {
     //   slides[i].innerHTML = "";
     // }
-
     if (a + numberOfdivs - 1 > educationContent.length) {
       slideIndex = 0;
       a = 0;
     }
-
     let divNumber = 0;
     for (let i = a; i < a + numberOfdivs; i++) {
       slides[divNumber].style.display = "block";
       slides[
         divNumber
-      ].innerHTML = `<img src=${educationContent[i].img_source}><div id="description"><h3>${educationContent[i].course_name}</h3><p>${educationContent[i].Author}</p><div id="star">${educationContent[i].rating}<p class="Stars" style="--rating: ${educationContent[i].rating};"></p></div><h3>${educationContent[i].price}</h3></div>`;
+      ].innerHTML = `<img src=${educationContent[i].img_source}><div class="description"><h3>${educationContent[i].course_name}</h3><p>${educationContent[i].Author}</p><div class="star"><span>${educationContent[i].rating}</span><p class="Stars" style="--rating: ${educationContent[i].rating};"></p><span>&#40;${educationContent[i].people}&#41;</span></div><div class="slide-price"><h3>&#x20B9 ${educationContent[i].price}</h3><span>&#x20B9 ${educationContent[i].mainPrice}</span></div></div>`;
       divNumber++;
+    }
+  }
+
+ var studentContent = [
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg?Expires=1623204287&Signature=MisbPLc6WMpTtx5pGkcVzlglm9yyaSNhqhlVRvYvAmCK7GbxdiHPa5uQZNVVw8NW9zEe76pAJCAkPnAPGYauW57bOG4G9kNqvyPcYuFQYNiO-bKd5mO1BPz5yLs9Z4j9hF1~N-jXMzzt2Ml5bSXG~naNiw57wkvjusMXfbhJlh5iEyHvp7ZxCkLJTGh~dHeLTF7qQeFq6Uk5U0jjiEoAc2jtBmVP6HrahTNwW81q2DdHlIAWwKjYaIXB~hUZWXcFIlGZ4B2Qih17BE20VSAXrhHyu2lTls4uvXH1AbTJPqKWRfTBd58wKUdQMF9Mi~OCTkhxC3hmNkpU2rKpTnZRag__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "2021 Complete Python Bootcamp From Zero to Hero in Python",
+      Author: "Jos Portilla",
+      rating: 4.6,
+      people:144000,
+      price: 455,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-b.udemycdn.com/course/240x135/950390_270f_3.jpg?secure=-BvfNab4X_3v9C_B3CNtow%3D%3D%2C1623204286",
+      course_name: "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+      Author: "Kiril Eremenko,Hadelen De Ponteves kjkdf kjndkfjskdnfkj",
+      rating: 4.5,
+      price: 445,
+      people:146559,
+       mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg?Expires=1623204291&Signature=Hv8tA769HhSOPvmIiaXfdGbGCiKqrhwaB9TOGOvOs5G8pRB9BRXj3H3WRZC8CN-b-8ug~rE7Yl5QqZgsw4OYvtt6nij6S8hTDWJV8R010KU7QxsL76fYA3Ds4HifUcaDbi~189288sClkurzZiuA~jc3XQwEX2bvHVbLVwzp0ozjAT~mKZ5F2B0xREPxbQJ5fHRzsx61h8OEb88aXB16kWjbf62s8UmDa-oRHQZgtX6vt288jFyD5qnvPNx7XKKu3E5oPJlIb-0~UX6Q8yhdmbtlNtwuMtGCokx7tTpXIowCjRwC5HLRbrfABsjpMfWLg2vAA7C17nYDGJYoIW14Gw__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Data Science and Free Machine Learning Bootcamp",
+      Author: "Jose Portilla",
+      rating: 4.6,
+      price: 455,
+      people:100777,
+       mainPrice:4480
+
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/629302_8a2d_2.jpg?Expires=1623247476&Signature=Oka46u0QNEXCjKQQ0q1Ei6YNxzu529XVILGu3nbjsqLGZ3YQv7yUQZSd4yDWCb96X3CS0VU0eF8-~WNhdE3zCnkYEyGCg7AEJFu3QhcqzDo0~Iei0kTKgy2v8DyZNe2-~D5cwPuUkmdWM~RFcsQawrck078i7tl9uVVCSEW0miQazPqOxXttd2rkFjPtT5vebDIQLMuGfvy-ji75G7aKQvwsUA30yBDoe1jlIKjwcpcaSkFD1fMZO1A0-AhnNxD~9z-Goa6Nwya7~C2YlPlyadIVG40DWGGC0XhbLeawapQQJpMyl-o12UEnCTKlazMcDSdIlHYpRl6h0uLFprK~vA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Learn Python Programming Masterclass",
+      Author: "Tim Buchalka,Jean-Paul Roberts,Tim Buchalka Learn Programming Academy",
+      rating: 4.5,
+      price: 455,
+      people:76088,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/692188_9da7_21.jpg?Expires=1623250678&Signature=GgisOkvuiIUXmXv3ylF6F4IpY7VUpIJmnCwVYS0lpoD5Mki-zVY5o6YTEzPnFYNVm6o1CYpUOd3OuhX0931BmGn9Xw4B7chsMSA-S63h3wazZvYrqzgwQt-hs4lBVzDQhmHnbnRlXtYRJ1DirmgQX2K9ukLhFNEMHgPNYE01mTzdMH0SS1xsNWU3zzZAGn2-hJRrIz~vy9XPRx-5qZjJ43oQV54kk7F09YKYycplBrhgSTIJLsWCrSGgHiqJXpi67kRCt15J~p6oZvUX~pondCAvJALs4XRq~mTjkFe~MSJx8QBNniUK15PNtO2jCuZyYELECzNBS9tthv8tERFA5A__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "The Python Mega Course: Build 10 Real World Applications",
+      Author: "Ardit Sulce",
+      rating: 4.6,
+      price: 455,
+      people:48960,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/396876_cc92_7.jpg?Expires=1623250678&Signature=INKyryMyXA42AR0TmQT46ZMa55Roo~CX9ryzICBQ3Av9mmohsYrV3eqh3sI4YbpDiok4pnI6yMrVtX04ARcGU43r8A83EcgVnBP0ZZ-nSO64W4czYAJyLlNNW2k-EDjQ3IHaVDXJM2KaM5lG6rDBMnH8ASph5vtEcglxooMF8tkNzbdSuS1nk4gqjb99ZfsMAsZswyu8J-mV3m171w-CBf0lhb-jhJERqpKNWWwoaz4yTG~3eFVsAuxqL1qlKmque2f5VGlYXlZxP9a9rWX7iX09n0L9TpbTMd0esY08xd4yWRL4Dj4J3GWxcwNK0fTJ5Q4enAy9gfdxvTrQ2zihBA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Learning Python for Data Analysis and Visualization",
+      Author: "Jose Portilla",
+      rating: 4.4,
+      price: 455,
+      people:16300,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-b.udemycdn.com/course/240x135/2776760_f176_5.jpg?secure=JdcWiK_8ql_e-xH4yJzSrQ%3D%3D%2C1623250678",
+      course_name: "100 Days of Code - The Complete Python Pro Bootcamp for 2021",
+      Author: "Dr. Angela Yu",
+      rating: 4.7,
+      price: 455,
+      people:32611,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg?Expires=1623252068&Signature=kWkAC2QEO1V0m2vyRFx~ssR774y3FGOpJWNmr0EyvkeWd6UTbOcdnpmYQA6~WK1wJDpULcr1aH2TAEdUNMdEof03MspT6N~VzMIBv~fp7VlnvYn~SZ3zS3z0qKQsuQwNjsNLGimehilHmeSyEEN1KXwZulxeSK8DIzRqaUfIxS9x5asGkpjyPCIXCa6tBcVPVARf-a54bB7ABo7~KTJY9Np-nFYUuFsDexPz34GYfzsqLV0Qn40T5gjlJEtqh5kLERSWef0~H29GmWXtQTN7sQhSk5wbpdOw1S46gKlpW4GGFHJ14MCBKDE0vaY0RMPqUdg4YGoy2JjJNrpp1L7ogg__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Automate the Boring Stuff with Python Programming",
+      Author: "Al Sweigart",
+      rating: 4.6,
+      price: 455,
+      people:87866,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/822444_a6db.jpg?Expires=1623252068&Signature=hCt6ZPpcC0HV17a23HAo-a7RxDJOVpk1e468fHgoof7I3QbI5rlNAf92MY5w5BLomePAFVQCEwlcV2m5YEyqheC51DNJ6fr27kJfs9vh-01Nahv~XkXRc3kzRQQp86DuyYsPekAPGxlHvsJHYdkW36-Cv6oyDEsHRe7RZVTQm9Ws5y7EBd8JLUmj4S5QSDYrYO~abAQJhZ5QI8lVrXpbQH-YAli5v50Rxq1jhIFg2Oacjf~7irqa6XQNWolA7K3mtyXdRxOE96K68ApEc7heIIXfntMrfScHStruB321jvC~-NPCJaTSz1CFyx7VMVuqfoNRVK4VEtX66h~lzl2nRA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python and Django Full Stack Web Developer Bootcamp",
+      Author: "Jose Portilla",
+      rating: 4.6,
+      price: 455,
+      people:38905,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/1212032_b7e8.jpg?Expires=1623252068&Signature=P~6JabDqANIkd0blDygZR4o0wH254AUhvU4udEytGFLUjT28VxrlsfGWxEp5rUZyDJTFrx2zi2iAozMyGR91UVpziglMbi6Xu2JUitJOJReARb7UCWJD4Lji3JdBkS9vC40SubX0rWH1mW6a-cMLadhDt~7idW8dqVS7fbBwXgFvJ9ZdZbW4mHCMTmQU8nT5~wzB2Q9Bz-ay21QNnMiRwjajkwaO7zQZ38Y1pJvXPFhgtJ754IumO9huBkaM8jPsMyIKJB3qP~H7c51JNaW9y6h0DKr3q3mzPJfj82-zYSYH3lahYU5L73vW2HbDieYm4YxFqwKWYQcvr~GqMd5TYQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Financial Analysis and Algorithmic Trading",
+      Author: "Jose Portilla",
+      rating: 4.5,
+      price: 455,
+      people:15555,
+      mainPrice:4480
+
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/1035472_23ce_5.jpg?Expires=1623252068&Signature=izWNw73UjGmcNxuMiDjt5PGWSWb~e6Qjp6MltGA8loe6qSV~pMszkw04KDVFU8e~1UZAHwqKEODLxd7dKygyDrWBE5KqlP8g4ql0ayM7nuxc4jMT4TfSJHS89~fdRXEX6j6n95AFRVjJtandSr6zgFceOP0z6G~FZs33GKmoh0Uhs90YYNjzynT2c1DglohTRok5QsRvSUZOkKQn48VmpLt-t~SADT6WtC8DHTTqS6HhD~0Gzur4BoKcVhbsefgBfZBpY16-eCqkYg~JQar1xjVtKQuMb6ooHi4dNEYRC-SclUrS10-J43ut-30BzVdW7f6B3zM3mKK965swueIvGA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Finance: Investment Fundamentals & Data Analytics",
+      Author: "365 careers",
+      rating: 4.5,
+      price: 455,
+      people:21854,
+      mainPrice:4480
+
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/2473048_8255_5.jpg?Expires=1623252068&Signature=YCIf8tPLGeuSN0RpPJdogZgv1y5vYSmgiBXmJ7XBJozfsWS2gGnz7hywXt8PGbeeltC2eQ0q6Ei-8lRa2CS4j2cGKMUwCmx7RcKbwh9doslzRfudwDK8aQw3C-3K8E7QsyZBD5MWZ7IUtT9vBFazXw2S3wrxFwyG1CrzcVD1BAYkuZGnSI1JPIEyBknqiX8tpSKRy9GJe-6eFSXeQYyHWL32tQQ-~qrjKu-OXJSRF0--B-EwXWMF~025A~uYQ1skDXpnMMToebw-8hWAZCyJzjsIbkCuDumHJwiwWUbbqlRf-y9UlXfVxP7JUKY89b7U~WXJ0Y714KfIz8K624sjJQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Complete Python Developer in 2021: Zero to Mastery",
+      Author: "Andrei Neagoi",
+      rating: 4.7,
+      price: 455,
+      people:27911,
+      mainPrice:4480
+    },
+  
+  ];
+   var studentSlides = document.getElementsByClassName("slides-2");
+  var noOfDivs = studentSlides.length;
+  // var a1 = document.getElementsByClassName("previous");
+  var studentSlideIndex = 0;
+  showStudSlides(studentSlideIndex);
+  function plusSlideStud(n) {
+    studentSlideIndex += noOfDivs * n - 1;
+    if (studentSlideIndex > 1) {
+      showStudSlides(studentSlideIndex);
+    } else {
+      studentSlideIndex = 0;
+      showStudSlides(studentSlideIndex);
+    }
+  }
+ 
+  function showStudSlides(a) {
+    // for (let i = 0; i < numberOfdivs; i++) {
+    //   slides[i].innerHTML = "";
+    // }
+    if (a + noOfDivs - 1 > studentContent.length) {
+      studentSlideIndex = 0;
+      a = 0;
+    }
+    let divNo = 0;
+    for (let i = a; i < a + noOfDivs; i++) {
+      studentSlides[divNo].style.display = "block";
+      studentSlides[
+        divNo
+      ].innerHTML = `<img src=${studentContent[i].img_source}><div class="description"><h3>${studentContent[i].course_name}</h3><p>${studentContent[i].Author}</p><div class="star"><span>${studentContent[i].rating}</span><p class="Stars" style="--rating: ${studentContent[i].rating};"></p><span>&#40;${studentContent[i].people}&#41;</span></div><div class="slide-price"><h3>&#x20B9 ${studentContent[i].price}</h3><span>&#x20B9 ${studentContent[i].mainPrice}</span></div></div>`;
+      divNo++;
+    }
+  }
+  var recommendContent = [
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/567828_67d0.jpg?Expires=1623204287&Signature=MisbPLc6WMpTtx5pGkcVzlglm9yyaSNhqhlVRvYvAmCK7GbxdiHPa5uQZNVVw8NW9zEe76pAJCAkPnAPGYauW57bOG4G9kNqvyPcYuFQYNiO-bKd5mO1BPz5yLs9Z4j9hF1~N-jXMzzt2Ml5bSXG~naNiw57wkvjusMXfbhJlh5iEyHvp7ZxCkLJTGh~dHeLTF7qQeFq6Uk5U0jjiEoAc2jtBmVP6HrahTNwW81q2DdHlIAWwKjYaIXB~hUZWXcFIlGZ4B2Qih17BE20VSAXrhHyu2lTls4uvXH1AbTJPqKWRfTBd58wKUdQMF9Mi~OCTkhxC3hmNkpU2rKpTnZRag__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "2021 Complete Python Bootcamp From Zero to Hero in Python",
+      Author: "Jos Portilla",
+      rating: 4.6,
+      people:144000,
+      price: 455,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-b.udemycdn.com/course/240x135/950390_270f_3.jpg?secure=-BvfNab4X_3v9C_B3CNtow%3D%3D%2C1623204286",
+      course_name: "Machine Learning A-Z™: Hands-On Python & R In Data Science",
+      Author: "Kiril Eremenko,Hadelen De Ponteves kjkdf kjndkfjskdnfkj",
+      rating: 4.5,
+      price: 445,
+      people:146559,
+       mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/903744_8eb2.jpg?Expires=1623204291&Signature=Hv8tA769HhSOPvmIiaXfdGbGCiKqrhwaB9TOGOvOs5G8pRB9BRXj3H3WRZC8CN-b-8ug~rE7Yl5QqZgsw4OYvtt6nij6S8hTDWJV8R010KU7QxsL76fYA3Ds4HifUcaDbi~189288sClkurzZiuA~jc3XQwEX2bvHVbLVwzp0ozjAT~mKZ5F2B0xREPxbQJ5fHRzsx61h8OEb88aXB16kWjbf62s8UmDa-oRHQZgtX6vt288jFyD5qnvPNx7XKKu3E5oPJlIb-0~UX6Q8yhdmbtlNtwuMtGCokx7tTpXIowCjRwC5HLRbrfABsjpMfWLg2vAA7C17nYDGJYoIW14Gw__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Data Science and Free Machine Learning Bootcamp",
+      Author: "Jose Portilla",
+      rating: 4.6,
+      price: 455,
+      people:100777,
+       mainPrice:4480
+
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/629302_8a2d_2.jpg?Expires=1623247476&Signature=Oka46u0QNEXCjKQQ0q1Ei6YNxzu529XVILGu3nbjsqLGZ3YQv7yUQZSd4yDWCb96X3CS0VU0eF8-~WNhdE3zCnkYEyGCg7AEJFu3QhcqzDo0~Iei0kTKgy2v8DyZNe2-~D5cwPuUkmdWM~RFcsQawrck078i7tl9uVVCSEW0miQazPqOxXttd2rkFjPtT5vebDIQLMuGfvy-ji75G7aKQvwsUA30yBDoe1jlIKjwcpcaSkFD1fMZO1A0-AhnNxD~9z-Goa6Nwya7~C2YlPlyadIVG40DWGGC0XhbLeawapQQJpMyl-o12UEnCTKlazMcDSdIlHYpRl6h0uLFprK~vA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Learn Python Programming Masterclass",
+      Author: "Tim Buchalka,Jean-Paul Roberts,Tim Buchalka Learn Programming Academy",
+      rating: 4.5,
+      price: 455,
+      people:76088,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/692188_9da7_21.jpg?Expires=1623250678&Signature=GgisOkvuiIUXmXv3ylF6F4IpY7VUpIJmnCwVYS0lpoD5Mki-zVY5o6YTEzPnFYNVm6o1CYpUOd3OuhX0931BmGn9Xw4B7chsMSA-S63h3wazZvYrqzgwQt-hs4lBVzDQhmHnbnRlXtYRJ1DirmgQX2K9ukLhFNEMHgPNYE01mTzdMH0SS1xsNWU3zzZAGn2-hJRrIz~vy9XPRx-5qZjJ43oQV54kk7F09YKYycplBrhgSTIJLsWCrSGgHiqJXpi67kRCt15J~p6oZvUX~pondCAvJALs4XRq~mTjkFe~MSJx8QBNniUK15PNtO2jCuZyYELECzNBS9tthv8tERFA5A__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "The Python Mega Course: Build 10 Real World Applications",
+      Author: "Ardit Sulce",
+      rating: 4.6,
+      price: 455,
+      people:48960,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/396876_cc92_7.jpg?Expires=1623250678&Signature=INKyryMyXA42AR0TmQT46ZMa55Roo~CX9ryzICBQ3Av9mmohsYrV3eqh3sI4YbpDiok4pnI6yMrVtX04ARcGU43r8A83EcgVnBP0ZZ-nSO64W4czYAJyLlNNW2k-EDjQ3IHaVDXJM2KaM5lG6rDBMnH8ASph5vtEcglxooMF8tkNzbdSuS1nk4gqjb99ZfsMAsZswyu8J-mV3m171w-CBf0lhb-jhJERqpKNWWwoaz4yTG~3eFVsAuxqL1qlKmque2f5VGlYXlZxP9a9rWX7iX09n0L9TpbTMd0esY08xd4yWRL4Dj4J3GWxcwNK0fTJ5Q4enAy9gfdxvTrQ2zihBA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Learning Python for Data Analysis and Visualization",
+      Author: "Jose Portilla",
+      rating: 4.4,
+      price: 455,
+      people:16300,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-b.udemycdn.com/course/240x135/2776760_f176_5.jpg?secure=JdcWiK_8ql_e-xH4yJzSrQ%3D%3D%2C1623250678",
+      course_name: "100 Days of Code - The Complete Python Pro Bootcamp for 2021",
+      Author: "Dr. Angela Yu",
+      rating: 4.7,
+      price: 455,
+      people:32611,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/543600_64d1_4.jpg?Expires=1623252068&Signature=kWkAC2QEO1V0m2vyRFx~ssR774y3FGOpJWNmr0EyvkeWd6UTbOcdnpmYQA6~WK1wJDpULcr1aH2TAEdUNMdEof03MspT6N~VzMIBv~fp7VlnvYn~SZ3zS3z0qKQsuQwNjsNLGimehilHmeSyEEN1KXwZulxeSK8DIzRqaUfIxS9x5asGkpjyPCIXCa6tBcVPVARf-a54bB7ABo7~KTJY9Np-nFYUuFsDexPz34GYfzsqLV0Qn40T5gjlJEtqh5kLERSWef0~H29GmWXtQTN7sQhSk5wbpdOw1S46gKlpW4GGFHJ14MCBKDE0vaY0RMPqUdg4YGoy2JjJNrpp1L7ogg__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Automate the Boring Stuff with Python Programming",
+      Author: "Al Sweigart",
+      rating: 4.6,
+      price: 455,
+      people:87866,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/822444_a6db.jpg?Expires=1623252068&Signature=hCt6ZPpcC0HV17a23HAo-a7RxDJOVpk1e468fHgoof7I3QbI5rlNAf92MY5w5BLomePAFVQCEwlcV2m5YEyqheC51DNJ6fr27kJfs9vh-01Nahv~XkXRc3kzRQQp86DuyYsPekAPGxlHvsJHYdkW36-Cv6oyDEsHRe7RZVTQm9Ws5y7EBd8JLUmj4S5QSDYrYO~abAQJhZ5QI8lVrXpbQH-YAli5v50Rxq1jhIFg2Oacjf~7irqa6XQNWolA7K3mtyXdRxOE96K68ApEc7heIIXfntMrfScHStruB321jvC~-NPCJaTSz1CFyx7VMVuqfoNRVK4VEtX66h~lzl2nRA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python and Django Full Stack Web Developer Bootcamp",
+      Author: "Jose Portilla",
+      rating: 4.6,
+      price: 455,
+      people:38905,
+      mainPrice:4480
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/1212032_b7e8.jpg?Expires=1623252068&Signature=P~6JabDqANIkd0blDygZR4o0wH254AUhvU4udEytGFLUjT28VxrlsfGWxEp5rUZyDJTFrx2zi2iAozMyGR91UVpziglMbi6Xu2JUitJOJReARb7UCWJD4Lji3JdBkS9vC40SubX0rWH1mW6a-cMLadhDt~7idW8dqVS7fbBwXgFvJ9ZdZbW4mHCMTmQU8nT5~wzB2Q9Bz-ay21QNnMiRwjajkwaO7zQZ38Y1pJvXPFhgtJ754IumO9huBkaM8jPsMyIKJB3qP~H7c51JNaW9y6h0DKr3q3mzPJfj82-zYSYH3lahYU5L73vW2HbDieYm4YxFqwKWYQcvr~GqMd5TYQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Financial Analysis and Algorithmic Trading",
+      Author: "Jose Portilla",
+      rating: 4.5,
+      price: 455,
+      people:15555,
+      mainPrice:4480
+
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/1035472_23ce_5.jpg?Expires=1623252068&Signature=izWNw73UjGmcNxuMiDjt5PGWSWb~e6Qjp6MltGA8loe6qSV~pMszkw04KDVFU8e~1UZAHwqKEODLxd7dKygyDrWBE5KqlP8g4ql0ayM7nuxc4jMT4TfSJHS89~fdRXEX6j6n95AFRVjJtandSr6zgFceOP0z6G~FZs33GKmoh0Uhs90YYNjzynT2c1DglohTRok5QsRvSUZOkKQn48VmpLt-t~SADT6WtC8DHTTqS6HhD~0Gzur4BoKcVhbsefgBfZBpY16-eCqkYg~JQar1xjVtKQuMb6ooHi4dNEYRC-SclUrS10-J43ut-30BzVdW7f6B3zM3mKK965swueIvGA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Python for Finance: Investment Fundamentals & Data Analytics",
+      Author: "365 careers",
+      rating: 4.5,
+      price: 455,
+      people:21854,
+      mainPrice:4480
+
+    },
+    {
+      img_source: "https://img-c.udemycdn.com/course/240x135/2473048_8255_5.jpg?Expires=1623252068&Signature=YCIf8tPLGeuSN0RpPJdogZgv1y5vYSmgiBXmJ7XBJozfsWS2gGnz7hywXt8PGbeeltC2eQ0q6Ei-8lRa2CS4j2cGKMUwCmx7RcKbwh9doslzRfudwDK8aQw3C-3K8E7QsyZBD5MWZ7IUtT9vBFazXw2S3wrxFwyG1CrzcVD1BAYkuZGnSI1JPIEyBknqiX8tpSKRy9GJe-6eFSXeQYyHWL32tQQ-~qrjKu-OXJSRF0--B-EwXWMF~025A~uYQ1skDXpnMMToebw-8hWAZCyJzjsIbkCuDumHJwiwWUbbqlRf-y9UlXfVxP7JUKY89b7U~WXJ0Y714KfIz8K624sjJQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+      course_name: "Complete Python Developer in 2021: Zero to Mastery",
+      Author: "Andrei Neagoi",
+      rating: 4.7,
+      price: 455,
+      people:27911,
+      mainPrice:4480
+    },
+  
+  ];
+   var recommendSlides = document.getElementsByClassName("slides-3");
+  var noOfRecommDivs = recommendSlides.length;
+  // var a1 = document.getElementsByClassName("previous");
+  var recommendSlideIndex = 0;
+  showRecommSlides(recommendSlideIndex);
+  function plusSlideRecomm(n) {
+    recommendSlideIndex += noOfRecommDivs * n - 1;
+    if (recommendSlideIndex > 1) {
+      showRecommSlides(recommendSlideIndex);
+    } else {
+      recommendSlideIndex = 0;
+      showRecommSlides(recommendSlideIndex);
+    }
+  }
+
+  function showRecommSlides(a) {
+    // for (let i = 0; i < numberOfdivs; i++) {
+    //   slides[i].innerHTML = "";
+    // }
+    if (a + noOfRecommDivs - 1 > recommendContent.length) {
+      recommendSlideIndex = 0;
+      a = 0;
+    }
+    let divNum = 0;
+    for (let i = a; i < a + noOfRecommDivs; i++) {
+      recommendSlides[divNum].style.display = "block";
+      recommendSlides[
+        divNum
+      ].innerHTML = `<img src=${recommendContent[i].img_source}><div class="description"><h3>${recommendContent[i].course_name}</h3><p>${recommendContent[i].Author}</p><div class="star"><span>${recommendContent[i].rating}</span><p class="Stars" style="--rating: ${recommendContent[i].rating};"></p><span>&#40;${recommendContent[i].people}&#41;</span></div><div class="slide-price"><h3>&#x20B9 ${recommendContent[i].price}</h3><span>&#x20B9 ${recommendContent[i].mainPrice}</span></div></div>`;
+      divNum++;
     }
   }
 </script>
