@@ -415,16 +415,17 @@
       }
 
       /* style the submit button */
-      input[type="submit"] {
+      input[type="button"] {
         background-color: #ec5252;
         color: white;
         cursor: pointer;
         height:45px;
         font-weight: bold;
         border-radius: 2px;
+        text-align: center;
       }
 
-      input[type="submit"]:hover {
+      input[type="button"]:hover {
         background-color: #992337;
       }
       input:focus {
@@ -778,7 +779,7 @@
             name="psw"
           />
         </div>
-        <input type="submit" value="Log In" />
+        <input type="button" value="Log In" onclick="logIn()" />
         <div class="form-group">or <a href="https://www.udemy.com/user/forgot-password/">Forgot Password</a></div>
         <div class="form-group sign">Don't have an account? <a href="https://www.udemy.com/join/signup-popup/"><b>Sign up</b></a></div>
         <div class="form-group log"><a><b>Log in with your organization</b></a></div>
@@ -866,4 +867,33 @@
       }
     }
   };
+  
+  function logIn(){
+  var input_field = document.getElementsByClassName('input-field');
+  var loginEmail = input_field[0].value;
+  var loginPassword = input_field[1].value;
+  let udemyUsers = JSON.parse(localStorage.getItem('udemyUsers'));
+  for(let i = 0;i<udemyUsers.length;i++){
+    if(loginEmail==udemyUsers[i].signupEmail&&loginPassword==udemyUsers[i].signupPassword){
+         let loginUser ={
+        loginEmail,
+      }
+      
+  let loginDetail;
+  loginDetail=localStorage.getItem('loginDetails');
+  if(loginDetail==null){
+    loginDetail=[];
+  }else{
+    loginDetail=JSON.parse(loginDetail);
+  }
+    loginDetail.push(loginUser);
+    localStorage.setItem('loginDetails',JSON.stringify(loginDetail));
+      window.location.href ="afterLogin.html"
+   
+      break;
+    }
+  }
+  }
+
+  
 </script>
