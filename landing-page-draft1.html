@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
     />
+    <link rel="stylesheet" href="popup.css">
     <style>
       * {
         margin: 0;
@@ -626,7 +627,7 @@
       .popup-div-addtocart > ul li{
         padding:5px 0 5px 10px
       }
-      .popup-div-addtocart > button{
+      .popup-div-addtocart > a{
         width: 70%;
         background-color: #ec5353 !important;
         font-weight: 800;
@@ -634,6 +635,7 @@
         text-align: center;
         padding: 10px 20px;
         border-radius: 7px;
+        text-decoration: none;
       }
       .popup-div-addtocart  .wishlistButton{
          margin-left: 20px;
@@ -1067,10 +1069,10 @@ overflow: hidden;
         height: 2.8vw;
       }
     </style>
-    <!-- <script
+    <script
       src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
       data-auto-a11y="true"
-    ></script> -->
+    ></script>
   </head>
   <body>
     <header>
@@ -1290,7 +1292,48 @@ overflow: hidden;
             <button onclick="plusSlideStud(1)" href="#" class="next round">&#8250;</button>
           </div>
           <div class="popup-div-addtocart"></div>
-          <div class="big-popup-before-addtocart" style="display: none;"></div>
+          <div id="black_overlay">
+      <div id="whitespace">
+        <div id="rightCrossButton">
+          <h2>Added to cart</h2>
+          <button id="close_black_overlay">&times;</button>
+        </div>
+
+        <div id="buy1">
+          <div id="tick">
+            <i class="fas fa-check-circle fa-2x" style="color: green"></i>
+          </div>
+
+          <div id="buy_one_course"></div>
+
+          <div id="buyBtn">
+            <a href="after_cart.html">Go to cart</a>
+          </div>
+        </div>
+
+        <div id="buy_two_course">
+          <h2>Frequently bought together</h2>
+
+          <div id="buy_two_course1"></div>
+
+          <div id="buy_two_course2"></div>
+
+          <div id="plusIcon">
+            <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
+          </div>
+
+          <div id="priceof2"><div>
+        <div id="related">
+          <h2>Related Topics</h2>
+          <a>Machine Learning</a>
+          <a>Data Science</a>
+          <a>JavaScript</a>
+          <a>Database</a>
+          <a>Django</a>
+        </div>
+      </div>
+      
+    </div>
             </div>
               <div class="main-slider-2-hp">
             <span>Because you searched for Python</span>
@@ -1306,7 +1349,52 @@ overflow: hidden;
             <button onclick="plusSlideRecomm(1)" href="#" class="next round">&#8250;</button>
           </div>
            <div class="popup-div-addtocart"></div>
-          <div class="big-popup-before-addtocart" style="display: none;"></div>
+            <div id="black_overlay">
+      <div id="whitespace">
+        <div id="rightCrossButton">
+          <h2>Added to cart</h2>
+          <button id="close_black_overlay">&times;</button>
+        </div>
+
+        <div id="buy1">
+          <div id="tick">
+            <i class="fas fa-check-circle fa-2x" style="color: green"></i>
+          </div>
+
+          <div id="buy_one_course"></div>
+
+          <div id="buyBtn">
+            <a onclick="addOneItem()" href="after_cart.html">Go to cart</a>
+          </div>
+        </div>
+
+        <div id="buy_two_course">
+          <h2>Frequently bought together</h2>
+
+          <div id="buy_two_course1"></div>
+
+          <div id="buy_two_course2">
+            
+          </div>
+
+          <div id="plusIcon">
+            <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
+          </div>
+
+          <div id="priceof2">
+            
+          </div>
+        </div>
+        <div id="related">
+          <h2>Related Topics</h2>
+          <a>Machine Learning</a>
+          <a>Data Science</a>
+          <a>JavaScript</a>
+          <a>Database</a>
+          <a>Django</a>
+        </div>
+      </div>
+    </div>
             </div>
           </div>
         </div>
@@ -1578,6 +1666,7 @@ overflow: hidden;
       <div>&copy;2021 Udemy Inc.</div>
     </footer>
   </body>
+  <script src="popup.js"></script>
 </html>
 <script>
   /* When the user clicks on the button, 
@@ -1671,6 +1760,12 @@ toggle between hiding and showing the dropdown content */
       dropdown1.style.display = "none";
       dropdown2.style.display = "none";
       overlay.style.display = "none";
+    }
+
+    var black_overlay = document.getElementById("black_overlay");
+     var close_black_overlay = document.getElementById("close_black_overlay");
+     if (event.target.matches("#close_black_overlay") || event.target.matches("#black_overlay")  ) {
+        black_overlay.style.display="none";
     }
   };
   var slideCourses = document.getElementsByClassName("slideCourses")
@@ -1938,7 +2033,7 @@ slideCourses[0].appendChild(pythonSlider);
                   <li>Create games with Python, like Tic Tac Toe and Blackjack!</li>
                   <li>Learn advanced Python features, like the collections module and how to work with timestamps!</li>
                 </ul>
-                <button onclick="bigPopupBeforeAddToCart()" >Add to cart</button><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
+                <a href="#black_overlay"onclick="showbigpopup(${indexOfContent})" >Add to cart</a><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
 
     popupAddToCArt.style.top="-280px";
     if(i < 3 ){
@@ -2221,7 +2316,7 @@ slideCourses[0].appendChild(pythonSlider);
                   <li>Create games with Python, like Tic Tac Toe and Blackjack!</li>
                   <li>Learn advanced Python features, like the collections module and how to work with timestamps!</li>
                 </ul>
-                <button onclick="bigPopupBeforeAddToCart()" >Add to cart</button><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
+                <button onclick="showbigpopup(${indexOfContent})" >Add to cart</button><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
 
     popupAddToCArt.style.top="-280px";
     if(i < 3 ){
@@ -2432,7 +2527,7 @@ slideCourses[0].appendChild(pythonSlider);
                   <li>Create games with Python, like Tic Tac Toe and Blackjack!</li>
                   <li>Learn advanced Python features, like the collections module and how to work with timestamps!</li>
                 </ul>
-                <button onclick="bigPopupBeforeAddToCart()" >Add to cart</button><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
+                <a href="#black_overlay" onclick="showbigpopup(${indexOfContent})" >Add to cart</a><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
 
     popupAddToCArt.style.top="67px";
     if(i < 3 ){
@@ -2639,7 +2734,7 @@ slideCourses[0].appendChild(pythonSlider);
                   <li>Create games with Python, like Tic Tac Toe and Blackjack!</li>
                   <li>Learn advanced Python features, like the collections module and how to work with timestamps!</li>
                 </ul>
-                <button onclick="bigPopupBeforeAddToCart()" >Add to cart</button><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
+                <a href="#black_overlay" onclick="showbigpopup(${indexOfContent})" >Add to cart</a><span class="wishlistButton" onclick="addToWishlist()"><i class="far fa-heart fa-2x" style="color: #107d90;"></i></span>`;
 
     popupAddToCArt.style.top="350px";
     if(i < 3 ){
