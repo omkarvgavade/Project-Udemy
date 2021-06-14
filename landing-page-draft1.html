@@ -166,6 +166,7 @@
         /* margin: 0 0.8vw; */
         margin: 0 12px;
       }
+      
       .secondSection > ul > li {
         /* margin: 0 0.3vw; */
         margin: 0;
@@ -177,6 +178,7 @@
       }
       .navbar {
         display: flex;
+        width: 100%;
         flex-basis: 4vw;
         justify-content: space-between;
         align-items: center;
@@ -190,11 +192,8 @@
       .navbar > div:nth-child(1) {
         display: none;
       }
-      .navbar > div:nth-child(2) {
-        flex-grow: 2;
-      }
       .navbar > div:nth-child(3) {
-        flex-grow: 22;
+        flex-grow:0;
       }
       .navbar > div:nth-child(4) {
         flex-grow: 4;
@@ -208,16 +207,15 @@
       .udemyLogo {
         width: 8vw;
         height: 2.8vw;
-        margin-left: 20%;
+        margin-left: 0.5%;
       }
       .searchContainer {
         display: flex;
         /* flex: 1 1 50%; */
-        width: 30vw;
-        width: 41.2vw;
+        width: 100%;
         position: relative;
         border: 0.1vw solid #ccc;
-        border-radius: 3vw;
+        border-radius: 50px;
         overflow: hidden;
         background-color: #FBFBF8;
       }
@@ -287,25 +285,35 @@
       .smallWindow {
         display: none;
       }
+      .firstSection > ul > li:nth-child(2) {
+          width: 70%;
+          margin-left: 10px;
+        }
+        .firstSection > ul > li:nth-child(1) {
+          margin-left: 0px;
+        }
       @media (max-width: 1080px) {
         .firstSection > ul > li:nth-child(3) {
           display: none;
         }
-        /* .searchContainer {
-               flex-grow: 2;
-             } */
       }
-      @media (max-width: 850px) {
+      /* @media (max-width: 850px) {
         .firstSection > ul > li:nth-child(4) {
           display: none;
         }
         /* .searchContainer {
                flex-grow: 3;
-             } */
-      }
+             } ++
+      } */
       @media (max-width: 800px) {
         body{
           position: relative;
+        }
+        .bgimage {
+          background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+          width: 100%;
+          height: 100%;
+          margin: auto;
         }
         #dropdownbtn {
           display: inline;
@@ -324,6 +332,9 @@
         .logo{
           width: 65vw;
           margin: auto;
+        }
+        .udemyLogo{
+          margin-left: 15%;
         }
       }
       section {
@@ -396,8 +407,7 @@
       .searchBox2 > button:hover {
         cursor: pointer;
       }
-      @media (min-width: 1366px) {
-        .container {
+      .container {
           width: 100%;
           height: 25rem;
           margin: 0;
@@ -409,8 +419,7 @@
           height: 100%;
           margin: auto;
         }
-      }
-      @media (min-width: 700px) and (max-width: 1366px) {
+      /* @media (min-width: 700px) and (max-width: 1366px) {
         .container {
           width: 100%;
           height: 25rem;
@@ -428,8 +437,8 @@
         .searchContent {
           margin-left: 5%;
         }
-      }
-      @media (min-width: 700px) and (max-width: 1200px) {
+      } */
+      /* @media (min-width: 700px) and (max-width: 1200px) {
         .searchContent {
           width: 21rem;
           margin-top: -23.5rem;
@@ -444,8 +453,8 @@
         .searchBox2 {
           width: 18rem;
         }
-      }
-      @media (min-width: 0px) and (max-width: 700px) {
+      } */
+      /* @media (min-width: 0px) and (max-width: 700px) {
         .searchContent {
           display: flex;
           flex-direction: column;
@@ -486,7 +495,7 @@
         .searchBox2 > input {
           width: 90%;
         }
-      }
+      } */
       .courseBox {
         display: grid;
         width: 100%;
@@ -969,10 +978,6 @@ overflow: hidden;
         text-align: center;
         height: 4rem;
       }
-      .logo {
-        margin-right: 20px;
-        margin-right: 10px;
-      }
       .mercedesLogo {
         width: 135px;
       }
@@ -1065,8 +1070,8 @@ overflow: hidden;
         cursor: pointer;
       }
       .udemyLogo {
-        width: 7vw;
-        height: 2.8vw;
+        width: 80px;
+        height: 30px;
       }
 
 
@@ -1182,10 +1187,10 @@ overflow: hidden;
 
 
     </style>
-    <script
+    <!-- <script
       src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
       data-auto-a11y="true"
-    ></script>
+    ></script> -->
   </head>
   <body>
     <header>
