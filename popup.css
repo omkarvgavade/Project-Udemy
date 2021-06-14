@@ -1,0 +1,261 @@
+#black_overlay {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+}
+
+#whitespace {
+  background-color: #fff;
+  width: 700px;
+  max-height: 90vh;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  position: absolute;
+  z-index: 20;
+}
+#rightCrossButton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#rightCrossButton > button {
+  border: none;
+  background: none;
+  font-size: 50px;
+  font-weight: 600;
+}
+#whitespace > div {
+  margin-bottom: 20px;
+}
+
+#buy1 {
+  background-color: #fff;
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+#buy_one_course {
+  display: flex;
+  width: 70%;
+}
+#buy_one_course div {
+  margin: 10px;
+}
+#buy_one_course img {
+  width: 100px;
+  height: 100px;
+}
+#buyBtn a,
+#priceof2 a {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #0f7c90;
+  color: #fff;
+  border-radius: 7px;
+}
+#buyBtn a:hover {
+  background-color: #094c59;
+}
+#buy_two_course {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+#buy_two_course div > h2 {
+  margin: 0 15px;
+}
+#buy_two_course1,
+#buy_two_course2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+}
+#buy_two_course1 img,
+#buy_two_course2 img {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+#buy_two_course1 h2,
+#buy_two_course2 h2 {
+  flex-grow: 2;
+}
+#plusIcon {
+  position: absolute;
+  z-index: 2;
+  top: 60%;
+  left: 19%;
+  display: inline-block;
+}
+#priceof2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#priceof2 span {
+  display: flex;
+  align-items: center;
+}
+#priceof2 p:last-child {
+  text-decoration: line-through;
+}
+#priceof2 p:first-child {
+  font-size: 25px;
+}
+#price0f2 span p {
+  padding: 5px 10px;
+}
+#priceof2 a {
+  background-color: #ec5252;
+}
+#priceof2 a:hover {
+  background-color: #ec1b1b;
+}
+#related a {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid teal;
+  border-radius: 10px;
+  text-decoration: none;
+  color: teal;
+  margin: 5px;
+}
+
+#whitespace_2 {
+  background-color: #fff;
+  width: 700px;
+  max-height: 90vh;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  position: absolute;
+  z-index: 30;
+}
+#rightCrossButton_2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#rightCrossButton_2 > button {
+  border: none;
+  background: none;
+  font-size: 50px;
+  font-weight: 600;
+}
+#whitespace_2 > div {
+  margin-bottom: 20px;
+}
+
+#buy1_2 {
+  background-color: #fff;
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+#buy_one_course_2 {
+  display: flex;
+  width: 70%;
+}
+#buy_one_course_2 div {
+  margin: 10px;
+}
+#buy_one_course_2 img {
+  width: 100px;
+  height: 100px;
+}
+#buyBtn_2 a,
+#priceof2_2 a {
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #0f7c90;
+  color: #fff;
+  border-radius: 7px;
+}
+#buyBtn_2 a:hover {
+  background-color: #094c59;
+}
+#buy_two_course_2 {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+#buy_two_course_2 div > h2 {
+  margin: 0 15px;
+}
+#buy_two_course1_2,
+#buy_two_course2_2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+}
+#buy_two_course1_2 img,
+#buy_two_course2_2 img {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+#buy_two_course1_2 h2,
+#buy_two_course2_2 h2 {
+  flex-grow: 2;
+}
+#plusIcon_2 {
+  position: absolute;
+  z-index: 2;
+  top: 60%;
+  left: 19%;
+  display: inline-block;
+}
+#priceof2_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+#priceof2_2 span {
+  display: flex;
+  align-items: center;
+}
+#priceof2_2 p:last-child {
+  text-decoration: line-through;
+}
+#priceof2_2 p:first-child {
+  font-size: 25px;
+}
+#price0f2_2 span p {
+  padding: 5px 10px;
+}
+#priceof2_2 a {
+  background-color: #ec5252;
+}
+#priceof2_2 a:hover {
+  background-color: #ec1b1b;
+}
+#related_2 a {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid teal;
+  border-radius: 10px;
+  text-decoration: none;
+  color: teal;
+  margin: 5px;
+}
