@@ -495,7 +495,6 @@
           height: 25rem;
           margin: 0;
           margin-top: -4px;
-
         }
         .bgimage {
           background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
@@ -1259,11 +1258,10 @@
 
 
 
-    /* .navText {
+    .navText {
   position: relative;
   display: inline-block;
 }
-
 .navText .tooltiptext {
   visibility: hidden;
   background-color: white;
@@ -1282,7 +1280,6 @@
   transition: opacity 0.3s;
   box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
 }
-
 .navText .tooltiptext::after {
   position: absolute;
   top: 100%;
@@ -1291,7 +1288,6 @@
   border-width: 5px;
   border-style: solid;
 }
-
 .navText:hover .tooltiptext{
   visibility: visible;
   opacity: 1;
@@ -1316,7 +1312,7 @@
   border: none;
   color: white;
   font-size:17px;
-} */
+}
     .dropdown {
       position: relative;
       display: inline-block;
@@ -1375,10 +1371,8 @@
       background-color: #3e8e41;
     }
   </style>
-  <!-- <script
-      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-      data-auto-a11y="true"
-    ></script> -->
+  <link rel="stylesheet" href="categories.css">
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
 </head>
 
 <body>
@@ -1422,7 +1416,7 @@
       </div>
       <div class="firstSection">
         <ul>
-          <li><a class="navText" href="#">Categories</a></li>
+          <li><a onmouseover="showCategoriesList()" class="navText" href="#">Categories</a></li>
           <li>
             <div class="searchContainer">
               <button class="searchButton cursorPointer">
@@ -1482,6 +1476,28 @@
       </div>
     </nav>
   </header>
+  <div id="parent_div" class="show_all_list_items">
+    <ul>
+      <li onmouseover="showChildList(0)"><a href="#">Development</a></li>
+      <li onmouseover="showChildList(1)"><a href="#">Business</a></li>
+      <li onmouseover="showChildList(2)"><a href="#">Finance & Accounting</a></li>
+      <li onmouseover="showChildList(3)"><a href="#">IT & Software</a></li>
+      <li onmouseover="showChildList(4)"><a href="#">Office Productivity</a></li>
+      <li onmouseover="showChildList(5)"><a href="#">Personal Development</a></li>
+      <li onmouseover="showChildList(6)"><a href="#">Design</a></li>
+      <li onmouseover="showChildList(7)"><a href="#">Marketing</a></li>
+      <li onmouseover="showChildList(8)"><a href="#">Lifestyle</a></li>
+      <li onmouseover="showChildList(9)"><a href="#">Photography& Video</a></li>
+      <li onmouseover="showChildList(10)"><a href="#">Health and Fitness</a></li>
+      <li onmouseover="showChildList(11)"><a href="#">Music</a></li>
+      <li onmouseover="showChildList(12)"><a href="#">Teaching</a></li>
+      <li onmouseover="showChildList(13)"><a href="#">Academics</a></li>
+    </ul>
+  </div>
+  <div id="child_div" class="show_all_list_items">
+  </div>
+  <div id="grandChild_div" class="show_all_list_items">
+  </div>
   <section>
     <div class="container">
       <div class="bgimage"></div>
@@ -1587,7 +1603,7 @@
               <div id="buy_one_course"></div>
 
               <div id="buyBtn">
-                <a href="after_cart.html">Go to cart</a>
+                <a onclick="addOneItem()" href="after_cart.html">Go to cart</a>
               </div>
             </div>
 
@@ -1602,82 +1618,84 @@
                 <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
               </div>
 
+              <div id="priceof2"></div>
+
+            </div>
+
+            <div id="related">
+              <h2>Related Topics</h2>
+              <a>Machine Learning</a>
+              <a>Data Science</a>
+              <a>JavaScript</a>
+              <a>Database</a>
+              <a>Django</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="main-slider-2-hp">
+        <span>Because you searched for Python</span>
+        <div class="main-slider-recommended">
+          <button onclick="plusSlideRecomm(-1)" href="#" class="previous round">&#8249;</button>
+          <div onmouseover="popupAddToCartRecomm(0)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(1)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(2)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(3)" class="slides-3 fade-3"></div>
+          <div onmouseover="popupAddToCartRecomm(4)" class="slides-3 fade-3"></div>
+          <button onclick="plusSlideRecomm(1)" href="#" class="next round">&#8250;</button>
+        </div>
+        <div class="popup-div-addtocart"></div>
+        <div id="black_overlay">
+          <div id="whitespace">
+            <div id="rightCrossButton">
+              <h2>Added to cart</h2>
+              <button id="close_black_overlay">&times;</button>
+            </div>
+
+            <div id="buy1">
+              <div id="tick">
+                <i class="fas fa-check-circle fa-2x" style="color: green"></i>
+              </div>
+
+              <div id="buy_one_course"></div>
+
+              <div id="buyBtn">
+                <a onclick="addOneItem()" href="after_cart.html">Go to cart</a>
+              </div>
+            </div>
+
+            <div id="buy_two_course">
+              <h2>Frequently bought together</h2>
+
+              <div id="buy_two_course1"></div>
+
+              <div id="buy_two_course2">
+
+              </div>
+
+              <div id="plusIcon">
+                <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
+              </div>
+
               <div id="priceof2">
-                <div>
-                  <div id="related">
-                    <h2>Related Topics</h2>
-                    <a>Machine Learning</a>
-                    <a>Data Science</a>
-                    <a>JavaScript</a>
-                    <a>Database</a>
-                    <a>Django</a>
-                  </div>
-                </div>
 
               </div>
             </div>
-            <div class="main-slider-2-hp">
-              <span>Because you searched for Python</span>
-              <div class="main-slider-recommended">
-                <button onclick="plusSlideRecomm(-1)" href="#" class="previous round">&#8249;</button>
-                <div onmouseover="popupAddToCartRecomm(0)" class="slides-3 fade-3"></div>
-                <div onmouseover="popupAddToCartRecomm(1)" class="slides-3 fade-3"></div>
-                <div onmouseover="popupAddToCartRecomm(2)" class="slides-3 fade-3"></div>
-                <div onmouseover="popupAddToCartRecomm(3)" class="slides-3 fade-3"></div>
-                <div onmouseover="popupAddToCartRecomm(4)" class="slides-3 fade-3"></div>
-                <button onclick="plusSlideRecomm(1)" href="#" class="next round">&#8250;</button>
-              </div>
-              <div class="popup-div-addtocart"></div>
-              <div id="black_overlay">
-                <div id="whitespace">
-                  <div id="rightCrossButton">
-                    <h2>Added to cart</h2>
-                    <button id="close_black_overlay">&times;</button>
-                  </div>
-
-                  <div id="buy1">
-                    <div id="tick">
-                      <i class="fas fa-check-circle fa-2x" style="color: green"></i>
-                    </div>
-
-                    <div id="buy_one_course"></div>
-
-                    <div id="buyBtn">
-                      <a onclick="addOneItem()" href="after_cart.html">Go to cart</a>
-                    </div>
-                  </div>
-
-                  <div id="buy_two_course">
-                    <h2>Frequently bought together</h2>
-
-                    <div id="buy_two_course1"></div>
-
-                    <div id="buy_two_course2">
-
-                    </div>
-
-                    <div id="plusIcon">
-                      <i class="fas fa-plus-circle fa-3x" style="color: #0f7c90"></i>
-                    </div>
-
-                    <div id="priceof2">
-
-                    </div>
-                  </div>
-                  <div id="related">
-                    <h2>Related Topics</h2>
-                    <a>Machine Learning</a>
-                    <a>Data Science</a>
-                    <a>JavaScript</a>
-                    <a>Database</a>
-                    <a>Django</a>
-                  </div>
-                </div>
-              </div>
+            <div id="related">
+              <h2>Related Topics</h2>
+              <a>Machine Learning</a>
+              <a>Data Science</a>
+              <a>JavaScript</a>
+              <a>Database</a>
+              <a>Django</a>
             </div>
           </div>
         </div>
       </div>
+
+
+
       <div id="main-content">
         <h3>Top Categories</h3>
         <div id="topcourse">
@@ -1891,6 +1909,7 @@
   </footer>
 </body>
 <script src="popup.js"></script>
+<script src="categories.js"></script>
 
 </html>
 <script>
