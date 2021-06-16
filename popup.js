@@ -173,24 +173,25 @@ function showbigpopup(index) {
         <div>
               <p>${educationContent[index].course_name}</p>
               <p>${educationContent[index].Author}</p>
-              <p>${educationContent[index].rating}  (${educationContent[index].people})</p> 
+              
         </div>`;
 
   let buy_two_course1 = document.getElementById("buy_two_course1");
   buy_two_course1.innerHTML = `<img src=${educationContent[index].img_source} />
-            <h2>${educationContent[index].course_name}</h2>
-            <h3>${educationContent[index].price}</h3>`;
+            <div><h2>${educationContent[index].course_name}</h2>
+            <p>${educationContent[index].Author}</P>
+            <div class="star"><span>${educationContent[index].rating}</span><p class="Stars" style="--rating: ${educationContent[index].rating};"></p><span>&#40;${educationContent[index].people}&#41;</span></div></div> <h3>&#x20B9 ${educationContent[index].price}</h3>`;
 
   let buy_two_course2 = document.getElementById("buy_two_course2");
   buy_two_course2.innerHTML = `<img src=${educationContent[index + 1].img_source} />
-            <h2>${educationContent[index + 1].course_name}</h2>
-            <h3>${educationContent[index + 1].price}</h3>`;
+           <div> <h2>${educationContent[index + 1].course_name}</h2>
+            <p>${educationContent[index + 1].Author}</P>
+            <div class="star"><span>${educationContent[index + 1].rating}</span><p class="Stars" style="--rating: ${educationContent[index + 1].rating};"></p><span>&#40;${educationContent[index + 1].people}&#41;</span></div></div>    <h3>&#x20B9 ${educationContent[index + 1].price}</h3>`;
 
   let priceof2 = document.getElementById("priceof2");
   priceof2.innerHTML = `<span>
-              <p>Total price:</p>
-              <h2>${educationContent[index].price + educationContent[index + 1].price}</h2>
-              <p>${educationContent[index].mainPrice + educationContent[index + 1].mainPrice}</p>
+              <p>Total price:&#x20B9 ${educationContent[index].price}</p>
+              <p>&#x20B9 ${educationContent[index].mainPrice + educationContent[index + 1].mainPrice}</p>
             </span>
             <a
               href="after_cart.html"
