@@ -55,7 +55,6 @@ function showcartItems() {
                         <div>`;
 }
 
-
 function moveToWishList(i) {
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
     let removedWish = document.getElementById('removedWish');
