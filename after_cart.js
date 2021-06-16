@@ -1,68 +1,199 @@
+localStorage.setItem("removedWish", JSON.stringify([]));
 function showcartItems() {
+    showremovedWisher();
+    showSaveForLater();
     let showCartItems = document.getElementById("showCartItems");
     showCartItems.innerHTML = null;
-let cartItem = JSON.parse(localStorage.getItem("cartItem"));
-for (let i = 0; i < cartItem.length; i++){
-    let div = document.createElement("div");
-    div.innerHTML = `<img src=${cartItem[i].img_source}>
+    let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    for (let i = 0; i < cartItem.length; i++) {
+        let div = document.createElement("div");
+        div.innerHTML = `<img src=${cartItem[i].img_source}>
                      <div>
                      <h3>${cartItem[i].course_name}</h3>
-                     <h6>${cartItem[i].Author}</h6>
+                     <p>${cartItem[i].Author}</p>
                      </div>
                     <div>
                      <button onclick="removeCourseFromCart(${i})">remove</button>
                      <button onclick="saveForLater(${i})">Save for later</button>
+                     <button onclick="moveToWishList(${i})">Move to wishlist</button>
                      </div>
                      <div>
-                     <h3>${cartItem[i].price}</h3>
-                     <h6>${cartItem[i].mainPrice}</h6>
+                     <h3>&#8377; ${cartItem[i].price}</h3>
+                     <p>&#8377; ${cartItem[i].mainPrice}</p>
                      </div>`;
-    div.style.display = "flex";
-    showCartItems.appendChild(div);
-}
-let total_price = 0;
-let total_main_price = 0;
-for (let i = 0; i < cartItem.length; i++) {
-    total_price += cartItem[i].price;
-    total_main_price += cartItem[i].mainPrice;
-}
-let checkoutDiv = document.getElementById("checkoutDiv");
-checkoutDiv.innerHTML = `<p>Total:</p>
-                        <h2>${total_price}</h2>
-                        <h4>${total_main_price}</h4>
-                        <p>90% off</p>
+        div.style.display = "flex";
+        showCartItems.appendChild(div);
+    }
+    // let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    // console.log(cartItem.length)
+    let noOfItemsInshop = document.getElementById("noOfItemsInshop");
+    noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    let total_price = 0;
+    for (let i = 0; i < cartItem.length; i++) {
+        total_price += cartItem[i].price;
+        total_main_price += cartItem[i].mainPrice;
+    }
+    let checkoutDiv = document.getElementById("checkoutDiv");
+    checkoutDiv.innerHTML = `<p>Total:</p>
+                        <h2 id="showDiscountedPrice">&#8377;  ${total_price}</h2>
+                        <p>&#8377;  ${total_main_price}</p>
+                        <p id="couponInPercent">90% off</p>
                         <a href="checkout.html">checkout</a>
                         <div>
-                            <input type="text" placeholder="Enter Copoun">
-                            <button>Apply</button>
+                            <input id="coupon" type="text" placeholder="Enter Copoun">
+                            <button onclick="applyCoupon()">Apply</button>
                         </div>
                         <div>
-                            <i class="fas fa-times"></i>masai90 is applied
+                            <i class="fas fa-times"></i><span id="couponName">masai90 is applied</span>
                         <div>`;
 }
+let total_main_price = 0;
 
+function moveToWishList(i) {
+    let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    let removedWish = document.getElementById('removedWish');
+    // let arr1 = [];
+    // cartItem.splice(i, 1);
+    let arrSplice = cartItem.splice(i, 1);
+    // arr1.push(arrSplice[0]);
+    removedWish.innerHTML = null;
+    let removedWishArr;
+    removedWishArr = localStorage.getItem('removedWish');
+    if (removedWishArr == null) {
+        removedWishArr = [];
+    } else {
+        removedWishArr = JSON.parse(removedWishArr);
+    }
+    removedWishArr.push(arrSplice[0]);
+    localStorage.setItem("removedWish", JSON.stringify(removedWishArr))
+    noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+    showcartItems();
+    showremovedWisher();
+}
+// let removedWishDiv = document.getElementById('removedWish');
+// removedWishDiv.innerHTML = "Omkar"
 
+function showremovedWisher() {
+    let removedWishDiv = document.getElementById('removedWish');
+    let removedWisher = JSON.parse(localStorage.getItem("removedWish"))
+    if (removedWisher.length == 0) {
+        removedWishDiv.innerHTML = `<p>You haven't saved any courses for later.</p>`
+    } else {
+        removedWishDiv.innerHTML = null;
+        let removedWisher = JSON.parse(localStorage.getItem("removedWish"))
+        for (let i = 0; i < removedWisher.length; i++) {
+            let removedWishdiv = document.createElement("div");
+            removedWishdiv.innerHTML = `<img src=${removedWisher[i].img_source}>
+                     <div>
+                     <h3>${removedWisher[i].course_name}</h3>
+                     <p>${removedWisher[i].Author}</p>
+                     </div>
+                    <div>
+                     <button onclick="removeCourseFromRemovedWish(${i})">remove</button>
+                     </div>
+                     <div>
+                     <h3>&#8377; ${removedWisher[i].price}</h3>
+                     <p>&#8377; ${removedWisher[i].mainPrice}</p>
+                     </div>`;
+            removedWishdiv.style.display = "flex";
+            removedWishDiv.appendChild(removedWishdiv);
+        }
+    }
+}
+
+function removeCourseFromRemovedWish(i) {
+    let removedWish = JSON.parse(localStorage.getItem("removedWish"))
+    removedWish.splice(i, 1);
+    // localstorage.setItem("removedWish", JSON.stringify(removedWishA))
+    localStorage.setItem("removedWish", JSON.stringify(removedWish))
+    showremovedWisher();
+
+}
 function removeCourseFromCart(i) {
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
     cartItem.splice(i, 1);
+    noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
+
 }
 
 function saveForLater(i) {
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
-    let obj = cartItem[i];
-    cartItem.splice(i, 1);
-    localStorage.setItem("cartItem", JSON.stringify(cartItem));
-
-    if (localStorage.getItem("saveForLater") == null) {
-        localStorage.setItem("saveForLater", JSON.stringify([]));
+    let saveForLater = document.getElementById('saveForLater');
+    // let arr1 = [];
+    // cartItem.splice(i, 1);
+    let arrSplice = cartItem.splice(i, 1);
+    // arr1.push(arrSplice[0]);
+    saveForLater.innerHTML = null;
+    let saveForLaterArr;
+    saveForLaterArr = localStorage.getItem('saveForLater');
+    if (saveForLaterArr == null) {
+        saveForLaterArr = [];
+    } else {
+        saveForLaterArr = JSON.parse(saveForLaterArr);
     }
-    let saveForLater = JSON.parse(localStorage.getItem("saveForLater"));
-    saveForLater.push(obj);
-    localStorage.setItem("saveForLater", JSON.stringify(saveForLater));
+    saveForLaterArr.push(arrSplice[0]);
+    localStorage.setItem("saveForLater", JSON.stringify(saveForLaterArr))
+    noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
+    showSaveForLater()
 }
 
+function showSaveForLater() {
+    let saveForLaterDiv = document.getElementById('saveForLater');
+    saveForLaterDiv.innerHTML = null;
+    let saveForLater = JSON.parse(localStorage.getItem("saveForLater"))
+    if (saveForLater.length == 0) {
+        saveForLaterDiv.innerHTML = `<p>You haven't added any courses to your wishlist.</p>`
+    } else {
+        for (let i = 0; i < saveForLater.length; i++) {
+            let saveForLaterdiv = document.createElement("div");
+            saveForLaterdiv.innerHTML = `<img src=${saveForLater[i].img_source}>
+                     <div>
+                     <h3>${saveForLater[i].course_name}</h3>
+                     <p>${saveForLater[i].Author}</p>
+                     </div>
+                    <div>
+                     <button onclick="removeCourseFromSaveForLater(${i})">remove</button>
+                     
+                     </div>
+                     <div>
+                     <h3>&#8377; ${saveForLater[i].price}</h3>
+                     <p>&#8377; ${saveForLater[i].mainPrice}</p>
+                     </div>`;
+            saveForLaterdiv.style.display = "flex";
+            saveForLaterDiv.appendChild(saveForLaterdiv);
+        }
+    }
+}
+function removeCourseFromSaveForLater(i) {
+    let saveForLater = JSON.parse(localStorage.getItem("saveForLater"))
+    saveForLater.splice(i, 1);
+    // localstorage.setItem("removedWish", JSON.stringify(removedWishA))
+    localStorage.setItem("saveForLater", JSON.stringify(saveForLater))
+    showSaveForLater();
 
+}
+function applyCoupon() {
+    let coupon = document.getElementById("coupon").value;
+
+    let couponPercent = Number(coupon.slice(5));
+    if (couponPercent == NaN || couponPercent > 100 || couponPercent < 0) {
+        alert("invalid coupon!")
+        return 0;
+    }
+
+    let couponName = document.getElementById("couponName");
+    couponName.innerHTML = `${coupon} is applied`;
+
+    let couponInPercent = document.getElementById("couponInPercent");
+    couponInPercent.innerHTML = `${couponPercent}% is off`;
+
+    let showDiscountedPrice = document.getElementById("showDiscountedPrice");
+    let discountedPrice = total_main_price * (couponPercent / 100);
+    showDiscountedPrice.innerHTML = `&#8377; ${total_main_price - discountedPrice}`;
+}
 showcartItems();
