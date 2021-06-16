@@ -5,18 +5,18 @@
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: 10;
-  padding: 20px;
+  padding: 20px 25%;
 }
 
 #whitespace {
   background-color: #fff;
-  width: 700px;
+  width: 580px;
   max-height: 90vh;
   padding: 20px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  /* align-items: center; */
   overflow: auto;
   position: absolute;
   z-index: 20;
@@ -28,21 +28,25 @@
 }
 
 #rightCrossButton > button {
+  outline: none;
   border: none;
   background: none;
-  font-size: 50px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: lighter;
 }
 #whitespace > div {
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 #buy1 {
   background-color: #fff;
   display: flex;
-  width: 600px;
   justify-content: space-between;
-  align-items: center;
+  height: 4rem;
+}
+#buy1 > #tick > svg {
+  color: green;
+  margin-top: 25%;
 }
 #buy_one_course {
   display: flex;
@@ -50,15 +54,35 @@
 }
 #buy_one_course div {
   margin: 10px;
+  margin-top: -0.1rem;
+}
+#buyBtn {
+  padding-top: 1.5rem;
+}
+#buy_one_course > div:first-child {
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+}
+#buy_one_course > div:nth-child(2) > p:nth-child(2) {
+  font-size: 12px;
+}
+#buy_one_course > div:nth-child(2) > p:nth-child(1) {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 300px;
+  font-weight: bold;
 }
 #buy_one_course img {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
+  border: 1px solid gray;
 }
 #buyBtn a,
 #priceof2 a {
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 13px 15px;
   background-color: #0f7c90;
   color: #fff;
   border-radius: 7px;
@@ -67,36 +91,94 @@
   background-color: #094c59;
 }
 #buy_two_course {
-  width: 600px;
-  padding: 10px;
+  padding: 20px;
   border: 1px solid #333;
-  border-radius: 5px;
+  display: grid;
+  grid-gap: 1rem;
+}
+#buy_two_course > h2,
+#rightCrossButton > h2,
+#related > h2 {
+  font-size: 1.2rem;
 }
 #buy_two_course div > h2 {
-  margin: 0 15px;
+  /* margin: 0 15px; */
+}
+#buy_two_course1 > div > p:nth-child(2),
+#buy_two_course2 > div > p:nth-child(2) {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 275px;
+  /* margin-left: 1rem; */
+  font-size: 12px;
+}
+#buy_two_course1 > div:nth-child(2),
+#buy_two_course2 > div:nth-child(2) {
+  width: 250px;
+}
+#buy_two_course1 h3,
+#buy_two_course2 h3 {
+  font-size: 1rem;
 }
 #buy_two_course1,
 #buy_two_course2 {
   display: flex;
   justify-content: space-between;
-  padding: 13px;
 }
 #buy_two_course1 img,
 #buy_two_course2 img {
-  width: 200px;
+  width: 185px;
   height: 100px;
   border: 1px solid #333;
   border-radius: 5px;
 }
 #buy_two_course1 h2,
 #buy_two_course2 h2 {
-  flex-grow: 2;
+  /* margin: 0 15px; */
+  font-size: 1rem;
+}
+:root {
+  --star-size: 90%;
+  --star-color: #fff;
+  --star-background: rgb(235, 138, 47);
+  --star-border: 1px solid rgb(235, 138, 47);
+}
+
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.Stars:before {
+  content: "★★★★★";
+  letter-spacing: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--star-background) var(--percent),
+    var(--star-color) var(--percent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 0.3rem;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -1rem;
 }
 #plusIcon {
   position: absolute;
   z-index: 2;
-  top: 60%;
-  left: 19%;
+  top: 301px;
+  left: 109px;
+  width: 100px;
   display: inline-block;
 }
 #priceof2 {
@@ -111,9 +193,11 @@
 }
 #priceof2 p:last-child {
   text-decoration: line-through;
+  color: gray;
+  margin-left: 0.5rem;
 }
 #priceof2 p:first-child {
-  font-size: 25px;
+  font-size: 1rem;
 }
 #price0f2 span p {
   padding: 5px 10px;
