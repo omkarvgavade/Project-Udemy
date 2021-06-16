@@ -273,7 +273,152 @@
         .smallWindow {
             display: none;
         }
+        #allCartItems{
+            width:100vw;
+            height:auto;
+            padding:0rem 12rem;
+            display:grid;
+            grid-template-columns: 3fr 1fr;
+           grid-template-areas: "ci co"
+           "h2-1 co"
+           "sf co"
+           "h2-2 co"
+           "rw co";
+            grid-gap: 2rem;
 
+        }
+        #removedWish{
+            grid-area: rw;
+        }
+        #showCartItems{
+            grid-area: ci;
+        }
+        #checkoutDiv{
+            grid-area: co;
+        }
+        #saveForLater{
+            grid-area:sf;
+        }
+        #allCartItems>h2:nth-child(3){
+            grid-area: h2-1;
+            color: rgb(41,48,59);
+    font-size: 1.2em;
+        }
+        #allCartItems>h2:nth-child(5){
+            grid-area: h2-2;
+                 color: rgb(41,48,59);
+    font-size: 1.2em;
+        }
+        .save-wish{
+              width: 100vw;
+    height: auto;
+    padding: 0rem 12rem;
+    padding-right: 32rem;
+    display: grid;
+    grid-gap: 2rem;
+    margin-top: 6rem;
+        }
+        .countOfItemsDiv{
+          width: 100vw;
+    height: 5rem;
+    padding: 0rem 12rem;
+
+        }
+        #noOfItemsInshop{
+            position: relative;
+    top: 3rem;
+    font-size: 1.2rem;
+        }
+        #showCartItems,#saveForLater{
+           display: flex;
+    flex-direction: column;
+            
+        }
+        #showCartItems>div,#saveForLater>div,#removedWish>div{
+           display: flex;
+    /* height: 73px; */
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #686F7A;
+    height: 5.2rem;
+    justify-content: space-between;
+        }
+        #showCartItems>div>div:nth-child(3), #saveForLater>div>div:nth-child(3),#removedWish>div>div:nth-child(3){
+            display: grid;
+        }
+        #showCartItems>div>div:nth-child(2)>p,#saveForLater>div>div:nth-child(2)>p,#removedWish>div>div:nth-child(2)>p{
+            font-size: 14px;
+    color: rgb(104,111,122);
+        }
+        #showCartItems>div>div:nth-child(3)>button,#saveForLater>div>div:nth-child(3)>button,#removedWish>div>div:nth-child(3)>button{
+                outline: none;
+    border: none;
+    color: rgb(0,119,145);
+    background-color: transparent;
+    height: 1rem;
+    text-align: end;
+        }
+        #showCartItems>div>div:nth-child(2){
+            margin-left: -2rem;;
+        }
+      #saveForLater>div>div:nth-child(2), #removedWish>div>div:nth-child(2){
+            margin-left: -3rem;
+                width: 27rem;
+    text-align: start;
+        }
+         #showCartItems>div>div:nth-child(2)>h3, #saveForLater>div>div:nth-child(2)>h3,#removedWish>div>div:nth-child(2)>h3{
+             font-size:1rem;
+         }
+        #showCartItems>div>div:nth-child(4)>h3,#saveForLater>div>div:nth-child(4)>h3,#removedWish>div>div:nth-child(4)>h3{
+          color:red;
+        }
+         #showCartItems>div img, #saveForLater>div img,#removedWish>div img{
+             width:140px;
+             height:fit-content;
+         }
+         #checkoutDiv{
+                 display: grid;
+    height: 14rem;
+         }
+         #checkoutDiv p,#showCartItems>div>div:nth-child(4)>p{
+             font-size: 1rem;
+    color: rgb(104,111,122);
+         }
+          #checkoutDiv p:nth-child(3),#showCartItems>div>div:nth-child(4)>p{
+              text-decoration: line-through;
+          }
+         #checkoutDiv h2{
+             font-size: 3rem;
+         }
+         #checkoutDiv a{
+             text-decoration: none;
+    padding: 1rem 7rem;
+    font-size: 1.1rem;
+    background-color: rgb(236,82,82);
+    font-weight: bold;
+    color: white;
+    margin-top: 0.7rem;
+         }
+         #checkoutDiv>div{
+                 display: inline-flex;
+    height: 2rem;
+    margin-top: 1rem;
+         }
+         #checkoutDiv >div>input{
+             width:80%;
+         }
+         #checkoutDiv >div>button{
+                 width: 20%;
+    color: white;
+    background-color: rgb(236,82,82);
+    border: none;
+    font-weight: bold;
+
+         }
+         .svg-inline--fa.fa-w-11 {
+    width: .6875em;
+    color: rgb(0,119,145);
+    margin-right: 1rem;
+}
         @media (max-width: 1080px) {
             .firstSection>ul>li:nth-child(3) {
                 display: none;
@@ -1301,13 +1446,34 @@
         <div class="mainBox">
             <div class="shop">Shopping Cart</div>
         </div>
-        <div id="allCartItems" style="display: flex;">
+        <div class="countOfItemsDiv">
+         <div id="noOfItemsInshop"></div>
+         </div>
+        <div id="allCartItems">
+           
             <div id="showCartItems"></div>
             <div id="checkoutDiv"></div>
+                  <h2>Save for later</h2>
+        <div id="saveForLater">
+          
         </div>
-        
+          <h2>Recently Wishlisted</h2>
+        <div id="removedWish">
+           <p>You haven't added any courses to your wishlist.</p>
+        </div>
+        </div>
+        <!-- <div class="save-wish"> -->
+            <!-- <h2>Save for later</h2>
+        <div id="saveForLater">
+            <p>You haven't saved any courses for later.</p>
+        </div>
+          <h2>Recently Wishlisted</h2>
+        <div id="removedWish">
+           <p>You haven't added any courses to your wishlist.</p>
+        </div> -->
+        <!-- </div> -->
         <div class="main-slider-2-hp slideCourses">
-            <span>Students are viewing</span>
+            <span>You may also like</span>
             <div class="main-slider-students-view">
                 <button onclick="plusSlideStud(-1)" href="#" class="previous round">&#8249;</button>
                 <div class="slides-2 fade-2"></div>

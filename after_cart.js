@@ -1,4 +1,11 @@
-localStorage.setItem("removedWish", JSON.stringify([]));
+if(localStorage.getItem("saveForLater")==null){
+    localStorage.setItem("saveForLater", JSON.stringify([]))
+}
+if(localStorage.getItem("removedWish")==null){
+    localStorage.setItem("removedWish", JSON.stringify([]));
+}
+
+let total_main_price = 0;
 function showcartItems() {
     showremovedWisher();
     showSaveForLater();
@@ -47,7 +54,6 @@ function showcartItems() {
                             <i class="fas fa-times"></i><span id="couponName">masai90 is applied</span>
                         <div>`;
 }
-let total_main_price = 0;
 
 function moveToWishList(i) {
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
