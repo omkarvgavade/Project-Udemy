@@ -76,6 +76,9 @@ function moveToWishList(i) {
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
     showremovedWisher();
+    let noOfCartItems = document.getElementById('noOfCartItems');
+    // let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+    noOfCartItems.innerHTML = `${cartItem.length}`
 }
 // let removedWishDiv = document.getElementById('removedWish');
 // removedWishDiv.innerHTML = "Omkar"
@@ -123,6 +126,9 @@ function removeCourseFromCart(i) {
     noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
+    let noOfCartItems = document.getElementById('noOfCartItems');
+    // let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+    noOfCartItems.innerHTML = `${cartItem.length}`
 
 }
 
@@ -147,6 +153,9 @@ function saveForLater(i) {
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
     showSaveForLater()
+    let noOfCartItems = document.getElementById('noOfCartItems');
+    // let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+    noOfCartItems.innerHTML = `${cartItem.length}`
 }
 
 function showSaveForLater() {
@@ -195,6 +204,9 @@ function moveToCartfromSaved(i) {
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
     showSaveForLater();
+    let noOfCartItems = document.getElementById('noOfCartItems');
+    // let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+    noOfCartItems.innerHTML = `${cartItem.length}`
 
 }
 function moveToCartfromWish(i) {
@@ -208,6 +220,9 @@ function moveToCartfromWish(i) {
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
     showremovedWisher();
+    let noOfCartItems = document.getElementById('noOfCartItems');
+    // let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+    noOfCartItems.innerHTML = `${cartItem.length}`
 
 }
 function applyCoupon() {

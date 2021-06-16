@@ -163,6 +163,17 @@
       .cartBtn {
         margin-right: 1vw;
       }
+            /* this is newly added Id for span of showing no of items present in the cart */
+    #noOfCartItems{
+         padding: 0px 4px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    left: 0.5rem;
+    bottom: 1.8rem;
+
+    }
       .btn-medium {
         height: 2.4rem;
         width: 100px;
@@ -687,13 +698,14 @@
         <div class="secondSection">
           <ul>
             <li>
-              <button class="cartBtn cursorPointer">
+              <button onclick="showCart()" class="cartBtn cursorPointer">
                 <img
                   class="cartIcon"
                   src="https://image.flaticon.com/icons/png/128/628/628556.png"
                   alt="cart"
                 />
               </button>
+             <span id="noOfCartItems"></span>
             </li>
             <li>
               <button class="btn-medium btn-hover1 cursorPointer">
@@ -999,6 +1011,12 @@
 }
 
 }
-  
+    // This is newly added script for showing no of items present in cart
+let noOfCartItems=document.getElementById('noOfCartItems');
+let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+noOfCartItems.innerHTML=`${cartItem.length}`
+function showCart(){
+  window.location.href ="after_cart.html"
+}
   
 </script>
