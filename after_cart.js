@@ -1,7 +1,7 @@
-if(localStorage.getItem("saveForLater")==null){
+if (localStorage.getItem("saveForLater") == null) {
     localStorage.setItem("saveForLater", JSON.stringify([]))
 }
-if(localStorage.getItem("removedWish")==null){
+if (localStorage.getItem("removedWish") == null) {
     localStorage.setItem("removedWish", JSON.stringify([]));
 }
 
@@ -84,7 +84,7 @@ function showremovedWisher() {
     let removedWishDiv = document.getElementById('removedWish');
     let removedWisher = JSON.parse(localStorage.getItem("removedWish"))
     if (removedWisher.length == 0) {
-        removedWishDiv.innerHTML = `<p>You haven't saved any courses for later.</p>`
+        removedWishDiv.innerHTML = `<p>You haven't added any courses to your wishlist.</p>`
     } else {
         removedWishDiv.innerHTML = null;
         let removedWisher = JSON.parse(localStorage.getItem("removedWish"))
@@ -97,6 +97,7 @@ function showremovedWisher() {
                      </div>
                     <div>
                      <button onclick="removeCourseFromRemovedWish(${i})">remove</button>
+                     <button onclick="moveToCartfromWish(${i})">Move to cart</button>
                      </div>
                      <div>
                      <h3>&#8377; ${removedWisher[i].price}</h3>
@@ -153,7 +154,7 @@ function showSaveForLater() {
     saveForLaterDiv.innerHTML = null;
     let saveForLater = JSON.parse(localStorage.getItem("saveForLater"))
     if (saveForLater.length == 0) {
-        saveForLaterDiv.innerHTML = `<p>You haven't added any courses to your wishlist.</p>`
+        saveForLaterDiv.innerHTML = `<p>You haven't saved any courses for later.</p>`
     } else {
         for (let i = 0; i < saveForLater.length; i++) {
             let saveForLaterdiv = document.createElement("div");
@@ -164,7 +165,7 @@ function showSaveForLater() {
                      </div>
                     <div>
                      <button onclick="removeCourseFromSaveForLater(${i})">remove</button>
-                     
+                     <button onclick="moveToCartfromSaved(${i})">Move to cart</button>
                      </div>
                      <div>
                      <h3>&#8377; ${saveForLater[i].price}</h3>
@@ -181,6 +182,32 @@ function removeCourseFromSaveForLater(i) {
     // localstorage.setItem("removedWish", JSON.stringify(removedWishA))
     localStorage.setItem("saveForLater", JSON.stringify(saveForLater))
     showSaveForLater();
+
+}
+function moveToCartfromSaved(i) {
+
+    let saveForLater = JSON.parse(localStorage.getItem("saveForLater"))
+    let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    let arr2 = saveForLater.splice(i, 1);
+    // console.log(arr2);
+    cartItem.push(arr2[0]);
+    localStorage.setItem("saveForLater", JSON.stringify(saveForLater))
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+    showcartItems();
+    showSaveForLater();
+
+}
+function moveToCartfromWish(i) {
+
+    let removedWish = JSON.parse(localStorage.getItem("removedWish"))
+    let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    let arr2 = removedWish.splice(i, 1);
+    // console.log(arr2);
+    cartItem.push(arr2[0]);
+    localStorage.setItem("removedWish", JSON.stringify(removedWish))
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+    showcartItems();
+    showremovedWisher();
 
 }
 function applyCoupon() {
