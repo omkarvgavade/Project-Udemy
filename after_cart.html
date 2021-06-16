@@ -233,7 +233,17 @@
             width: 1.2rem;
             height: 1.3rem;
         }
+           /* this is newly added Id for span of showing no of items present in the cart */
+    #noOfCartItems{
+          padding: 0px 4px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    left: -1.5rem;
+    bottom: 0.8rem;
 
+    }
         .btn-medium {
             height: 2.7rem;
             height: 2.4rem;
@@ -1348,10 +1358,11 @@
         }
 
         .shop {
-            color: white;
-            font-size: 40px;
-            padding-top: 50px;
-            padding-left: 150px;
+           color: white;
+    font-size: 50px;
+    padding-top: 50px;
+    font-weight: bold;
+    padding-left: 150px;
         }
         .emptyBox{
             width: 1200px;
@@ -1414,10 +1425,11 @@
                     </li>
 
                     <li>
-                        <button class="cartBtn cursorPointer">
+                        <button onclick="showCart()" class="cartBtn cursorPointer">
                             <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png"
                                 alt="cart" />
                         </button>
+                         <span id="noOfCartItems"></span>
                     </li>
                     <li>
                         <button class="cartBtn cursorPointer">
@@ -1891,4 +1903,11 @@
         }
 
     } 
+      // This is newly added script for showing no of items present in cart
+let noOfCartItems=document.getElementById('noOfCartItems');
+let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+noOfCartItems.innerHTML=`${cartItem.length}`
+function showCart(){
+  window.location.href ="after_cart.html"
+}
 </script>

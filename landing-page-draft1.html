@@ -289,6 +289,17 @@
       width: 1.2rem;
       height: 1.3rem;
     }
+       /* this is newly added Id for span of showing no of items present in the cart */
+    #noOfCartItems{
+          padding: 0px 4px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    left: -1.5rem;
+    bottom: 0.8rem;
+
+    }
 
     .btn-medium {
       height: 2.7rem;
@@ -1785,9 +1796,10 @@
       <div class="secondSection">
         <ul>
           <li>
-            <button class="cartBtn cursorPointer">
+            <button onclick="showCart()" class="cartBtn cursorPointer">
               <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png" alt="cart" />
             </button>
+            <span id="noOfCartItems"></span>
           </li>
           <li>
             <a href="login.html"><button class="btn-medium btn-hover1 cursorPointer">
@@ -3332,6 +3344,12 @@ toggle between hiding and showing the dropdown content */
   }
 
   var udemyForBusiness = document.getElementById("div1");
-
+  // This is newly added script for showing no of items present in cart
+let noOfCartItems=document.getElementById('noOfCartItems');
+let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+noOfCartItems.innerHTML=`${cartItem.length}`
+function showCart(){
+  window.location.href ="after_cart.html"
+}
 
 </script>

@@ -281,6 +281,17 @@
     .cartBtn {
       margin-right: 1vw;
     }
+    /* this is newly added Id for span of showing no of items present in the cart */
+    #noOfCartItems{
+          padding: 0px 4px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    left: -1.5rem;
+    bottom: 0.8rem;
+
+    }
 
     .cartIcon {
       color: #73726c;
@@ -1498,19 +1509,21 @@
                   alt="heart"
                 />
               </button>
+              
             </li>
             
             <li>
-              <button class="cartBtn cursorPointer">
+              <button onclick="showCart()" class="cartBtn cursorPointer">
                 <img
                   class="cartIcon"
                   src="https://image.flaticon.com/icons/png/128/628/628556.png"
                   alt="cart"
                 />
               </button>
+              <span id="noOfCartItems"></span>
             </li>
             <li>
-              <button class="cartBtn cursorPointer">
+              <button  class="cartBtn cursorPointer">
                 <img
                   class="cartIcon"
                   src="https://cdn2.iconfinder.com/data/icons/apple-inspire-white/100/Apple-47-128.png"
@@ -3097,5 +3110,11 @@ toggle between hiding and showing the dropdown content */
       }
       
   }
-
+  // This is newly added script for showing no of items present in cart
+let noOfCartItems=document.getElementById('noOfCartItems');
+let cartItem=JSON.parse(localStorage.getItem('cartItem'));
+noOfCartItems.innerHTML=`${cartItem.length}`
+function showCart(){
+  window.location.href ="after_cart.html"
+}
 </script>
