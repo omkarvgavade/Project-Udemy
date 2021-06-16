@@ -1,4 +1,6 @@
-let showCartItems = document.getElementById("showCartItems");
+function showcartItems() {
+    let showCartItems = document.getElementById("showCartItems");
+    showCartItems.innerHTML = null;
 let cartItem = JSON.parse(localStorage.getItem("cartItem"));
 for (let i = 0; i < cartItem.length; i++){
     let div = document.createElement("div");
@@ -8,8 +10,8 @@ for (let i = 0; i < cartItem.length; i++){
                      <h6>${cartItem[i].Author}</h6>
                      </div>
                     <div>
-                     <button>remove</button>
-                     <button>Save for later</button>
+                     <button onclick="removeCourseFromCart(${i})">remove</button>
+                     <button onclick="saveForLater(${i})">Save for later</button>
                      </div>
                      <div>
                      <h3>${cartItem[i].price}</h3>
@@ -37,3 +39,30 @@ checkoutDiv.innerHTML = `<p>Total:</p>
                         <div>
                             <i class="fas fa-times"></i>masai90 is applied
                         <div>`;
+}
+
+
+function removeCourseFromCart(i) {
+    let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    cartItem.splice(i, 1);
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+    showcartItems();
+}
+
+function saveForLater(i) {
+    let cartItem = JSON.parse(localStorage.getItem("cartItem"));
+    let obj = cartItem[i];
+    cartItem.splice(i, 1);
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+
+    if (localStorage.getItem("saveForLater") == null) {
+        localStorage.setItem("saveForLater", JSON.stringify([]));
+    }
+    let saveForLater = JSON.parse(localStorage.getItem("saveForLater"));
+    saveForLater.push(obj);
+    localStorage.setItem("saveForLater", JSON.stringify(saveForLater));
+    showcartItems();
+}
+
+
+showcartItems();
