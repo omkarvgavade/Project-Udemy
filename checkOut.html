@@ -606,6 +606,26 @@
           padding:20px;
           font-family:sf pro display,-apple-system,BlinkMacSystemFont,Roboto,segoe ui,Helvetica,Arial,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol;
       }
+      .price-flex-boxes{
+        display: flex;
+        justify-content: space-between;
+      }
+      #total_in_bold span{
+        font-weight: 800;
+      }
+      .flexSum > button{
+        padding: 10px 20px;
+        width: 60%;
+        background-color: #ec5353;
+        color: #fff;
+      }
+      .flexSum > button:hover{
+        background-color: #dd1b1b;
+      }
+      .flexSum span ,
+      .flexSum p{
+        margin-bottom: 10px;
+      }
     </style>
   </head>
   <body>
@@ -860,7 +880,25 @@
         </div>
         <div class="flexSum">
             <h2>Summary</h2>
+            <div class="price-flex-boxes">
+              <span>Total Price:</span>
+              <span id="all_total_price"></span>
+            </div>
+            <div class="price-flex-boxes">
+              <span>Discount Price:</span>
+              <span id="discounted_price"></span>
+            </div>
+            <hr>
+            <div class="price-flex-boxes" id="total_in_bold">
+              <span>Total:</span>
+              <span id="total"></span>
+            </div>
+            <p>Udemy is required by law to collect applicable transaction taxes for purchases made in certain tax jurisdictions.</p>
+            <p>By completing your purchase you agree to these Terms of Service.</p>
+            <button onclick="shoppingComplete()">Complete Payment</button>
+            <h1 id="notification"></h1>
         </div>
     </div>
   </body>
+  <script src="checkOut.js"></script>
 </html>
