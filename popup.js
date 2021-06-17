@@ -202,13 +202,42 @@ function showbigpopup(index) {
 
 function addOneItem() {
   let cartItem = JSON.parse(localStorage.getItem("cartItem"));
-  cartItem.push(educationContent[courseIndex]);
+
+  let found = false;
+  for (let i = 0; i < cartItem.length; i++){
+    if (cartItem[i].course_name == educationContent[courseIndex].course_name) {
+      found = true;
+      break;
+    }
+  }
+  if (!found) {
+    cartItem.push(educationContent[courseIndex]);
+  }
+  
   localStorage.setItem("cartItem", JSON.stringify(cartItem));
 }
 
 function addTwoItems() {
   let cartItem = JSON.parse(localStorage.getItem("cartItem"));
-  cartItem.push(educationContent[courseIndex]);
-  cartItem.push(educationContent[courseIndex + 1]);
+
+  let foundFirst = false;
+  let foundSecond = false;
+
+  for (let i = 0; i < cartItem.length; i++){
+    if (cartItem[i].course_name == educationContent[courseIndex].course_name) {
+      foundFirst = true;
+    }
+    if (cartItem[i].course_name == educationContent[courseIndex + 1].course_name) {
+      foundSecond = true;
+    }
+  }
+  if (!foundFirst) {
+    cartItem.push(educationContent[courseIndex]);
+  }
+  
+ if (!foundSecond) {
+    cartItem.push(educationContent[courseIndex + 1]);
+  }
+
   localStorage.setItem("cartItem", JSON.stringify(cartItem));
 }
