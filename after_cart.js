@@ -6,6 +6,8 @@ if (localStorage.getItem("removedWish") == null) {
 }
 
 let total_main_price = 0;
+let discount_price = 0;
+
 function showcartItems() {
     showremovedWisher();
     showSaveForLater();
@@ -40,6 +42,9 @@ function showcartItems() {
         total_price += cartItem[i].price;
         total_main_price += cartItem[i].mainPrice;
     }
+    discount_price = total_main_price - total_price;
+    localStorage.setItem("total_discount_price", JSON.stringify([{ total_price: total_main_price, discount_price: discount_price }]))
+    
     let checkoutDiv = document.getElementById("checkoutDiv");
     checkoutDiv.innerHTML = `<p>Total:</p>
                         <h2 id="showDiscountedPrice">&#8377;  ${total_price}</h2>
@@ -243,5 +248,7 @@ function applyCoupon() {
     let showDiscountedPrice = document.getElementById("showDiscountedPrice");
     let discountedPrice = total_main_price * (couponPercent / 100);
     showDiscountedPrice.innerHTML = `&#8377; ${total_main_price - discountedPrice}`;
+
+    localStorage.setItem("total_discount_price", JSON.stringify([{total_price: total_main_price, discount_price: discountedPrice}]))
 }
 showcartItems();
