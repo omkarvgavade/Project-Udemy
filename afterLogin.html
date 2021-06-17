@@ -321,26 +321,31 @@
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  width: 260px;
-  right: 0%;
-  bottom: -140px;
-  margin-left: -60px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+ display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 0px;
+    height: 150px;
+    width: 280px;
+    right: 0%;
+    bottom: -140px;
+    margin-left: -60px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
 }
+
 .dropdown-content1 {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  width: 260px;
-  right: 0%;
-  bottom: -120px;
-  margin-left: -60px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: -3px;
+    width: 260px;
+    height: 120px;
+    right: 0%;
+    bottom: -120px;
+    margin-left: -60px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
 }
 
 .dropdown-content b {
@@ -391,7 +396,7 @@
                flex-grow: 3;
              } ++
       } */
-    @media (max-width: 800px) {
+    /* @media (max-width: 800px) {
       body {
         position: relative;
       }
@@ -429,7 +434,7 @@
       .udemyLogo {
         margin-left: 15%;
       }
-    }
+    } */
 
     section {
       margin-top: 0.3vw;
@@ -1358,7 +1363,32 @@
       height: 45px;
       width: 128px;
     }
-
+    .dropdown1 {
+      position: relative;
+      display: inline-block;
+      height: 45px;
+      width: 46px;
+    }
+    #btnUser{
+      margin-top:10px;
+      color:white;
+    }
+    .sizeM{
+      width: 46px;
+      height: 70px;
+      /* border: 1px solid; */
+    }
+    .btnLogout{
+      width: 250px;
+      height: 40px;
+      margin-top: 15px;
+      background-color: #0F7C90;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-size: 17px;
+      margin-left: 5px;
+    }
     .dropdown div:nth-child(1) {
       margin-top: 10px;
       padding-bottom: 40px;
@@ -1376,9 +1406,26 @@
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
+    .dropdown-content1 {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      width: 260px;
+      right: 0%;
+      bottom: -140px;
+      margin-left: -60px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
 
     .dropdown-content b {
-      color: black;
+      /* padding: 12px 16px; */
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-size: 18px;
+    }
+    .dropdown-content1 b {
       /* padding: 12px 16px; */
       text-decoration: none;
       display: block;
@@ -1400,13 +1447,19 @@
     .dropdown-content a:hover {
       background-color: #ddd;
     }
+    .dropdown-content1 a:hover {
+      background-color: #ddd;
+    }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
+    .dropdown1:hover .dropdown-content1 {
+      display: block;
+    }
   </style>
   <link rel="stylesheet" href="categories.css">
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+  <!-- <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script> -->
 </head>
 
 <body>
@@ -1444,12 +1497,9 @@
           </button>
         </div>
       </div>
-      <div class="logo">
-        <img
-          class="udemyLogo cursorPointer"
-          src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
-          alt="Udemy logo"
-        />
+      <div class="logo"><a href="afterLogin.html">
+        <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
+          alt="Udemy logo" /></a>
       </div>
       <div class="firstSection">
         <ul>
@@ -1514,11 +1564,16 @@
               </button>
             </li>
 
-            <li>
+            <!-- <li>
               <button class="btn-medium langIconbtn cursorPointer" id="btnUser">
                
               </button>
-            </li>
+            </li> -->
+            <li>
+              <a class="btn-medium langIconbtn cursorPointer dropdown1"><div class="sizeM"><div id="btnUser"></div></div><span class="dropdown-content1"><b>Click On the button Below to Logging Out</b>
+                <div><button onclick="window.location='landing-page-draft1.html'" class="btnLogout"><b>LogOut</b></button></div>
+              </span></a>
+
           </ul>
         </div>
       <div class="smallWindow">

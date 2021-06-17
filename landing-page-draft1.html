@@ -193,7 +193,8 @@
       margin: 0;
       margin-left: 0.3vw;
     }
-/* change */
+
+    /* change */
     .navbar a {
       text-decoration: none;
       color: #333;
@@ -289,15 +290,16 @@
       width: 1.2rem;
       height: 1.3rem;
     }
-       /* this is newly added Id for span of showing no of items present in the cart */
-    #noOfCartItems{
-          padding: 0px 4px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    position: relative;
-    left: -1.5rem;
-    bottom: 0.8rem;
+
+    /* this is newly added Id for span of showing no of items present in the cart */
+    #noOfCartItems {
+      padding: 0px 4px;
+      background-color: red;
+      color: white;
+      border-radius: 50%;
+      position: relative;
+      left: -1.5rem;
+      bottom: 0.8rem;
 
     }
 
@@ -363,7 +365,7 @@
                flex-grow: 3;
              } ++
       } */
-     
+
 
     section {
       margin-top: 0.3vw;
@@ -461,6 +463,7 @@
       height: 100%;
       margin: auto;
     }
+
     .courseBox {
       display: grid;
       width: 100%;
@@ -516,7 +519,7 @@
       font-size: 35px;
       color: rgb(60, 59, 55);
       letter-spacing: -0.1rem;
-      font-family: SuisseWorks,Georgia,Times,times new roman,serif,apple color emoji,segoe ui emoji,segoe ui symbol;
+      font-family: SuisseWorks, Georgia, Times, times new roman, serif, apple color emoji, segoe ui emoji, segoe ui symbol;
     }
 
     .textContent>div>span {
@@ -970,7 +973,7 @@
     .headings {
       width: 75vw;
       margin: auto;
-      margin-left: 14rem;
+      margin-left: 18rem;
       /* width: 1100px; */
       /* background-color: #e2e22a; */
       display: grid;
@@ -991,6 +994,16 @@
       line-height: 2rem;
     }
 
+    .contentBe {
+      position: relative;
+      /* top: 25vh; */
+      top: 5rem;
+      width: 25rem;
+      left: 5rem;
+      line-height: 2rem;
+    }
+
+
     .content h1 {
       font-size: 2.3rem;
     }
@@ -1004,6 +1017,25 @@
     }
 
     .content p {
+      font-size: large;
+      margin-bottom: 30px;
+      line-height: 1.6rem;
+      margin-top: 1rem;
+    }
+
+    .contentBe h1 {
+      font-size: 2.3rem;
+    }
+
+    .contentBe a {
+      text-decoration: none;
+      color: #fff;
+      background-color: rgb(15, 124, 144);
+      padding: 16px 20px;
+      border-radius: 4px;
+    }
+
+    .contentBe p {
       font-size: large;
       margin-bottom: 30px;
       line-height: 1.6rem;
@@ -1033,6 +1065,7 @@
       align-items: center;
       text-align: center;
       height: 4rem;
+      column-gap: 30px;
     }
 
     .mercedesLogo {
@@ -1066,6 +1099,7 @@
       align-items: center;
       justify-content: center;
       padding: 50px;
+      padding-left: 18vw;
       border: 1px solid rgb(220, 218, 203);
       border-left: none;
       border-right: none;
@@ -1078,14 +1112,14 @@
     }
 
     .youtube_content p {
-      width:70%;
+      width: 70%;
       font-size: 22px;
       margin-top: 1rem;
       line-height: 1.7rem;
     }
 
     .youtube_content h1 {
-      width:60%;
+      width: 60%;
       font-size: 2.3rem;
       line-height: 2.2rem;
     }
@@ -1096,9 +1130,11 @@
       padding: 30px 50px;
       grid-template-columns: 20% 20% 20% 40%;
     }
-    #links ul li a{
+
+    #links ul li a {
       color: rgb(15, 124, 144);
     }
+
     .languageRight {
       text-align: end;
     }
@@ -1163,60 +1199,68 @@
 
 
     .navText {
-  position: relative;
-  display: inline-block;
-}
-.navText .tooltiptext {
-  visibility: hidden;
-  background-color: white;
-  color: rgb(85, 82, 82);
-  text-align: center;
-  border-radius: 6px;
-  padding: 1.6rem;
-  box-sizing: border-box;
-  line-height:23px;
-  position: absolute;
-  z-index: 1;
-  bottom: -1100%;
-  right: 0%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
-}
-.navText .tooltiptext::after {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-}
-.navText:hover .tooltiptext{
-  visibility: visible;
-  opacity: 1;
-}
-.tooltiptext{
-  font-size:18px;
-  display: none;
-}
-.tooltiptext b{
-  display: block;
-}
-.tooltiptext:hover{
-  visibility: visible;
-  opacity: 1;
-}
-.navText button{
-  width: 250px;
-  height:40px;
-  margin-top:15px;
-  background-color:#0F7C90;
-  border-radius: 5px;
-  border: none;
-  color: white;
-  font-size:17px;
-}
+      position: relative;
+      display: inline-block;
+    }
+
+    .navText .tooltiptext {
+      visibility: hidden;
+      background-color: white;
+      color: rgb(85, 82, 82);
+      text-align: center;
+      border-radius: 6px;
+      padding: 1.6rem;
+      box-sizing: border-box;
+      line-height: 23px;
+      position: absolute;
+      z-index: 1;
+      bottom: -1100%;
+      right: 0%;
+      margin-left: -60px;
+      opacity: 0;
+      transition: opacity 0.3s;
+      box-shadow: 0 2px 4px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 8%);
+    }
+
+    .navText .tooltiptext::after {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+    }
+
+    .navText:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltiptext {
+      font-size: 18px;
+      display: none;
+    }
+
+    .tooltiptext b {
+      display: block;
+    }
+
+    .tooltiptext:hover {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .navText button {
+      width: 250px;
+      height: 40px;
+      margin-top: 15px;
+      background-color: #0F7C90;
+      border-radius: 5px;
+      border: none;
+      color: white;
+      font-size: 17px;
+    }
+
     .dropdown {
       position: relative;
       display: inline-block;
@@ -1234,13 +1278,16 @@
       display: none;
       position: absolute;
       background-color: #f1f1f1;
-      width: 260px;
+      padding: 10px;
+      height: 150px;
+      width: 280px;
       right: 0%;
       bottom: -140px;
       margin-left: -60px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
       z-index: 1;
     }
+
 
     .dropdown-content b {
       color: black;
@@ -1262,163 +1309,200 @@
       font-size: 17px;
       margin-left: 5px;
     }
-    
 
-    @media (min-width: 500px) and (max-width: 700px) {
-  .searchContent {
-          display: flex;
-          flex-direction: column;
-          height: 14rem;
-          max-width: 100%;
-          min-width: 400px;
-          margin-top: -12.6rem;
-          background-color: transparent;
-          margin-left: 0rem;
-          font-family: Georgia, "Times New Roman", Times, serif;
-        }
-        .container {
-          width: 100%;
-          height: 25rem;
-          margin: 0;
-        }
-        .bgimage {
-          background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
-          width: 100%;
-          height: 25rem;
-          background-repeat: no-repeat;
-          background-size: 100%;
-          min-width: 700px;
-        }
-        .searchContent > div:nth-child(2) {
-          min-width: 700px;
-          margin-top: -2rem;
-        }
-        .searchContent > div:nth-child(1) {
-          margin-bottom: 2.5rem;
-          display: block;
-          font-size: 37px;
-        }
-        .searchBox2 {
-          width: 600px;
-          margin-bottom: 2rem;
-        }
-        .searchBox2 > input {
-          width: 90%;
-        }
-        .textContent > div:nth-child(1) {
+
+    @media (min-width: 500px) and (max-width: 699px) {
+      .searchContent {
+        display: flex;
+        flex-direction: column;
+        height: 14rem;
+        max-width: 100%;
+        min-width: 400px;
+        margin-top: -12.6rem;
+        background-color: transparent;
+        margin-left: 0rem;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .container {
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+      }
+
+      .bgimage {
+        background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+        width: 100%;
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-width: 700px;
+      }
+
+      .searchContent>div:nth-child(2) {
+        min-width: 700px;
+        margin-top: -2rem;
+      }
+
+      .searchContent>div:nth-child(1) {
+        margin-bottom: 2.5rem;
+        display: block;
+        font-size: 37px;
+      }
+
+      .searchBox2 {
+        width: 600px;
+        margin-bottom: 2rem;
+      }
+
+      .searchBox2>input {
+        width: 90%;
+      }
+
+      .textContent>div:nth-child(1) {
         font-size: 35px;
         font-weight: 900;
-        padding:0px;
+        padding: 0px;
       }
+
       #linkList {
         overflow: auto;
         margin-top: 20px;
       }
+
       #linkList li {
         display: inline-block;
-  text-align: center;
-  text-decoration: none;
+        text-align: center;
+        text-decoration: none;
       }
-      #linkList > li:nth-child(3),
-      #linkList > li:nth-child(6){
+
+      #linkList>li:nth-child(3),
+      #linkList>li:nth-child(6) {
         width: 130px;
-        padding-left:0px;
-        padding-right:0px;
+        padding-left: 0px;
+        padding-right: 0px;
       }
-      #linkList > li:nth-child(5){
+
+      #linkList>li:nth-child(5) {
         width: 100px;
-        padding-left:0px;
-        padding-right:0px;
+        padding-left: 0px;
+        padding-right: 0px;
       }
-        #dropdownbtn {
-          display: inline;
-        }
-        .smallWindow {
-          display: flex;
-          width: 15vw;
-        }
-        .smallWindow > button {
-          margin-right: 3vw;
-        }
-        .firstSection,
-        .secondSection {
-          display: none;
-        }
-        .udemyLogo{
-          margin-left: 15%;
-        }
-        .image, .image-2{
-          display: none;
-        }
-        /* #companies{
+
+      #dropdownbtn {
+        display: inline;
+      }
+
+      .smallWindow {
+        display: flex;
+        width: 15vw;
+      }
+
+      .smallWindow>button {
+        margin-right: 3vw;
+      }
+
+      .firstSection,
+      .secondSection {
+        display: none;
+      }
+
+      .udemyLogo {
+        margin-left: 15%;
+      }
+      .main-slider-2-hp{
+display: none;
+}
+      .image,
+      .image-2 {
+        display: none;
+      }
+
+      /* #companies{
           padding-top: 0px;
         } */
-        #companies h1 {
+      #companies h1 {
         text-align: center;
       }
-      .content{
+
+      .content {
         text-align: center;
         left: -18vw;
         width: 34rem;
       }
+
       .content-2 {
         width: 400px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
       }
-      .not{
+
+      .not {
         width: 0px;
       }
-      .belowSection{
+
+      .belowSection {
         width: 100%;
         height: 13.5rem;
-        margin-top:60px;
+        margin-top: 60px;
       }
-      #youtube{
+
+      #youtube {
         padding-left: 3%;
         margin-top: 150px;
         padding-top: 45px;
         padding-bottom: 45px;
         flex-wrap: wrap;
       }
-      .video{
-  width:100%;
-  height:0;
-  padding-bottom:50%;
-  position: relative;
-}
-.video iframe{
-  position: absolute;
-  width:100%;
-  height:100%;
-}
-.youtube_content{
-  width: 100%;
-  margin-left: 0px;
-  margin-top: 20px;
-}
-.headings{
-  grid-template-columns: 0px 0px;
-}
-      .midSection{
+
+      .video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+      }
+
+      .video iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .youtube_content {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+
+      .headings {
+        grid-template-columns: 0px 0px;
+      }
+
+      .midSection {
         margin-bottom: -100px;
+        margin-left: -12rem;
       }
+
       #linktocourses {
-         width: 90%;
-         /* margin-right: 0px; */
-         margin-left: 25px;
+        width: 90%;
+        /* margin-right: 0px; */
+        margin-left: 25px;
       }
+
       #main-content-2 {
         padding-left: 0px;
-        padding-right:0px;
+        padding-right: 0px;
         margin-left: 0px;
         margin-top: 320px;
       }
-      .featured{
+
+      .featured {
         margin-left: 25px;
       }
-      .subparts{
+
+      .subparts {
         margin-right: 10px;
       }
+
       #topcourse {
         width: 100%;
         height: auto;
@@ -1428,22 +1512,26 @@
         grid-gap: 20px;
         margin-top: 1rem;
       }
+
       #main-content {
         line-height: 1.6rem;
         padding: 25px;
         padding-top: 0px;
       }
+
       #main-content {
         height: 46rem;
       }
+
       .slideCourses {
-     border: 1px solid rgb(220, 218, 203);
-    border-radius: 1rem;
-    padding: 2rem;
-    width: 100%;
-    margin-top: 1rem;
-    height: 550px;
+        border: 1px solid rgb(220, 218, 203);
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 100%;
+        margin-top: 1rem;
+        height: 550px;
       }
+
       #logos {
         display: flex;
         width: 300px;
@@ -1452,156 +1540,193 @@
         text-align: center;
         height: 4rem;
         flex-wrap: wrap;
-        column-gap:30px;
+        column-gap: 30px;
         margin-bottom: 200px;
       }
+
       #companies {
-    border:none;
-}
+        border: none;
+      }
+
       .courseBox {
         display: grid;
         width: 100%;
         font-family: Georgia, "Times New Roman", Times, serif;
         padding: 3rem 0rem;
       }
+
       .coursesSlider {
         width: 90%;
         margin: auto;
       }
-      .headings2{
-        width: 0px;
+
+      .headings2 {
+        width: 45vw;
       }
-      }
-
-
-
-
+    }
 
 
     @media (min-width: 700px) and (max-width: 800px) {
-      body{
-          position: relative;
-        }
-        .searchContent {
-          width: 21rem;
-          margin-top: -23.5rem;
-          margin-left: 1.5rem;
-          -webkit-box-shadow: 0 0px 6px -1px gray; 
-        }
-        .searchContent > div:nth-child(1) {
-          font-size: 33px;
-        }
-        .searchContent > div:nth-child(2) {
-          font-size: 1rem;
-        }
-        .searchBox2 {
-          width: 18rem;
-        }
-        .searchBox2 > button > img {
+      body {
+        position: relative;
+      }
+
+      .searchContent {
+        width: 21rem;
+        margin-top: -23.5rem;
+        margin-left: 1.5rem;
+        -webkit-box-shadow: 0 0px 6px -1px gray;
+      }
+
+      .searchContent>div:nth-child(1) {
+        font-size: 33px;
+      }
+
+      .searchContent>div:nth-child(2) {
+        font-size: 1rem;
+      }
+
+      .searchBox2 {
+        width: 18rem;
+      }
+
+      .searchBox2>button>img {
         margin-right: 15px;
       }
-        .container {
-          width: 100%;
-          height: 18rem;
-          margin: 0;
-        }
-        .bgimage {
-          background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
-          width: 100%;
-          height: 25rem;
-          background-repeat: no-repeat;
-          background-size: 100%;
-          min-width: 700px;
-        }
-        .textContent > div:nth-child(1) {
+
+      .container {
+        width: 100%;
+        height: 18rem;
+        margin: 0;
+      }
+
+      .bgimage {
+        background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+        width: 100%;
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        min-width: 700px;
+      }
+
+      .textContent>div:nth-child(1) {
         font-size: 35px;
         font-weight: 900;
-        padding:0px;
+        padding: 0px;
       }
+
       #linkList {
         overflow: auto;
         margin-top: 20px;
       }
+
       #linkList li {
         display: inline-block;
-  text-align: center;
-  text-decoration: none;
+        text-align: center;
+        text-decoration: none;
       }
-      #linkList > li:nth-child(3),
-      #linkList > li:nth-child(6){
+
+      #linkList>li:nth-child(3),
+      #linkList>li:nth-child(6) {
         width: 130px;
-        padding-left:0px;
-        padding-right:0px;
+        padding-left: 0px;
+        padding-right: 0px;
       }
-      #linkList > li:nth-child(5){
+
+      #linkList>li:nth-child(5) {
         width: 100px;
-        padding-left:0px;
-        padding-right:0px;
+        padding-left: 0px;
+        padding-right: 0px;
       }
-        #dropdownbtn {
-          display: inline;
-        }
-        .smallWindow {
-          display: flex;
-          width: 15vw;
-        }
-        .smallWindow > button {
-          margin-right: 3vw;
-        }
-        .firstSection,
-        .secondSection {
-          display: none;
-        }
-        .udemyLogo{
-          margin-left: 15%;
-        }
-        .image, .image-2{
-          display: none;
-        }
-        /* #companies{
+
+      #dropdownbtn {
+        display: inline;
+      }
+
+      .smallWindow {
+        display: flex;
+        width: 15vw;
+      }
+
+      .smallWindow>button {
+        margin-right: 3vw;
+      }
+
+      .firstSection,
+      .secondSection {
+        display: none;
+      }
+
+      .udemyLogo {
+        margin-left: 15%;
+      }
+
+      .image,
+      .image-2 {
+        display: none;
+      }
+
+      /* #companies{
           padding-top: 0px;
         } */
-        #companies h1 {
-        margin-bottom: 25px;;
+      #companies h1 {
+        margin-bottom: 25px;
+        ;
       }
-      .content{
+
+      .content {
         text-align: center;
         left: -5rem;
         width: 34rem;
       }
-      .belowSection{
+
+      .belowSection {
         height: 13.5rem;
-        margin-top:40px;
+        margin-top: 40px;
       }
-      #youtube{
+
+      #youtube {
         padding-left: 3%;
         margin-top: 150px;
         padding-top: 45px;
         padding-bottom: 45px;
       }
+
       .headings {
         grid-template-columns: none;
+        margin-left: 8rem;
+        text-align: center;
       }
-      .midSection{
+      .headings2 {
+        margin-left: 10rem;
+        text-align: center;
+      }
+
+      .midSection {
         width: 100%;
         margin-bottom: -100px;
       }
+
       #linktocourses {
-         width: 90%;
-         /* margin-right: 0px; */
-         margin-left: 25px;
-      }
-      #main-content-2 {
-        padding-left: 0px;
-        padding-right:0px;
-        margin-left: 0px;
-      }
-      .featured{
+        width: 90%;
+        /* margin-right: 0px; */
         margin-left: 25px;
       }
-      .subparts{
+
+      #main-content-2 {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+      }
+
+      .featured {
+        margin-left: 25px;
+      }
+
+      .subparts {
         margin-right: 30px;
       }
+
       #topcourse {
         width: 100%;
         height: auto;
@@ -1611,134 +1736,580 @@
         grid-gap: 20px;
         margin-top: 1rem;
       }
+
       #main-content {
         line-height: 1.6rem;
         padding: 25px;
         padding-top: 0px;
       }
+
       #main-content {
         height: 46rem;
       }
+
       .slideCourses {
-     border: 1px solid rgb(220, 218, 203);
-    border-radius: 1rem;
-    padding: 2rem;
-    width: 100%;
-    margin-top: 1rem;
-    height: 550px;
+        border: 1px solid rgb(220, 218, 203);
+        border-radius: 1rem;
+        padding-left:5rem;
+        width: 100%;
+        margin-top: 1rem;
+        height: 550px;
       }
+      p>.main-slider-recommended {
+    margin-top: 1rem;
+}
+.main-slider-students-view, .main-slider-recommended {
+    width: 90vw;
+}
+.main-slider-students-view, .main-slider-recommended {
+    margin-left: -6rem;
+}
+.main-slider-2-hp{
+  margin-top: 50px;
+  margin-bottom:50px;
+}
       .courseBox {
         display: grid;
         width: 100%;
         font-family: Georgia, "Times New Roman", Times, serif;
         padding: 3rem 0rem;
       }
+
       .coursesSlider {
         width: 90%;
         margin: auto;
       }
+
       #logos {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        column-gap:30px;
+        column-gap: 30px;
       }
     }
-    @media (min-width: 800px) and (max-width: 1366px) {
-        .container {
-          width: 100%;
-          height: 25rem;
-          margin: 0;
-          margin-top: -4px;
-        }
-        .bgimage {
-          background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
-          width: 100%;
-          height: 25rem;
-          background-repeat: no-repeat;
-          background-size: 100% auto;
-        }
-        .searchContent {
-          margin-left: 5%;
-        }
-        .coursesSlider{
-          width: 93vw;
-        }
-        .slideCourses{
-          width:100%
-        }
-        .courseBox{
-          margin-left:0px;
-        }
-        .textContent{
-          margin-left:40px;
-        }
-        #main{
-          width: 92vw;
-        }
-        .pythonSlider{
-          margin-left:0px;
-        }
-        .pythonSlider #main{
-          flex-basis: 30%;
-         }
-        .main-slider-2-hp {
-      width: 100%;
-      padding: 0rem 3rem;
 
-    }
-    .main-slider-students-view,
-    .main-slider-recommended {
-      width: 99vw;
-    }
-    #main-content,
-    #main-content-2,
-    #midSection {
-      width: auto;
-      line-height: 1.6rem;
-      padding: 35px;
-      padding-top: 0px;
-    }
-    .headings{
-      margin-left: 18%;
-    }
-    #linktocourses{
-      width: 93vw;
-    }
-    #logos{
-      column-gap: 30px;
-    }
-    .lang{
-      color: black;
-    }
-    #youtube{
-      padding-left: 10%;
-      column-gap:0px;
-    }
-    .youtube_content p{
-      width: 400px;
-    }
-    .youtube_content h1{
-      width: 400px;
-    }
-      } 
-    @media (min-width: 1000px) and (max-width: 1200px) {
-        .searchContent {
-          width: 21rem;
-          margin-top: -23.5rem;
-          margin-left: 1.5rem;
-        }
-        .searchContent > div:nth-child(1) {
-          font-size: 33px;
-        }
-        .searchContent > div:nth-child(2) {
-          font-size: 1rem;
-        }
-        .searchBox2 {
-          width: 18rem;
-        }
+    @media (min-width: 1200px) and (max-width: 1366px) {
+      .container {
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        margin-top: -4px;
       }
+
+      .bgimage {
+        background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+        width: 100%;
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+
+      .searchContent {
+        margin-left: 5%;
+      }
+
+      .coursesSlider {
+        width: 93vw;
+      }
+
+      .slideCourses {
+        width: 100%
+      }
+
+      .courseBox {
+        margin-left: 0px;
+      }
+
+      .textContent {
+        margin-left: 40px;
+      }
+
+      #main {
+        width: 92vw;
+      }
+
+      .pythonSlider {
+        margin-left: 0px;
+      }
+
+      .main-slider-2-hp {
+        width: 100%;
+        padding: 0rem 3rem;
+
+      }
+
+      .main-slider-students-view,
+      .main-slider-recommended {
+        width: 99vw;
+      }
+
+      #main-content,
+      #main-content-2,
+      #midSection {
+        width: auto;
+        line-height: 1.6rem;
+        padding: 35px;
+        padding-top: 0px;
+      }
+
+      .headings {
+        margin-left: 18%;
+      }
+
+      #linktocourses {
+        width: 93vw;
+      }
+
+      #logos {
+        column-gap: 30px;
+      }
+
+      .lang {
+        color: black;
+      }
+
+      #youtube {
+        padding-left: 10%;
+        column-gap: 0px;
+      }
+
+      .youtube_content p {
+        width: 400px;
+      }
+
+      .youtube_content h1 {
+        width: 400px;
+      }
+    }
+
+    @media (min-width: 1000px) and (max-width: 1200px) {
+      .container {
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        margin-top: -4px;
+      }
+
+      .bgimage {
+        background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+        width: 100%;
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+
+      .searchContent {
+        width: 21rem;
+        margin-top: -23.5rem;
+        margin-left: 1.5rem;
+      }
+
+      .searchContent>div:nth-child(1) {
+        font-size: 33px;
+      }
+
+      .searchContent>div:nth-child(2) {
+        font-size: 1rem;
+      }
+
+      .searchBox2 {
+        width: 18rem;
+      }
+
+      .contentBe {
+        left: 2vw;
+      }
+
+      #main-content {
+        height: 56rem;
+      }
+
+      .container {
+        height: 30vw;
+      }
+
+      .headings {
+        margin-left: 8rem;
+      }
+
+      .headings2 {
+        margin-left: 6rem;
+      }
+
+      #main-content {
+        padding: 25px;
+      }
+
+      .coursesSlider {
+        width: 93vw;
+      }
+
+      .slideCourses {
+        width: 100%
+      }
+
+      .courseBox {
+        margin-left: 0px;
+      }
+
+      .textContent {
+        margin-left: 40px;
+      }
+
+      #main {
+        width: 92vw;
+      }
+
+      .pythonSlider {
+        margin-left: 0px;
+      }
+
+      .main-slider-2-hp {
+        width: 100%;
+        padding: 0rem 3rem;
+
+      }
+
+      #logos {
+        column-gap: 30px;
+      }
+
+      .youtube_content {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -40px;
+      }
+
+      .video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+      }
+
+      .video iframe {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+      }
+
+      #youtube {
+        padding-left: 10%;
+        column-gap: 10px;
+      }
+
+      .youtube_content p {
+        width: 400px;
+      }
+
+      .youtube_content h1 {
+        width: 400px;
+      }
+    }
+
+    @media (min-width: 900px) and (max-width: 1000px) {
+      .container {
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        margin-top: -4px;
+      }
+
+      .bgimage {
+        background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+        width: 100%;
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+
+      .searchContent {
+        width: 21rem;
+        margin-top: -23.5rem;
+        margin-left: 1.5rem;
+      }
+
+      .searchContent>div:nth-child(1) {
+        font-size: 33px;
+      }
+
+      .searchContent>div:nth-child(2) {
+        font-size: 1rem;
+      }
+
+      .searchBox2 {
+        width: 18rem;
+      }
+
+      .contentBe {
+        left: 2vw;
+      }
+
+      #main-content {
+        height: 56rem;
+      }
+
+      .container {
+        height: 30vw;
+      }
+
+      .headings {
+        margin-left: 4rem;
+      }
+
+      .headings2 {
+        margin-left: 4rem;
+      }
+
+      #main-content {
+        padding: 25px;
+      }
+
+      .coursesSlider {
+        width: 93vw;
+      }
+
+      .slideCourses {
+        width: 100%
+      }
+
+      .courseBox {
+        margin-left: 0px;
+      }
+
+      .textContent {
+        margin-left: 40px;
+      }
+
+      #main {
+        width: 92vw;
+      }
+
+      .pythonSlider {
+        margin-left: 0px;
+      }
+
+      .main-slider-2-hp {
+        width: 100%;
+        padding: 0rem 3rem;
+
+      }
+
+      #logos {
+        column-gap: 30px;
+      }
+
+      .youtube_content {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -40px;
+      }
+
+      .video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+      }
+
+      .video iframe {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+      }
+
+      #youtube {
+        padding-left: 10%;
+        column-gap: 10px;
+      }
+
+      .youtube_content p {
+        width: 400px;
+      }
+
+      .youtube_content h1 {
+        width: 400px;
+      }
+    }
+
+
+    @media (min-width: 800px) and (max-width: 900px) {
+      .container {
+        width: 100%;
+        height: 25rem;
+        margin: 0;
+        margin-top: -4px;
+      }
+
+      .bgimage {
+        background-image: url("https://img-c.udemycdn.com/notices/home_banner/image_udlite/8a5d045c-2dd2-4a4d-bb0e-a487af8a5aa0.jpg?Expires=1622384869&Signature=BYen~JF~wKt06wmjYLb4FIghI2sv0ypZC7rsbGzhMabF1LwHvumy6k8YZQ8453jL663jdeemg4uiaMC9rKRy4ZOAY2j1~-yel7rLCihB863w7zsTnKLBTdY5lsOfrbKYYNnNZjRlf5Y2KTLsb6tN5H8W69R~-EON9tjf0w-hLAsqPLq1jwtWft51gYm3e3kN-jOIPGsBXxAz1aUMLAi7OU2BIBw-5CZh2u5EbBAEmN~xS~rv-CfaOQMw1faupgzOncYBvJHPeIE0JnHdUJwdmczio0lFcgjltN24SiY9ercOYeKQBeQDHwoPpNqJy-cRC3-4BBlExDvOwVa4UybxZA__&Key-Pair-Id=APKAITJV77WS5ZT7262A");
+        width: 100%;
+        height: 25rem;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+      }
+
+      .searchContent {
+        width: 21rem;
+        margin-top: -23.5rem;
+        margin-left: 1.5rem;
+      }
+
+      .searchContent>div:nth-child(1) {
+        font-size: 33px;
+      }
+
+      .searchContent>div:nth-child(2) {
+        font-size: 1rem;
+      }
+
+      .searchBox2 {
+        width: 18rem;
+      }
+
+      .contentBe {
+        left: 2vw;
+      }
+
+      #main-content {
+        height: 56rem;
+      }
+
+      .container {
+        height: 30vw;
+      }
+
+      .headings {
+        margin-left: 2rem;
+        text-align: center;
+      }
+
+      .headings2 {
+        margin-left: -2rem;
+      }
+
+      #main-content {
+        padding: 25px;
+        height: 50rem;
+      }
+
+      .coursesSlider {
+        width: 93vw;
+      }
+
+      .slideCourses {
+        width: 100%
+      }
+
+      .courseBox {
+        margin-left: 0px;
+      }
+
+      .textContent {
+        margin-left: 40px;
+      }
+
+      #main {
+        width: 92vw;
+      }
+
+      .pythonSlider {
+        margin-left: 0px;
+      }
+
+      .main-slider-2-hp {
+        width: 100%;
+        padding: 0rem 3rem;
+        padding-right: 0rem;
+        height: 8rem;
+
+      }
+
+      #logos {
+        column-gap: 30px;
+      }
+
+      .youtube_content {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: -40px;
+      }
+
+      .video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+      }
+
+      .video iframe {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+      }
+
+      #youtube {
+        padding-left: 10%;
+        column-gap: 40px;
+      }
+
+      .youtube_content p {
+        width: 400px;
+      }
+
+      .youtube_content h1 {
+        width: 400px;
+      }
+
+      .navText2 {
+        display: none;
+      }
+
+      .image,
+      .image-2 {
+        display: none;
+      }
+
+      #companies h1 {
+        margin-bottom: 25px;
+        ;
+      }
+
+      .content {
+        text-align: center;
+        left: -5rem;
+        width: 34rem;
+      }
+
+      .belowSection {
+        height: 13.5rem;
+        margin-top: 40px;
+      }
+
+      .headings {
+        grid-template-columns: none;
+      }
+
+      .midSection {
+        width: 100%;
+        margin-bottom: -100px;
+        padding-left: 12rem;
+      }
+
+      #linktocourses {
+        width: 93vw;
+      }
+
+      #main-content-2 {
+        padding: 31px;
+      }
+
+      .main-slider-students-view {
+        margin-right: 0px;
+      }
+    }
+
     /* @media (min-width: 0px) and (max-width: 700px) {
         .searchContent {
           display: flex;
@@ -1825,13 +2396,13 @@
         <div id="second"></div>
         <div id="closebtn" class="setZ">
           <button>
-            <i class="far fa-times-circle fa-3x"></i>
+            <i class="fa fa-times-circle fa-3x"></i>
           </button>
         </div>
       </div>
-      <div class="logo">
+      <div class="logo"><a href="landing-page-draft1.html">
         <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
-          alt="Udemy logo" />
+          alt="Udemy logo" /></a>
       </div>
       <div class="firstSection">
         <ul>
@@ -2227,14 +2798,15 @@
             <img src="https://s.udemycdn.com/home/non-student-cta/udlite-lohp-promo-teacher.jpg" alt="" />
           </div>
           <div class="not">
-            <div class="content">
+            <div class="contentBe">
               <h1>Become an instructor</h1>
               <div>
-              <p>
-                Top instructors from around the world teach
-                millions of students on Udemy. We provide the
-                tools and skills to teach what you love.
-              </p></div>
+                <p>
+                  Top instructors from around the world teach
+                  millions of students on Udemy. We provide the
+                  tools and skills to teach what you love.
+                </p>
+              </div>
               <a href="#">Start teaching today</a>
             </div>
           </div>
@@ -2315,7 +2887,8 @@
           <li><a href="">Featured courses</a></li>
         </ul>
         <ul class="languageRight">
-          <div> <a href="" class="lang"> <img src="https://image.flaticon.com/icons/png/128/591/591788.png" alt="language logo" />
+          <div> <a href="" class="lang"> <img src="https://image.flaticon.com/icons/png/128/591/591788.png"
+                alt="language logo" />
               English</a></div>
 
       </div>
@@ -2614,7 +3187,7 @@ toggle between hiding and showing the dropdown content */
         mainPrice: 4480,
         updatedDate: "November 2021",
         totalHoursOfVideo: 17,
-        courseHeading:"Learn to build websited with HTML, CSS, Bootstrap, Javascript,Jquery,Python 3 and Django"
+        courseHeading: "Learn to build websited with HTML, CSS, Bootstrap, Javascript,Jquery,Python 3 and Django"
       },
       {
         img_source: "https://img-c.udemycdn.com/course/240x135/1212032_b7e8.jpg?Expires=1623252068&Signature=P~6JabDqANIkd0blDygZR4o0wH254AUhvU4udEytGFLUjT28VxrlsfGWxEp5rUZyDJTFrx2zi2iAozMyGR91UVpziglMbi6Xu2JUitJOJReARb7UCWJD4Lji3JdBkS9vC40SubX0rWH1mW6a-cMLadhDt~7idW8dqVS7fbBwXgFvJ9ZdZbW4mHCMTmQU8nT5~wzB2Q9Bz-ay21QNnMiRwjajkwaO7zQZ38Y1pJvXPFhgtJ754IumO9huBkaM8jPsMyIKJB3qP~H7c51JNaW9y6h0DKr3q3mzPJfj82-zYSYH3lahYU5L73vW2HbDieYm4YxFqwKWYQcvr~GqMd5TYQ__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
@@ -3413,11 +3986,11 @@ toggle between hiding and showing the dropdown content */
 
   var udemyForBusiness = document.getElementById("div1");
   // This is newly added script for showing no of items present in cart
-let noOfCartItems=document.getElementById('noOfCartItems');
-let cartItem=JSON.parse(localStorage.getItem('cartItem'));
-noOfCartItems.innerHTML=`${cartItem.length}`
-function showCart(){
-  window.location.href ="after_cart.html"
-}
+  let noOfCartItems = document.getElementById('noOfCartItems');
+  let cartItem = JSON.parse(localStorage.getItem('cartItem'));
+  noOfCartItems.innerHTML = `${cartItem.length}`
+  function showCart() {
+    window.location.href = "after_cart.html"
+  }
 
 </script>

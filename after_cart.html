@@ -14,7 +14,7 @@
             box-sizing: border-box;
 
         }
-
+        /* navbar */
         /* html {
         font-family: "Roboto", sans-serif;
       } */
@@ -27,9 +27,7 @@
             font-family: sf pro text, -apple-system, BlinkMacSystemFont, Roboto, segoe ui, Helvetica, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
             font-weight: 400;
             color: rgb(60, 59, 55);
-            font-size: 12px;
             font-size: 14px;
-
         }
 
         .navText1 {
@@ -41,7 +39,6 @@
             padding: 0px;
             width: 122px;
             margin: 0rem;
-            width: 8rem;
         }
 
         .navText2 {
@@ -52,22 +49,36 @@
             padding: 0px;
             width: 105px;
             margin: 0rem;
-            width: 8rem;
 
+        }
+
+        .navText button {
+            width: 250px;
+            height: 40px;
+            margin-top: 15px;
+            background-color: #0F7C90;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-size: 17px;
+            margin-left: 5px;
         }
 
         header {
             width: 100%;
             height: 12vh;
-            /* -webkit-box-shadow: 0 8px 6px -6px gray;
-        -moz-box-shadow: 0 8px 6px -6px gray;
-        box-shadow: 0 8px 6px -6px gray; */
+            -webkit-box-shadow: 0 8px 6px -6px gray;
+            -moz-box-shadow: 0 8px 6px -6px gray;
+            box-shadow: 0 8px 6px -6px gray;
             height: 70px;
-            /* -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
-        -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);;
-        box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
-        overflow: hidden; */
+            -webkit-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
+            ;
+            -moz-box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
+            ;
+            box-shadow: 0 8px 6px -6px rgb(218, 214, 214);
+            overflow: hidden;
             margin-bottom: 0px;
+            /* position: relative; */
         }
 
         .dropbtn {
@@ -93,9 +104,13 @@
             display: none;
             position: absolute;
             background-color: #f1f1f1;
-            min-width: 160px;
-            overflow: auto;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            height: 150px;
+            width: 280px;
+            right: 0%;
+            bottom: -150px;
+            margin-left: -60px;
+            box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
             z-index: 1;
         }
 
@@ -114,35 +129,39 @@
             display: block;
         }
 
+        .firstSection ul {
+            margin-left: 40px;
+        }
+
         /* check above code till header w3 */
         .firstSection ul,
         .secondSection ul {
             list-style: none;
             display: flex;
-            justify-content: center;
+            /* justify-content: center; */
             /* justify-content: center; */
             align-items: center;
-            column-gap: 10px;
         }
 
         .firstSection>ul li {
             /* margin: 0 0.8vw; */
-            /* margin: 0 12px; */
+            margin: 0 12px;
 
         }
 
         .secondSection>ul>li {
-            margin: 0 0.3vw;
             margin: 0;
             margin-left: 0.3vw;
         }
 
         .navbar a {
             text-decoration: none;
+            color: black;
         }
 
         .navbar {
             display: flex;
+            width: 100%;
             flex-basis: 4vw;
             justify-content: space-between;
             align-items: center;
@@ -151,18 +170,15 @@
             padding-left: 1vw;
             padding-right: 1vw;
             margin: auto;
+            position: absolute;
         }
 
         .navbar>div:nth-child(1) {
             display: none;
         }
 
-        .navbar>div:nth-child(2) {
-            flex-grow: 2;
-        }
-
         .navbar>div:nth-child(3) {
-            flex-grow: 22;
+            flex-grow: 0;
         }
 
         .navbar>div:nth-child(4) {
@@ -179,6 +195,22 @@
         .udemyLogo {
             width: 8vw;
             height: 2.8vw;
+        }
+
+        .firstSection>ul>li:nth-child(2) {
+            width: 70%;
+            margin-left: 10px;
+
+        }
+
+        .firstSection>ul>li:nth-child(1) {
+            margin-left: 0px;
+        }
+
+        @media (max-width: 1080px) {
+            .firstSection>ul>li:nth-child(3) {
+                display: none;
+            }
         }
 
         .searchContainer {
@@ -233,17 +265,111 @@
             width: 1.2rem;
             height: 1.3rem;
         }
-           /* this is newly added Id for span of showing no of items present in the cart */
-    #noOfCartItems{
-          padding: 0px 4px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    position: relative;
-    left: -1.5rem;
-    bottom: 0.8rem;
 
-    }
+        /* this is newly added Id for span of showing no of items present in the cart */
+        #noOfCartItems {
+            padding: 0px 4px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            position: relative;
+            left: -1.5rem;
+            bottom: 0.8rem;
+
+        }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            height: 45px;
+            width: 128px;
+        }
+
+        .dropdown1 {
+            position: relative;
+            display: inline-block;
+            height: 45px;
+            width: 46px;
+        }
+
+        #btnUser {
+            margin-top: 10px;
+            color: white;
+        }
+
+        .sizeM {
+            width: 46px;
+            height: 70px;
+            /* border: 1px solid; */
+        }
+
+        .btnLogout {
+            width: 250px;
+            height: 40px;
+            margin-top: 15px;
+            background-color: #0F7C90;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-size: 17px;
+            margin-left: -5px;
+        }
+
+        .dropdown-content1 {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            padding: 10px;
+            height: 150px;
+            width: 280px;
+            right: 0%;
+            bottom: -150px;
+            margin-left: -60px;
+            box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+            z-index: 1;
+        }
+
+        .dropdown-content1 b {
+            /* padding: 12px 16px; */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .dropdown-content b {
+            /* padding: 12px 16px; */
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content1 a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown1:hover .dropdown-content1 {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content1 {
+            display: block;
+        }
+
+
+
+
+
         .btn-medium {
             height: 2.7rem;
             height: 2.4rem;
@@ -283,154 +409,202 @@
         .smallWindow {
             display: none;
         }
-        #allCartItems{
-            width:100vw;
-            height:auto;
-            padding:0rem 12rem;
-            display:grid;
+
+        #allCartItems {
+            width: 100%;
+            height: auto;
+            padding: 0rem 12rem;
+            display: grid;
             grid-template-columns: 3fr 1fr;
-           grid-template-areas: "ci co"
-           "h2-1 co"
-           "sf co"
-           "h2-2 co"
-           "rw co";
+            grid-template-areas: "ci co"
+                "h2-1 co"
+                "sf co"
+                "h2-2 co"
+                "rw co";
             grid-gap: 2rem;
 
         }
-        #removedWish{
+
+        #removedWish {
             grid-area: rw;
         }
-        #showCartItems{
+
+        #showCartItems {
             grid-area: ci;
         }
-        #checkoutDiv{
+
+        #checkoutDiv {
             grid-area: co;
         }
-        #saveForLater{
-            grid-area:sf;
+
+        #saveForLater {
+            grid-area: sf;
         }
-        #allCartItems>h2:nth-child(3){
+
+        #allCartItems>h2:nth-child(3) {
             grid-area: h2-1;
-            color: rgb(41,48,59);
-    font-size: 1.2em;
+            color: rgb(41, 48, 59);
+            font-size: 1.2em;
         }
-        #allCartItems>h2:nth-child(5){
+
+        #allCartItems>h2:nth-child(5) {
             grid-area: h2-2;
-                 color: rgb(41,48,59);
-    font-size: 1.2em;
+            color: rgb(41, 48, 59);
+            font-size: 1.2em;
         }
-        .save-wish{
-              width: 100vw;
-    height: auto;
-    padding: 0rem 12rem;
-    padding-right: 32rem;
-    display: grid;
-    grid-gap: 2rem;
-    margin-top: 6rem;
+
+        .save-wish {
+            width: 100vw;
+            height: auto;
+            padding: 0rem 12rem;
+            padding-right: 32rem;
+            display: grid;
+            grid-gap: 2rem;
+            margin-top: 6rem;
         }
-        .countOfItemsDiv{
-          width: 100vw;
-    height: 5rem;
-    padding: 0rem 12rem;
+
+        .countOfItemsDiv {
+            width: 100%;
+            height: 5rem;
+            padding: 0rem 12rem;
 
         }
-        #noOfItemsInshop{
+
+        #noOfItemsInshop {
             position: relative;
-    top: 3rem;
-    font-size: 1.2rem;
+            top: 3rem;
+            font-size: 1.2rem;
         }
-        #showCartItems,#saveForLater{
-           display: flex;
-    flex-direction: column;
-            
+
+        #showCartItems,
+        #saveForLater {
+            display: flex;
+            flex-direction: column;
+
         }
-        #showCartItems>div,#saveForLater>div,#removedWish>div{
-           display: flex;
-    /* height: 73px; */
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #686F7A;
-    height: 5.2rem;
-    justify-content: space-between;
+
+        #showCartItems>div,
+        #saveForLater>div,
+        #removedWish>div {
+            display: flex;
+            /* height: 73px; */
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #686F7A;
+            height: 5.2rem;
+            justify-content: space-between;
         }
-        #showCartItems>div>div:nth-child(3), #saveForLater>div>div:nth-child(3),#removedWish>div>div:nth-child(3){
+
+        #showCartItems>div>div:nth-child(3),
+        #saveForLater>div>div:nth-child(3),
+        #removedWish>div>div:nth-child(3) {
             display: grid;
         }
-        #showCartItems>div>div:nth-child(2)>p,#saveForLater>div>div:nth-child(2)>p,#removedWish>div>div:nth-child(2)>p{
-            font-size: 14px;
-    color: rgb(104,111,122);
-        }
-        #showCartItems>div>div:nth-child(3)>button,#saveForLater>div>div:nth-child(3)>button,#removedWish>div>div:nth-child(3)>button{
-                outline: none;
-    border: none;
-    color: rgb(0,119,145);
-    background-color: transparent;
-    height: 1rem;
-    text-align: end;
-        }
-        #showCartItems>div>div:nth-child(2){
-           margin-left: -3rem;
-    width: 27rem;
-    text-align: start;
-        }
-      #saveForLater>div>div:nth-child(2), #removedWish>div>div:nth-child(2){
-            margin-left: -3rem;
-                width: 27rem;
-    text-align: start;
-        }
-         #showCartItems>div>div:nth-child(2)>h3, #saveForLater>div>div:nth-child(2)>h3,#removedWish>div>div:nth-child(2)>h3{
-             font-size:1rem;
-         }
-        #showCartItems>div>div:nth-child(4)>h3,#saveForLater>div>div:nth-child(4)>h3,#removedWish>div>div:nth-child(4)>h3{
-          color:red;
-        }
-         #showCartItems>div img, #saveForLater>div img,#removedWish>div img{
-             width:140px;
-             height:fit-content;
-         }
-         #checkoutDiv{
-                 display: grid;
-    height: 14rem;
-         }
-         #checkoutDiv p,#showCartItems>div>div:nth-child(4)>p{
-             font-size: 1rem;
-    color: rgb(104,111,122);
-         }
-          #checkoutDiv p:nth-child(3),#showCartItems>div>div:nth-child(4)>p{
-              text-decoration: line-through;
-          }
-         #checkoutDiv h2{
-             font-size: 3rem;
-         }
-         #checkoutDiv a{
-             text-decoration: none;
-    padding: 1rem 7rem;
-    font-size: 1.1rem;
-    background-color: rgb(236,82,82);
-    font-weight: bold;
-    color: white;
-    margin-top: 0.7rem;
-         }
-         #checkoutDiv>div{
-                 display: inline-flex;
-    height: 2rem;
-    margin-top: 1rem;
-         }
-         #checkoutDiv >div>input{
-             width:80%;
-         }
-         #checkoutDiv >div>button{
-                 width: 20%;
-    color: white;
-    background-color: rgb(236,82,82);
-    border: none;
-    font-weight: bold;
 
-         }
-         .svg-inline--fa.fa-w-11 {
-    width: .6875em;
-    color: rgb(0,119,145);
-    margin-right: 1rem;
-}
+        #showCartItems>div>div:nth-child(2)>p,
+        #saveForLater>div>div:nth-child(2)>p,
+        #removedWish>div>div:nth-child(2)>p {
+            font-size: 14px;
+            color: rgb(104, 111, 122);
+        }
+
+        #showCartItems>div>div:nth-child(3)>button,
+        #saveForLater>div>div:nth-child(3)>button,
+        #removedWish>div>div:nth-child(3)>button {
+            outline: none;
+            border: none;
+            color: rgb(0, 119, 145);
+            background-color: transparent;
+            height: 1rem;
+            text-align: end;
+        }
+
+        #showCartItems>div>div:nth-child(2) {
+            margin-left: -3rem;
+            width: 27rem;
+            text-align: start;
+        }
+
+        #saveForLater>div>div:nth-child(2),
+        #removedWish>div>div:nth-child(2) {
+            margin-left: -3rem;
+            width: 27rem;
+            text-align: start;
+        }
+
+        #showCartItems>div>div:nth-child(2)>h3,
+        #saveForLater>div>div:nth-child(2)>h3,
+        #removedWish>div>div:nth-child(2)>h3 {
+            font-size: 1rem;
+        }
+
+        #showCartItems>div>div:nth-child(4)>h3,
+        #saveForLater>div>div:nth-child(4)>h3,
+        #removedWish>div>div:nth-child(4)>h3 {
+            color: red;
+        }
+
+        #showCartItems>div img,
+        #saveForLater>div img,
+        #removedWish>div img {
+            width: 140px;
+            height: fit-content;
+        }
+
+        #checkoutDiv {
+            display: grid;
+            height: 14rem;
+        }
+
+        #checkoutDiv p,
+        #showCartItems>div>div:nth-child(4)>p {
+            font-size: 1rem;
+            color: rgb(104, 111, 122);
+        }
+
+        #checkoutDiv p:nth-child(3),
+        #showCartItems>div>div:nth-child(4)>p {
+            text-decoration: line-through;
+        }
+
+        #checkoutDiv h2 {
+            font-size: 3rem;
+        }
+
+        #checkoutDiv a {
+            text-decoration: none;
+            padding: 1rem 7rem;
+            font-size: 1.1rem;
+            background-color: rgb(236, 82, 82);
+            font-weight: bold;
+            color: white;
+            margin-top: 0.7rem;
+        }
+
+        #checkoutDiv>div {
+            display: inline-flex;
+            height: 2rem;
+            margin-top: 1rem;
+        }
+
+        #checkoutDiv>div>input {
+            width: 80%;
+        }
+
+        #checkoutDiv>div>button {
+            width: 20%;
+            color: white;
+            background-color: rgb(236, 82, 82);
+            border: none;
+            font-weight: bold;
+
+        }
+
+        .svg-inline--fa.fa-w-11 {
+            width: .6875em;
+            color: rgb(0, 119, 145);
+            margin-right: 1rem;
+        }
+
         @media (max-width: 1080px) {
             .firstSection>ul>li:nth-child(3) {
                 display: none;
@@ -1358,17 +1532,22 @@
         }
 
         .shop {
-           color: white;
-    font-size: 50px;
-    padding-top: 50px;
-    font-weight: bold;
-    padding-left: 150px;
+            color: white;
+            font-size: 50px;
+            padding-top: 50px;
+            font-weight: bold;
+            padding-left: 150px;
         }
-        .emptyBox{
+
+        .emptyBox {
             width: 1200px;
-            height:400px;
+            height: 400px;
             margin: 50px auto;
             border: 1px solid
+        }
+
+        .navText div {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -1384,9 +1563,9 @@
                     <a href="#contact">Contact</a>
                 </div>
             </div>
-            <div class="logo">
-                <img class="udemyLogo cursorPointer" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg"
-                    alt="Udemy logo" />
+            <div class="logo"><a href="afterLogin.html">
+                    <img class="udemyLogo cursorPointer"
+                        src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg" alt="Udemy logo" /></a>
             </div>
             <div class="firstSection">
                 <ul>
@@ -1400,17 +1579,28 @@
                                 placeholder="Search for anything" />
                         </div>
                     </li>
-                    <li style="margin: 2px;">
-                    <li class="navText1">
-                        <a class="navText" href="#">Udemy for Business</a>
-                    </li>
-                    <li>
-                    <li class="navText2">
-                        <a class="navText" href="#">Teach On Udemy</a>
-                    </li>
-                    <li class="navText2">
-                        <a class="navText" href="#">My learning</a>
-                    </li>
+                    <li class="navText1 hello">
+                        <a class="navText dropdown" href="udemy-Copy.html">
+                            <div>Udemy for Business</div><span class="dropdown-content"><b>Get your team access to over
+                                    5,500 top Udemy courses, anytime, anywhere.</b>
+                                <div><button><b>Try Udemy for Business</b></button></div>
+                            </span>
+                        </a>
+                    <li class="navText2 hello">
+                        <a class="navText dropdown" href="techOnUdemy.html">
+                            <div>Teach On Udemy</div><span class="dropdown-content"><b>Turn what you know into an
+                                    opportunity and reach millions around the world.</b>
+                                <div><button class="btn"><b>Learn more</b></button></div>
+                            </span>
+                        </a>
+
+                    <li class="navText2 hello">
+                        <a class="navText dropdown" href="techOnUdemy.html">
+                            <div>My Learning</div><span class="dropdown-content1"><b>Start learning from over 155,000
+                                    courses today.</b>
+                                <div><button><b>Browse now</b></button></div>
+                            </span>
+                        </a>
                 </ul>
             </div>
 
@@ -1429,7 +1619,7 @@
                             <img class="cartIcon" src="https://image.flaticon.com/icons/png/128/628/628556.png"
                                 alt="cart" />
                         </button>
-                         <span id="noOfCartItems"></span>
+                        <span id="noOfCartItems"></span>
                     </li>
                     <li>
                         <button class="cartBtn cursorPointer">
@@ -1440,8 +1630,16 @@
                     </li>
 
                     <li>
-                        <button class="btn-medium langIconbtn cursorPointer" id="btnUser">
-
+                        <!-- <button class="btn-medium langIconbtn cursorPointer" id="btnUser"> -->
+                    <li>
+                        <a class="btn-medium langIconbtn cursorPointer dropdown1">
+                            <div class="sizeM">
+                                <div id="btnUser"></div>
+                            </div><span class="dropdown-content1"><b>Click On the button Below to Logging Out</b>
+                                <div><button onclick="window.location='landing-page-draft1.html'"
+                                        class="btnLogout"><b>LogOut</b></button></div>
+                            </span>
+                        </a>
                         </button>
                     </li>
                 </ul>
@@ -1461,23 +1659,23 @@
             <div class="shop">Shopping Cart</div>
         </div>
         <div class="countOfItemsDiv">
-         <div id="noOfItemsInshop"></div>
-         </div>
+            <div id="noOfItemsInshop"></div>
+        </div>
         <div id="allCartItems">
-           
+
             <div id="showCartItems"></div>
             <div id="checkoutDiv"></div>
-                  <h2>Save for later</h2>
-        <div id="saveForLater">
-          
-        </div>
-          <h2>Recently Wishlisted</h2>
-        <div id="removedWish">
-           <p>You haven't added any courses to your wishlist.</p>
-        </div>
+            <h2>Save for later</h2>
+            <div id="saveForLater">
+
+            </div>
+            <h2>Recently Wishlisted</h2>
+            <div id="removedWish">
+                <p>You haven't added any courses to your wishlist.</p>
+            </div>
         </div>
         <!-- <div class="save-wish"> -->
-            <!-- <h2>Save for later</h2>
+        <!-- <h2>Save for later</h2>
         <div id="saveForLater">
             <p>You haven't saved any courses for later.</p>
         </div>
@@ -1563,10 +1761,8 @@
     </footer>
 </body>
 <script src="after_cart.js"></script>
-<script
-      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-      data-auto-a11y="true"
-    ></script>
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+
 </html>
 <script>
     var studentContent = [
@@ -1892,7 +2088,7 @@
             return res;
         }
     }
-     let loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
+    let loginDetails = JSON.parse(localStorage.getItem('loginDetails'));
     let udemyUsers = JSON.parse(localStorage.getItem('udemyUsers'));
     let btnUser = document.getElementById('btnUser');
     for (let i = 0; i < loginDetails.length; i++) {
@@ -1902,12 +2098,12 @@
             }
         }
 
-    } 
-      // This is newly added script for showing no of items present in cart
-let noOfCartItems=document.getElementById('noOfCartItems');
-let cartItem=JSON.parse(localStorage.getItem('cartItem'));
-noOfCartItems.innerHTML=`${cartItem.length}`
-function showCart(){
-  window.location.href ="after_cart.html"
-}
+    }
+    // This is newly added script for showing no of items present in cart
+    let noOfCartItems = document.getElementById('noOfCartItems');
+    let cartItem = JSON.parse(localStorage.getItem('cartItem'));
+    noOfCartItems.innerHTML = `${cartItem.length}`
+    function showCart() {
+        window.location.href = "after_cart.html"
+    }
 </script>

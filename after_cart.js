@@ -52,7 +52,7 @@ function showcartItems() {
 
     discount_price = total_main_price - total_price;
     localStorage.setItem("total_discount_price", JSON.stringify([{ total_price: total_main_price, discount_price: discount_price }]))
-    
+
     let checkoutDiv = document.getElementById("checkoutDiv");
     checkoutDiv.innerHTML = `<p>Total:</p>
                         <h2 id="showDiscountedPrice">&#8377;  ${total_price}</h2>
@@ -89,7 +89,11 @@ function moveToWishList(i) {
     }
     removedWishArr.push(arrSplice[0]);
     localStorage.setItem("removedWish", JSON.stringify(removedWishArr))
-    noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    if (cartItem.length == 1) {
+        noOfItemsInshop.innerHTML = `<p>${cartItem.length} Course is in cart</p>`;
+    } else {
+        noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    }
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
     showremovedWisher();
@@ -171,7 +175,11 @@ function saveForLater(i) {
     }
     saveForLaterArr.push(arrSplice[0]);
     localStorage.setItem("saveForLater", JSON.stringify(saveForLaterArr))
-    noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    if (cartItem.length == 1) {
+        noOfItemsInshop.innerHTML = `<p>${cartItem.length} Course is in cart</p>`;
+    } else {
+        noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    }
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
     showSaveForLater()
@@ -273,6 +281,6 @@ function applyCoupon() {
     let discountedPrice = total_main_price * (couponPercent / 100);
     showDiscountedPrice.innerHTML = `&#8377; ${total_main_price - discountedPrice}`;
 
-    localStorage.setItem("total_discount_price", JSON.stringify([{total_price: total_main_price, discount_price: discountedPrice}]))
+    localStorage.setItem("total_discount_price", JSON.stringify([{ total_price: total_main_price, discount_price: discountedPrice }]))
 }
 showcartItems();
