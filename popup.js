@@ -16,7 +16,7 @@ var educationContent = [
     rating: 4.6,
     people: 144000,
     price: 455,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -28,7 +28,7 @@ var educationContent = [
     rating: 4.5,
     price: 455,
     people: 146559,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -40,7 +40,7 @@ var educationContent = [
     rating: 4.6,
     price: 455,
     people: 100777,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -52,7 +52,7 @@ var educationContent = [
     rating: 4.5,
     price: 455,
     people: 76088,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -64,7 +64,7 @@ var educationContent = [
     rating: 4.6,
     price: 455,
     people: 48960,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -76,7 +76,7 @@ var educationContent = [
     rating: 4.4,
     price: 455,
     people: 16300,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -88,7 +88,7 @@ var educationContent = [
     rating: 4.7,
     price: 455,
     people: 32611,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -100,7 +100,7 @@ var educationContent = [
     rating: 4.6,
     price: 455,
     people: 87866,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -112,7 +112,7 @@ var educationContent = [
     rating: 4.6,
     price: 455,
     people: 38905,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -124,7 +124,7 @@ var educationContent = [
     rating: 4.5,
     price: 455,
     people: 15555,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -136,7 +136,7 @@ var educationContent = [
     rating: 4.5,
     price: 455,
     people: 21854,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
@@ -148,7 +148,7 @@ var educationContent = [
     rating: 4.7,
     price: 455,
     people: 27911,
-    mainPrice: 4480,
+    mainPrice:4450,
     updatedDate: "November 2021",
     totalHoursOfVideo: 10,
     courseHeading: "Learn Python like a Professional Start from the basics and go all the way to creating your own applications and games"
