@@ -7,6 +7,7 @@ if (localStorage.getItem("removedWish") == null) {
 
 let total_main_price = 0;
 let discount_price = 0;
+let total_price = 0;
 
 function showcartItems() {
     showremovedWisher();
@@ -37,11 +38,18 @@ function showcartItems() {
     // console.log(cartItem.length)
     let noOfItemsInshop = document.getElementById("noOfItemsInshop");
     noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
-    let total_price = 0;
+
+    let total_main_price_cart = 0;
+    let total_price_cart = 0;
+
     for (let i = 0; i < cartItem.length; i++) {
-        total_price += cartItem[i].price;
-        total_main_price += cartItem[i].mainPrice;
+        total_price_cart += cartItem[i].price;
+        total_main_price_cart += cartItem[i].mainPrice;
     }
+
+    total_main_price = total_main_price_cart;
+    total_price = total_price_cart;
+
     discount_price = total_main_price - total_price;
     localStorage.setItem("total_discount_price", JSON.stringify([{ total_price: total_main_price, discount_price: discount_price }]))
     
@@ -66,7 +74,11 @@ function moveToWishList(i) {
     // let arr1 = [];
     // cartItem.splice(i, 1);
     let arrSplice = cartItem.splice(i, 1);
+    
     // arr1.push(arrSplice[0]);
+    total_main_price -= Number(arrSplice[0].mainPrice);
+    total_price -= Number(arrSplice[0].price);
+
     removedWish.innerHTML = null;
     let removedWishArr;
     removedWishArr = localStorage.getItem('removedWish');
@@ -127,7 +139,10 @@ function removeCourseFromRemovedWish(i) {
 }
 function removeCourseFromCart(i) {
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
-    cartItem.splice(i, 1);
+    let arrSplice = cartItem.splice(i, 1);
+    total_main_price -= arrSplice[0].mainPrice;
+    total_price -= arrSplice[0].price;
+    
     noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
     showcartItems();
@@ -143,6 +158,8 @@ function saveForLater(i) {
     // let arr1 = [];
     // cartItem.splice(i, 1);
     let arrSplice = cartItem.splice(i, 1);
+    total_main_price -= arrSplice[0].mainPrice;
+    total_price -= arrSplice[0].price;
     // arr1.push(arrSplice[0]);
     saveForLater.innerHTML = null;
     let saveForLaterArr;
@@ -203,7 +220,10 @@ function moveToCartfromSaved(i) {
     let saveForLater = JSON.parse(localStorage.getItem("saveForLater"))
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
     let arr2 = saveForLater.splice(i, 1);
-    // console.log(arr2);
+
+    total_main_price += arr2[0].mainPrice;
+    total_price += arr2[0].price;
+    
     cartItem.push(arr2[0]);
     localStorage.setItem("saveForLater", JSON.stringify(saveForLater))
     localStorage.setItem("cartItem", JSON.stringify(cartItem));
@@ -219,6 +239,10 @@ function moveToCartfromWish(i) {
     let removedWish = JSON.parse(localStorage.getItem("removedWish"))
     let cartItem = JSON.parse(localStorage.getItem("cartItem"));
     let arr2 = removedWish.splice(i, 1);
+
+    total_main_price += arr2[0].mainPrice;
+    total_price += arr2[0].price;
+
     // console.log(arr2);
     cartItem.push(arr2[0]);
     localStorage.setItem("removedWish", JSON.stringify(removedWish))

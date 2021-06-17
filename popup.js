@@ -26,7 +26,7 @@ var educationContent = [
     course_name: "Machine Learning A-Z™: Hands-On Python & R In Data Science",
     Author: "Kiril Eremenko,Hadelen De Ponteves kjkdf kjndkfjskdnfkj",
     rating: 4.5,
-    price: 445,
+    price: 455,
     people: 146559,
     mainPrice: 4480,
     updatedDate: "November 2021",
