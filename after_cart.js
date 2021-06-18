@@ -42,10 +42,12 @@ function showcartItems() {
         noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
     }
     let total_price = 0;
+    // let total_main_price = 0;
     for (let i = 0; i < cartItem.length; i++) {
         total_price += cartItem[i].price;
         total_main_price += cartItem[i].mainPrice;
     }
+    // let temp = total_main_price;
     discount_price = total_main_price - total_price;
     localStorage.setItem("total_discount_price", JSON.stringify([{ total_price: total_main_price, discount_price: discount_price }]))
 
