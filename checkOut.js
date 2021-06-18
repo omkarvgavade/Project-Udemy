@@ -11,9 +11,9 @@ total.innerHTML = `&#8377;${Number(total_discount_price[0].total_price) - Number
 
 function shoppingComplete() {
   let array = [
-    "Your order is accepted",
-    "Your order is ready",
-    "Order delivered",
+    "Payment Successfull",
+    "Course Linked with Your Profile",
+    "Happy Learning!",
   ];
 
   let h1 = document.getElementById("notification");
