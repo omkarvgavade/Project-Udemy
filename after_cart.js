@@ -37,19 +37,33 @@ function showcartItems() {
     // let cartItem = JSON.parse(localStorage.getItem("cartItem"));
     // console.log(cartItem.length)
     let noOfItemsInshop = document.getElementById("noOfItemsInshop");
+<<<<<<< HEAD
+    if (cartItem.length == 1) {
+        noOfItemsInshop.innerHTML = `<p>${cartItem.length} Course is in cart</p>`;
+    } else {
+        noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
+    }
+    let total_price = 0;
+    // let total_main_price = 0;
+=======
     noOfItemsInshop.innerHTML = `<p>${cartItem.length} Courses are in cart</p>`;
 
     let total_main_price_cart = 0;
     let total_price_cart = 0;
 
+>>>>>>> 607e07cdf12db1d87b821d054cac3001bed8353f
     for (let i = 0; i < cartItem.length; i++) {
         total_price_cart += cartItem[i].price;
         total_main_price_cart += cartItem[i].mainPrice;
     }
+<<<<<<< HEAD
+    // let temp = total_main_price;
+=======
 
     total_main_price = total_main_price_cart;
     total_price = total_price_cart;
 
+>>>>>>> 607e07cdf12db1d87b821d054cac3001bed8353f
     discount_price = total_main_price - total_price;
     localStorage.setItem("total_discount_price", JSON.stringify([{ total_price: total_main_price, discount_price: discount_price }]))
 
