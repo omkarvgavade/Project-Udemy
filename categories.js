@@ -7,7 +7,12 @@ let childArray = [
     "#", "Programming Languages","#", "Game Development",
     "#", "Database Design & Development","#", "Software Testing",
     "#", "Software Engineering", "#", "Development Tools",
-    "#", "No-Code Development"]
+        "#", "No-Code Development"],
+    ["#", "Enterpreneurship", "#", "Communication", "#", "Management", "#", "Sales", "#", "Business Strategy", "#", "Operations", "#", "Project Management", "#", "Business Law", "#", "Business Analytics & intelligence", "#", "Human Respurces", "#", "industry", "#", "E-Commerse"],
+    ["#","Accounting & Bookkeeping", "#", "Complience", "#", "Cryptocurrency & Blockchain", "#", "Economics", "#", "Finance", "#", "Finance Cert & Exam Prep", "#", "Taxes", "#", "Investing & Trading", "#", "Other Finance & Accounting"],
+    ["#","IT Certification", "#", "Network & Security", "#", "Hardware", "#", "Operating System", "#", "Other IT & Software"],
+    ["#","Microsoft", "#", "Apple", "#", "Google", "#", "SAP", "#", "Oracle"],
+    ["#","Personal transformation","#","Leadership","#","Career Development","#","Happiness","#","Creativity","#","Influence"]
   ];
 function showChildList(index) {
     let childDiv = document.getElementById("child_div");
@@ -22,9 +27,41 @@ function showChildList(index) {
     childDiv.appendChild(ul);
 }
 
-let grandChildArray = [[["#", "JavaScript", "#", "React", "#", "css",
-    "#", "Angular","#", "Django",
-    "#", "PHP","#", "Node.js","#","Wordpress"],["#","Python","#","Machine learning","#","Deep learning","#","Data Analysis","#","Artificial Intelligence","#","R(programming language)","#","TensorFlow","#","Statistics"]]];
+let grandChildArray = [
+    [
+        ["#", "JavaScript", "#", "React", "#", "css",
+        "#", "Angular","#", "Django",
+        "#", "PHP", "#", "Node.js", "#", "Wordpress"],
+        ["#", "Python", "#", "Machine learning", "#", "Deep learning", "#", "Data Analysis", "#", "Artificial Intelligence",
+            "#", "R(programming language)", "#", "TensorFlow", "#", "Statistics"]
+    ],
+    [
+        ["#", "Busness Fundamentals", "#", "Enterprenureship Fundamentals", "#", "Business Strategy", "#", "Startup", "#", "Freelancing"],
+        ["#","Product Management", "#", "leadership", "#", "Business Streagey", "#", "Management Skills", "#", "ISO 9001", "#", "Agile"],
+        ["#","Sales Skills", "#", "B2B Sales", "#", "LinkedIn", "#", "Cold Email", "#", "Customer Service"],
+        ["#","Digital Marketing","#", "Management Counsulting", "#", "Business Model", "#", "Google Adds", "#", "Innovations"],
+        ["#","Six Sigma", "#", "Six Sigma Green Belt", "#", "Supply Chain", "#", "Lean", "#", "Quality management", "#", "Robotic Process Automation"],
+        ["#","PMP", "#", "PMBOK", "#", "CAPM", "#", "PMI - ACI", "#", "Agile"],
+        ["#","GDPR", "#", "Contact Law", "#", "Law", "#", "Medical Device Development", "#", "Data Protection", "#", "Patent"],
+        ["#","Microsoft Power BI", "#", "SQL", "#", "Tableau", "#", "MySQL", "#", "Blockchain"],
+        ["#","Recruiting","#","HR Analytics","#","Instructional Design","#","Hiring","#","Employee law"]
+    ],
+    [
+        ["#","Accounting","#","Bookkeeping","#","Finance Accounting","#","Financial Statement","#","Tally.Erp","#","Xero","#","Cost Accounting"],
+        ["#","Anti-Money Laundering","#","Risk Management","#","CAMS Certification","#","IFRS","#","Accounting"],
+        ["#","CryptoCurrency","#","Bitcoin","#","Blockchain","#","Personal Finance","#","Day Trading","#","NFT"],
+        ["#","Stata","#","Microeconomics","#","macroeconomics","#","Data Visualization","#","Economics"],
+        ["#","Personal Finance","#","Investement Banking","#","CFA","#","Finance Fundamentals","#","Corporate Finance"],
+        ["#","CFA","#","CMA","#","ACCA","#","Stock Trading","#","Financial Planing"]
+    ],
+    [
+        ["#","AWS certification","#","Microsoft Certific","#","AWS Certified","#","Amazon Aws","#","Microsoft AZ-900"],
+        ["#","Ethical Hacking","#","Cyber Security","#","Network Security","#","Personal Testing","#","Kubernets"],
+        ["#","PLC","#","Arduino","#","Microcontroller","#","Electronics","#","Rasberry Pi","#","Fpga"],
+        ["#","Linux","#","Linux Administration","#","Windows Server","#","Shell Scripting","#","VMware"],
+        ["#","Python","#","Kubernets","#","Docker","#","DevOps","#","React","#","Java"]
+    ]
+];
 function showGrandChildList(childIndex, grandChildIndex) {
     // console.log(grandChildArray[childIndex][grandChildIndex], childIndex, grandChildIndex);
     let grandChildDiv = document.getElementById("grandChild_div");
